@@ -3364,17 +3364,327 @@ def deleteNode(arr, element):
 
 \subsection{Heapsort}
 
-\noindent Heapsort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is ascending for min-heap while the order is descending for max-heap.
+\noindent Heapsort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is \textbf{ascending for max-heap} while the order is \textbf{descending for min-heap}. Let's consider an array \lstinline{arr} which is to be sorted using heap sort.
 
 \begin{enumerate}
-    \item Build a heap from an arbitrary array with \lstinline{buildHeap}.
+    \item Build a max-heap from the elements of the array \lstinline{arr}.
+    \item The root element, that is \lstinline{arr[0]}, will contain maximum element of \lstinline{arr}. Swap this element with the last element of \lstinline{arr}. The last element is already in its correct position.
+    \item Decrease the length of heap by one which will exclude the last element.
+    \item Heapify the root element (bubble-down operation of root) again so that we have the highest element moves at the root again.
+    \item The process is repeated until all the items of the list are sorted.
 \end{enumerate}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {12}
+	child {node {6} 
+		child {node {5}}
+		child {node {1}}
+	}
+	child {node {10}
+		child {node {9}}
+		child {edge from parent[draw = none]}
+	};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {12};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {6};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {10};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node (D) [right of=C] {5};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node (E) [right of=D] {1};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node (F) [right of=E] {9};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 1. Initialisation}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {9}
+	child {node {6} 
+		child {node {5}}
+		child {node {1}}
+	}
+	child {node {10}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {10};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {6};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {9};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node (D) [right of=C] {5};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node (E) [right of=D] {1};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 2. Swapping 12 with 9}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {10}
+	child {node {6} 
+		child {node {5}}
+		child {node {1}}
+	}
+	child {node {9}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {1};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {6};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {9};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node (D) [right of=C] {5};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 3. Bubble-down 9}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {1}
+	child {node {6} 
+		child {node {5}}
+		child {edge from parent[draw = none]}
+	}
+	child {node {9}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {9};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {6};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {1};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node (D) [right of=C] {5};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 4. Swapping 10 with 1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {9}
+	child {node {6} 
+		child {node {5}}
+		child {edge from parent[draw = none]}
+	}
+	child {node {1}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {5};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {6};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {1};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 5. Bubble-down 1}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {5}
+	child {node {6}}
+	child {node {1}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {6};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {5};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node (C) [right of=B] {1};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 6. Swap 5 with 9}
+\end{figure}
+	
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {6}
+	child {node {5}}
+	child {node {1}};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {1};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {5};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node[fill=gray!30] (C) [right of=B] {6};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 7. Bubble-down 5}
+\end{figure}
+
+\begin{figure}[H]	
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {1}
+	child {node {5}}
+	child {edge from parent[draw = none]};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {1};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {5};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node[fill=gray!30] (C) [right of=B] {6};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 8. Swap 6 with 1}
+\end{figure}
+\begin{figure}[H]	
+	\centering
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {5}
+	child {node {1}}
+	child {edge from parent[draw = none]};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {5};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node (B) [right of=A] {1};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node[fill=gray!30] (C) [right of=B] {6};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 9. Bubble down 1}
+\end{figure}
+\begin{figure}[H]
+	\centering	
+	
+	\begin{tikzpicture}[
+	every node/.style = {minimum width = 2em, draw, circle},
+	level/.style = {sibling distance = 25mm/#1}
+	]
+	\node {1};
+	\end{tikzpicture}
+	\hspace{5mm}
+	\begin{tikzpicture}[>=to, 
+	every node/.style = {minimum width = 2em, draw, rectangle, node distance={2em}}]
+	\node (A) {1};
+	\node[draw=none, fill=white!20] (A1) [above=.1cm of A] {0};
+	\node[fill=gray!30] (B) [right of=A] {5};
+	\node[draw=none, fill=white!20] (B1) [above=.1cm of B] {1};
+	\node[fill=gray!30] (C) [right of=B] {6};
+	\node[draw=none, fill=white!20] (C1) [above=.1cm of C] {2};
+	\node[fill=gray!30] (D) [right of=C] {9};
+	\node[draw=none, fill=white!20] (D1) [above=.1cm of D] {3};
+	\node[fill=gray!30] (E) [right of=D] {10};
+	\node[draw=none, fill=white!20] (E1) [above=.1cm of E] {4};
+	\node[fill=gray!30] (F) [right of=E] {12};
+	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
+	\end{tikzpicture}
+	\caption{Heap sort: Step 10. Swap 5 with 1}
+\end{figure}
 
 \subsection{Priority queues}
 \noindent A priority queue is a special type of queue in which each element is associated with a priority value. And, elements are served on the basis of their priority. That is, higher priority elements are served first (not first-in-first-out rule). However, if elements with the same priority occur, they are served according to their order in the queue. Generally, the value of the element itself is considered for assigning the priority. We can perform two operations on a priority queue:
 \begin{enumerate}
-    \item \textbf{add}(element): This function will insert `element' into the priority queue.
-    \item \textbf{poll}(): This function will remove the highest priority element from the priority queue. 
+	\item \textbf{add}(element): This function will insert `element' into the priority queue.
+	\item \textbf{poll}(): This function will remove the highest priority element from the priority queue. 
 \end{enumerate}
 
 \noindent Priority queue can be implemented using an array, a linked list, a heap data structure, or a binary search tree. Among these data structures, heap data structure provides an efficient implementation of priority queues. 
@@ -3387,7 +3697,7 @@ def deleteNode(arr, element):
     level/.style = {sibling distance = 30mm/#1}
     ]
     \node (A) {18};
-    \node[draw=none, fill=gray!20] (A1) [above=.4cm of A] {Highest priority};
+    \node[draw=none, fill=white!20] (A1) [above=.2cm of A] {Highest priority};
     \node (B) [right of=A] {12};
     \node (C) [right of=B] {9};
     \node (D) [right of=C] {7};
@@ -3402,7 +3712,7 @@ def deleteNode(arr, element):
     	level/.style = {sibling distance = 30mm/#1}
     	]
     	\node (A) {7};
-    	\node[draw=none, fill=gray!20] (A1) [above=.4cm of A] {Highest priority};
+    	\node[draw=none, fill=white!20] (A1) [above=.2cm of A] {Highest priority};
     	\node (B) [right of=A] {9};
     	\node (C) [right of=B] {12};
     	\node (D) [right of=C] {18};
@@ -3412,6 +3722,44 @@ def deleteNode(arr, element):
 \end{itemize}
 
 \noindent Adding an element to a priority queue is equivalent to adding the element into the corresponding heap. Polling of element from the priority queue is basically deleting the root node form the heap.
+
+%\section{Disjoint sets}
+%\noindent A disjoint set is a data structure which is a set of elements partitioned into several disjoint (non-overlapping) subsets. In other words, a disjoint set is a group of sets where no item can be in more than one set. It is also called a \textit{union-find} data structure as it supports union and find operation on subsets. It supports the following operations:
+%
+%\begin{enumerate}
+%	\item \textbf{makeSet}($x$): This operation creates a new set containing element $x$. A set with only one element is called a singleton set.
+%	\item \textbf{find}($x$): This operation returns the representative of the set in which the element $x$ is present.
+%	\item \textbf{union}($x$, $y$): This creates a new set containing the elements of sets $x$ and $y$ and then deletes the individual sets $x$ and $y$.
+%\end{enumerate}
+%
+%\begin{lstlisting}
+%# A class to represent a disjoint set
+%class DisjointSet:
+%    parent = {}
+%
+%    # perform MakeSet operation
+%    def makeSet(self, n):
+%        # create `n` disjoint sets (one for each vertex)
+%        for i in range(n):
+%            self.parent[i] = i
+%	
+%	# Find the root of the set in which element `k' belongs
+%    def find(self, k):
+%        # if `k' is root
+%        if self.parent[k] == k:
+%            return k
+%	
+%        # recur for the parent until we find the root
+%        return self.find(self.parent[k])
+%	
+%    # Perform Union of two subsets
+%    def union(self, a, b):
+%        # find the root of the sets in which elements `x` and `y` belongs
+%        x = self.find(a)
+%        y = self.find(b)
+%		
+%        self.parent[x] = y
+%\end{lstlisting}
 
 \section{Graph}
 
@@ -3965,7 +4313,7 @@ if __name__ == "__main__":
 \subsubsection{Time complexity}
 \noindent We have a loop with $n=|V|$ iterations. On each iteration, we need to find the minimum distance node. Then we need to update the distance of all the adjacent node. In the worst case this operation will take $O(|V|)$ time. Thus overall we have the time complexity $O(|V|^2)$. The space complexity is $O(|V|)$, since we have to maintain two lists $d$ and $u$ each of length $|V|$.
 
-\subsubsection{Bellman-Ford algorithm}
+% \subsubsection{Bellman-Ford algorithm}
 % \subsubsection{Floyd-Warshall algorithm}
 
 \subsection{Minimum spanning tree (MST)}
@@ -3974,106 +4322,106 @@ if __name__ == "__main__":
 
 \noindent A \textit{minimum spanning tree} (MST) is a spanning tree in which the sum of the weight of the edges is the minimum.
 
-\subsubsection{Kruskal's algorithm}
-
-\noindent It falls under a class of algorithms called greedy algorithms that find the local optimum in the hopes of finding a global optimum. We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
-\begin{enumerate}
-    \item Sort all the edges from low weight to high.
-    \item Take the edge with the lowest weight and add it to the spanning tree. If adding the edge created a cycle, then reject this edge.
-    \item Keep adding edges until we reach all vertices.
-\end{enumerate}
-
-\begin{lstlisting}
-# https://www.techiedelight.com/kruskals-algorithm-for-finding-minimum-spanning-tree/
-# A class to represent a disjoint set
-class DisjointSet:
-    parent = {}
- 
-    # perform MakeSet operation
-    def makeSet(self, n):
-        # create `n` disjoint sets (one for each vertex)
-        for i in range(n):
-            self.parent[i] = i
- 
-    # Find the root of the set in which element `k` belongs
-    def find(self, k):
-        # if `k` is root
-        if self.parent[k] == k:
-            return k
- 
-        # recur for the parent until we find the root
-        return self.find(self.parent[k])
- 
-    # Perform Union of two subsets
-    def union(self, a, b):
-        # find the root of the sets in which elements `x` and `y` belongs
-        x = self.find(a)
-        y = self.find(b)
- 
-        self.parent[x] = y
- 
- 
-# Function to construct MST using Kruskal's algorithm
-def runKruskalAlgorithm(edges, n):
- 
-    # stores the edges present in MST
-    MST = []
- 
-    # Initialize `DisjointSet` class.
-    # Create a singleton set for each element of the universe.
-    ds = DisjointSet()
-    ds.makeSet(n)
- 
-    index = 0
- 
-    # sort edges by increasing weight
-    edges.sort(key=lambda x: x[2])
- 
-    # MST contains exactly `V-1` edges
-    while len(MST) != n - 1:
- 
-        # consider the next edge with minimum weight from the graph
-        (src, dest, weight) = edges[index]
-        index = index + 1
- 
-        # find the root of the sets to which two endpoints
-        # vertices of the next edge belongs
-        x = ds.find(src)
-        y = ds.find(dest)
- 
-        # if both endpoints have different parents, they belong to
-        # different connected components and can be included in MST
-        if x != y:
-            MST.append((src, dest, weight))
-            ds.union(x, y)
- 
-    return MST
- 
- 
-if __name__ == '__main__':
-    # (u, v, w) triplet represent undirected edge from
-    # vertex `u` to vertex `v` having weight `w`
-    edges = [
-        (0, 1, 7), (1, 2, 8), (0, 3, 5), (1, 3, 9), (1, 4, 7), (2, 4, 5),
-        (3, 4, 15), (3, 5, 6), (4, 5, 8), (4, 6, 9), (5, 6, 11)
-    ]
- 
-    # total number of nodes in the graph (labelled from 0 to 6)
-    n = 7
- 
-    # construct graph
-    e = runKruskalAlgorithm(edges, n)
- 
-    print(e)
-\end{lstlisting}
-\textbf{Output}
-\begin{lstlisting}
-[(0, 3, 5), (2, 4, 5), (3, 5, 6), (0, 1, 7), (1, 4, 7), (4, 6, 9)]
-\end{lstlisting}
+%\subsubsection{Kruskal's algorithm}
+%
+%\noindent It falls under a class of algorithms called greedy algorithms that find the local optimum in the hopes of finding a global optimum. We start from the edges with the lowest weight and keep adding edges until we reach our goal. The steps for implementing Kruskal's algorithm are as follows:
+%\begin{enumerate}
+%    \item Sort all the edges from low weight to high.
+%    \item Take the edge with the lowest weight and add it to the spanning tree. If adding the edge created a cycle, then reject this edge.
+%    \item Keep adding edges until we reach all vertices.
+%\end{enumerate}
+%
+%\begin{lstlisting}
+%# https://www.techiedelight.com/kruskals-algorithm-for-finding-minimum-spanning-tree/
+%# A class to represent a disjoint set
+%class DisjointSet:
+%    parent = {}
+% 
+%    # perform MakeSet operation
+%    def makeSet(self, n):
+%        # create `n` disjoint sets (one for each vertex)
+%        for i in range(n):
+%            self.parent[i] = i
+% 
+%    # Find the root of the set in which element `k` belongs
+%    def find(self, k):
+%        # if `k` is root
+%        if self.parent[k] == k:
+%            return k
+% 
+%        # recur for the parent until we find the root
+%        return self.find(self.parent[k])
+% 
+%    # Perform Union of two subsets
+%    def union(self, a, b):
+%        # find the root of the sets in which elements `x` and `y` belongs
+%        x = self.find(a)
+%        y = self.find(b)
+% 
+%        self.parent[x] = y
+% 
+% 
+%# Function to construct MST using Kruskal's algorithm
+%def runKruskalAlgorithm(edges, n):
+% 
+%    # stores the edges present in MST
+%    MST = []
+% 
+%    # Initialize `DisjointSet` class.
+%    # Create a singleton set for each element of the universe.
+%    ds = DisjointSet()
+%    ds.makeSet(n)
+% 
+%    index = 0
+% 
+%    # sort edges by increasing weight
+%    edges.sort(key=lambda x: x[2])
+% 
+%    # MST contains exactly `V-1` edges
+%    while len(MST) != n - 1:
+% 
+%        # consider the next edge with minimum weight from the graph
+%        (src, dest, weight) = edges[index]
+%        index = index + 1
+% 
+%        # find the root of the sets to which two endpoints
+%        # vertices of the next edge belongs
+%        x = ds.find(src)
+%        y = ds.find(dest)
+% 
+%        # if both endpoints have different parents, they belong to
+%        # different connected components and can be included in MST
+%        if x != y:
+%            MST.append((src, dest, weight))
+%            ds.union(x, y)
+% 
+%    return MST
+% 
+% 
+%if __name__ == '__main__':
+%    # (u, v, w) triplet represent undirected edge from
+%    # vertex `u` to vertex `v` having weight `w`
+%    edges = [
+%        (0, 1, 7), (1, 2, 8), (0, 3, 5), (1, 3, 9), (1, 4, 7), (2, 4, 5),
+%        (3, 4, 15), (3, 5, 6), (4, 5, 8), (4, 6, 9), (5, 6, 11)
+%    ]
+% 
+%    # total number of nodes in the graph (labelled from 0 to 6)
+%    n = 7
+% 
+%    # construct graph
+%    e = runKruskalAlgorithm(edges, n)
+% 
+%    print(e)
+%\end{lstlisting}
+%\textbf{Output}
+%\begin{lstlisting}
+%[(0, 3, 5), (2, 4, 5), (3, 5, 6), (0, 1, 7), (1, 4, 7), (4, 6, 9)]
+%\end{lstlisting}
 
 \subsubsection{Prim's algorithm}
 
-\noindent Like Kruskal's algorithm, Prim's algorithm is also a Greedy algorithm. It starts with an empty spanning tree.
+\noindent Prim's algorithm is a greedy algorithm. It starts with an empty spanning tree.
 \begin{enumerate}
     \item At first the spanning tree consists only of a single vertex (chosen arbitrarily). 
     \item Then the minimum weight edge outgoing from this vertex is selected and added to the spanning tree. After that the spanning tree already consists of two vertices. 
@@ -4164,14 +4512,13 @@ Edge : Weight
 \noindent Time complexity: At every iteration of the loop, we add one node to the tree. Since there are $|V|$ nodes, it follows that there are $O(|V|)$ iterations of this loop. Within each iteration of the loop, we need to find and test edges in the tree. If there are $|E|$ edges, the naive searching implementation uses $O(|E|)$ to find the edge with minimum weight. So in combination, we should expect the complexity to be $O(|V||E|)$, which may be $O(|V|^3)$ in the worst case.\\
 Space complexity: $O(|V|)$
 
-\section{Disjoint sets}
 
 \newpage
 \chapter{Algorithm Techniques}
 
 \section{Brute force approach}
 
-\section{Divide and conquer method}
+\section{Divide and Conquer method}
 
 \noindent Divide and conquer is an algorithm design paradigm. A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. Here are the steps involved:
 \begin{enumerate}
