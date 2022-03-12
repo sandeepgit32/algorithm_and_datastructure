@@ -3380,11 +3380,38 @@ def deleteNode(arr, element):
 \noindent Priority queue can be implemented using an array, a linked list, a heap data structure, or a binary search tree. Among these data structures, heap data structure provides an efficient implementation of priority queues. 
 \begin{itemize}
     \item If higher priority corresponds to higher number in the element, then a \textit{max-heap} can be used to implement the priority queue. this is known as \textit{descending order priority queue}.
-    
+    \begin{figure}[H]
+    	\centering
+    \begin{tikzpicture}[>=to, 
+    every node/.style = {minimum width = 6em, draw, rectangle, node distance={6em}},
+    level/.style = {sibling distance = 30mm/#1}
+    ]
+    \node (A) {18};
+    \node[draw=none, fill=gray!20] (A1) [above=.4cm of A] {Highest priority};
+    \node (B) [right of=A] {12};
+    \node (C) [right of=B] {9};
+    \node (D) [right of=C] {7};
+    \end{tikzpicture}
+    \caption{Descending order priority queue}
+\end{figure}
     \item If higher priority corresponds to lower number in the element, then a \textit{min-heap} can be used to implement the priority queue. this is known as \textit{ascending order priority queue}.
+    \begin{figure}[H]
+    	\centering
+    	\begin{tikzpicture}[>=to, 
+    	every node/.style = {minimum width = 6em, draw, rectangle, node distance={6em}},
+    	level/.style = {sibling distance = 30mm/#1}
+    	]
+    	\node (A) {7};
+    	\node[draw=none, fill=gray!20] (A1) [above=.4cm of A] {Highest priority};
+    	\node (B) [right of=A] {9};
+    	\node (C) [right of=B] {12};
+    	\node (D) [right of=C] {18};
+    	\end{tikzpicture}
+    	\caption{Ascending order priority queue}
+    \end{figure}
 \end{itemize}
 
-\noindent Adding an element to a priority queue is equivalent to adding the element into the corresponding heap. The polling element from the priority queue is basically deleting the root node form the heap.
+\noindent Adding an element to a priority queue is equivalent to adding the element into the corresponding heap. Polling of element from the priority queue is basically deleting the root node form the heap.
 
 \section{Graph}
 

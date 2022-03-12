@@ -50,21 +50,21 @@
 \contentsline {subsection}{\numberline {2.7.5}Heapsort}{66}{subsection.2.7.5}%
 \contentsline {subsection}{\numberline {2.7.6}Priority queues}{66}{subsection.2.7.6}%
 \contentsline {section}{\numberline {2.8}Graph}{67}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Directed and Undirected graph}{67}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.1}Directed and Undirected graph}{68}{subsection.2.8.1}%
 \contentsline {subsection}{\numberline {2.8.2}Graph terminologies}{68}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}Graph implementations}{69}{subsection.2.8.3}%
 \contentsline {subsection}{\numberline {2.8.4}Depth First Search (DFS)}{70}{subsection.2.8.4}%
-\contentsline {subsubsection}{Applications}{72}{section*.26}%
-\contentsline {subsection}{\numberline {2.8.5}Breadth First Search (BFS)}{72}{subsection.2.8.5}%
-\contentsline {subsubsection}{Applications}{74}{section*.28}%
-\contentsline {subsection}{\numberline {2.8.6}Shortest path}{74}{subsection.2.8.6}%
-\contentsline {subsubsection}{Dijkstra's Algorithm}{74}{section*.29}%
-\contentsline {subsubsection}{Time complexity}{78}{section*.37}%
-\contentsline {subsubsection}{Bellman-Ford algorithm}{78}{section*.38}%
-\contentsline {subsection}{\numberline {2.8.7}Minimum spanning tree (MST)}{78}{subsection.2.8.7}%
-\contentsline {subsubsection}{Kruskal's algorithm}{78}{section*.39}%
-\contentsline {subsubsection}{Prim's algorithm}{81}{section*.40}%
-\contentsline {section}{\numberline {2.9}Disjoint sets}{83}{section.2.9}%
+\contentsline {subsubsection}{Applications}{73}{section*.28}%
+\contentsline {subsection}{\numberline {2.8.5}Breadth First Search (BFS)}{73}{subsection.2.8.5}%
+\contentsline {subsubsection}{Applications}{74}{section*.30}%
+\contentsline {subsection}{\numberline {2.8.6}Shortest path}{75}{subsection.2.8.6}%
+\contentsline {subsubsection}{Dijkstra's Algorithm}{75}{section*.31}%
+\contentsline {subsubsection}{Time complexity}{78}{section*.39}%
+\contentsline {subsubsection}{Bellman-Ford algorithm}{79}{section*.40}%
+\contentsline {subsection}{\numberline {2.8.7}Minimum spanning tree (MST)}{79}{subsection.2.8.7}%
+\contentsline {subsubsection}{Kruskal's algorithm}{79}{section*.41}%
+\contentsline {subsubsection}{Prim's algorithm}{81}{section*.42}%
+\contentsline {section}{\numberline {2.9}Disjoint sets}{84}{section.2.9}%
 \contentsline {chapter}{\numberline {3}Algorithm Techniques}{85}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Brute force approach}{85}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Divide and conquer method}{85}{section.3.2}%
@@ -100,7 +100,7 @@
 \contentsline {section}{\numberline {6.9}First repeating character}{135}{section.6.9}%
 \contentsline {section}{\numberline {6.10}Remove duplicates}{136}{section.6.10}%
 \contentsline {section}{\numberline {6.11}Find duplicate value}{137}{section.6.11}%
-\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{139}{section*.64}%
+\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{139}{section*.66}%
 \contentsline {section}{\numberline {6.12}Maximum sub-array sum}{141}{section.6.12}%
 \contentsline {section}{\numberline {6.13}Rotation checker}{143}{section.6.13}%
 \contentsline {section}{\numberline {6.14}Reverse words in a given sentence}{144}{section.6.14}%
