@@ -130,13 +130,13 @@ $f(n) = $ Number of steps to be executed by the algorithm for input size $n$
 \subsubsection{$\Theta$-notation}
 % $\Theta\left(g(n)\right) = \{f(n): \exists \text{ positive constant } c_1, c_2 \text{ and } n_0 \text{ such that } 0 \leq c_1g(n) \leq f(n) \leq c_2g(n), \forall n \geq n_0\}$
 
-A function $f(n)$ belongs to set $\Theta\left(g(n)\right)$, if there exist positive constants $c_1$, $c_2$ and $n_0$ such that $c_1g(n) \leq f(n) \leq c_2g(n)$ for sufficiently large $n (n \geq n_0)$.
+A function $f(n)$ belongs to set $\Theta\left(g(n)\right)$, if there exist positive constants $c_1$, $c_2$ and $n_0$ such that $c_1g(n) \leq f(n) \leq c_2g(n)$ for sufficiently large $n$ $(n \geq n_0)$.
 
 \subsubsection{$O$-notation (or, Big-$O$-notation)}
-A function $f(n)$ belongs to set $O\left(g(n)\right)$, if there exist positive constants $c$ and $n$ such that $0 \leq f(n) \leq c_g(n)$ for $n \geq n_0$. $O$-notation provides an asymptotic upper bound.
+A function $f(n)$ belongs to set $O\left(g(n)\right)$, if there exist positive constants $c$ and $n$ such that $0 \leq f(n) \leq cg(n)$ for $n \geq n_0$. $O$-notation provides an asymptotic upper bound.
 
 \subsubsection{$\Omega$-notation}
-A function $f(n)$ belongs to set $\Omega\left(g(n)\right)$, if there exist positive constants $c$ and $n$ such that $0 \leq c_g(n) \leq f(n)$ for $n \geq n_0$. $\Omega$-notation provides an asymptotic lower bound.
+A function $f(n)$ belongs to set $\Omega\left(g(n)\right)$, if there exist positive constants $c$ and $n$ such that $0 \leq cg(n) \leq f(n)$ for $n \geq n_0$. $\Omega$-notation provides an asymptotic lower bound.
 
 \begin{figure}[ht]
 	\centering
@@ -316,7 +316,7 @@ $$T(n) \in O(3^n)$$
 	     & n \times \left[(n-1)T(n-2)\right] = n(n-1) T[n-2] \\
 	     &= n(n-1) \times \left[(n-2)T(n-3)\right] = n(n-1)(n-2) T[n-3]\\
 	     &= \cdots\\
-	     &= n(n-1)(n-2) \cdots (n-(k-1)T[n-k]\\
+	     &= n(n-1)(n-2) \cdots (n-(k-1))T[n-k]\\
 \end{align*}
 \noindent Now let's find the value of $k$ for which $n-k = 0$ i.e. $k=n$. Therefore,
 \begin{align*}
@@ -7872,5 +7872,194 @@ Iteration  7 : Value =  3.5540967484931585 : Error =  0.0008694628781782399
 Iteration  8 : Value =  3.5541398217013684 : Error =  0.00015571566942895743
 Iteration  9 : Value =  3.5541475357252508 : Error =  2.7886966961432336e-05
 \end{lstlisting}
+
+\newpage
+\section{Edit distance (Levenshtein distance)}
+
+\textbf{Given two strings \lstinline{str1} and \lstinline{str2}, find the minimum number of edits (operations which include \textit{insert}, \textit{remove} and \textit{replace}) required to convert \lstinline{str1} into \lstinline{str2}.  }
+
+\vspace{5mm}
+\noindent The \textbf{Levenshtein distance} between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other. 
+\vspace{5mm}
+
+\noindent Example 1
+\begin{lstlisting}
+Input:   str1 = "geek", str2 = "gesek"
+Output:  1
+We can convert str1 into str2 by inserting a 's'.
+\end{lstlisting}
+\noindent Example 2
+\begin{lstlisting}
+Input:   str1 = "cat", str2 = "cut"
+Output:  1
+We can convert str1 into str2 by replacing 'a' with 'u'.
+\end{lstlisting}
+\noindent Example 3
+\begin{lstlisting}
+Input:   str1 = "sunday", str2 = "saturday"
+Output:  3
+Last three and first characters are same.  We basically
+need to convert "un" to "atur".  This can be done using
+below three operations. 
+Replace 'n' with 'r', insert 't', insert 'a'
+\end{lstlisting}
+
+\noindent First solution: Naive recursive approach
+
+\begin{enumerate}
+\item Let $m = $ the length of \lstinline{str1} and $n=$ the length of \lstinline{str2}.
+\item If last characters of two strings are same, ignore last characters and get count for remaining strings. So we recur for lengths $m-1$ and $n-1$.
+\item Else (if last characters are not same), we consider all three operations on last character of first string \lstinline{str1}, recursively compute minimum cost for all three operations and take minimum of three values.
+\begin{enumerate}
+	\item Insert: Recur for lengths $m$ and $n-1$.
+	\item Remove: Recur for lengths $m-1$ and $n$.
+	\item Replace: Recur for lengths $m-1$ and $n-1$.
+\end{enumerate}
+\end{enumerate}
+
+\noindent Time complexity: $O(3^{\min(m,n)})$\\
+\noindent Space complexity: $O(\min(m,n))$ for the requirement of call stack
+
+
+\begin{lstlisting}
+def editDistance(str1, str2, m, n):
+    # m = length of str1
+    # n = length of str2
+    # If first string is empty, the only option is to insert all characters of second string into first
+    if m == 0:
+        return n
+ 
+    # If second string is empty, the only option is to remove all characters of first string
+    if n == 0:
+        return m
+    
+    # If last characters of two strings are same, ignore last characters and get count for remaining strings.
+    if str1[m-1] == str2[n-1]:
+        return editDistance(str1, str2, m-1, n-1)
+ 
+    # If last characters are not same, consider all three operations on last character of first string, recursively
+    # Compute minimum cost for all three operations and take minimum of three values.
+    return 1 + min(editDistance(str1, str2, m, n-1),    # Insert
+                   editDistance(str1, str2, m-1, n),    # Remove
+                   editDistance(str1, str2, m-1, n-1)    # Replace
+                   )
+ 
+ 
+if __name__ == "__main__":
+    str1 = "sunday"
+    str2 = "saturday"
+    print (editDistance(str1, str2, len(str1), len(str2)))
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+3
+\end{lstlisting}
+
+\noindent Second solution: Memoization (Top-down) approach 
+
+\noindent Time complexity: $O(mn)$\\
+\noindent Space complexity: $O(mn)$ 
+
+\begin{lstlisting}
+def editDistance(str1, str2, m, n, memo = {}):
+    # m = length of str1
+    # n = length of str2
+    # If first string is empty, the only option is to insert all characters of second string into first
+    if m == 0:
+        return n
+ 
+    # If second string is empty, the only option is to remove all characters of first string
+    if n == 0:
+        return m
+
+    # Check if the recursive tree for given n & m has already been executed
+    key = f'{m}_{n}' # An unique key for the set of values m and n
+    if memo.get(key) != None:
+        return memo[key]
+    
+    # If last characters of two strings are same, ignore last characters and get count for remaining strings.
+    if str1[m-1] == str2[n-1]:
+        memo[key] = editDistance(str1, str2, m-1, n-1, memo)
+        return memo[key]
+ 
+    # If last characters are not same, consider all three operations on last character of first string, recursively
+    # Compute minimum cost for all three operations and take minimum of three values.
+    memo[key] = 1 + min(editDistance(str1, str2, m, n-1, memo),    # Insert
+                   editDistance(str1, str2, m-1, n, memo),    # Remove
+                   editDistance(str1, str2, m-1, n-1, memo)    # Replace
+                   )
+    return memo[key]
+ 
+ 
+if __name__ == "__main__":
+    str1 = "sunday"
+    str2 = "saturday"
+    print (editDistance(str1, str2, len(str1), len(str2)))
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+3
+\end{lstlisting}
+
+\noindent Second solution: Tabulation (Bottom-up) approach
+
+\noindent We will define a table of size $(m+1) \times (n+1)$, where $dp[i][j]$ is the content of the $(i,j)$th cell, which indicates the edit distance of the substrings from \lstinline{str1} and \lstinline{str2} of length $i$ and $j$ respectively. Recursive equation for $dp[i][j]$:
+
+\begin{itemize}
+\item If $\min(i,j) = 0$:
+$$dp[i][j] = \max(i, j)$$
+\item If $i$th character of str1 = $j$th character of str2:
+$$dp[i][j] = dp[i-1][j-1]$$
+\item If $i$th character of str1 $\neq$ $j$th character of str2:
+$$dp[i][j] = 1 + \min \left(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]\right)$$
+\end{itemize}
+
+\noindent Time complexity: $O(mn)$\\
+\noindent Space complexity: $O(mn)$
+
+\begin{lstlisting}
+def editDistance(str1, str2, m, n):
+    # Create a table to store results of subproblems
+    dp = [[0 for x in range(n+1)] for x in range(m+1)]
+ 
+    # Fill dp[][] in bottom up manner
+    for i in range(m+1):
+        for j in range(n+1):
+ 
+            # If first string is empty, only option is to
+            # insert all characters of second string
+            if i == 0:
+                dp[i][j] = j    # Min. operations = j
+ 
+            # If second string is empty, only option is to
+            # remove all characters of second string
+            elif j == 0:
+                dp[i][j] = i    # Min. operations = i
+ 
+            # If last characters are same, ignore last char
+            # and recur for remaining string
+            elif str1[i-1] == str2[j-1]:
+                dp[i][j] = dp[i-1][j-1]
+ 
+            # If last character are different, consider all
+            # possibilities and find minimum
+            else:
+                dp[i][j] = 1 + min(dp[i][j-1],      # Insert
+                                   dp[i-1][j],      # Remove
+                                   dp[i-1][j-1])    # Replace
+ 
+    return dp[m][n]
+ 
+ 
+if __name__ == "__main__":
+    str1 = "sunday"
+    str2 = "saturday"
+    print (editDistance(str1, str2, len(str1), len(str2)))
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+3
+\end{lstlisting}
+
 
 \end{document}
