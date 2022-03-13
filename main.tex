@@ -141,6 +141,7 @@ A function $f(n)$ belongs to set $\Omega\left(g(n)\right)$, if there exist posit
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{pic/time.jpg}
+	\caption{Asymptotic notation}
 \end{figure}
 
 \noindent Usually we care most about upper bound on the running time of an algorithm, which is why we most often use the Big-$O$ notation for algorithm analysis.
@@ -495,6 +496,7 @@ To delete a node from the linked list, we need to do the following steps.
     \item Free memory for the node to be deleted.
 \end{itemize}
 
+\begin{figure}
 \begin{center}
     \begin{tikzpicture}[
     every node/.style = {minimum width = 2em, draw, rectangle, node distance={15mm}},
@@ -549,13 +551,14 @@ To delete a node from the linked list, we need to do the following steps.
     \draw[->] (4) -- (5);
     \end{tikzpicture}
 \end{center}
+\caption{Deleting item from linked list}
+\end{figure}
 
 \noindent Time complexity: $O(n)$
 
 \begin{lstlisting}
 # Delete item by value (key)
 def delete_by_key(self, key):
-
     cur_node = self.head
 
     if cur_node and cur_node.data == key:
@@ -637,6 +640,7 @@ def searchkey(self, key):
     \end{enumerate}
 \end{enumerate}
 
+\begin{figure}[ht]
 \begin{center}
     \begin{tikzpicture}[>=to, 
     every node/.style = {minimum width = 2em, draw, rectangle, node distance={23mm}},
@@ -754,6 +758,8 @@ def searchkey(self, key):
     \draw[->] (3) -- (2);
     \end{tikzpicture}
 \end{center}
+\caption{Reversing a linked list: iterative approach}
+\end{figure}
 
 \noindent Time complexity: $O(n)$\\
 \noindent Space complexity: $O(1)$
@@ -782,6 +788,7 @@ def searchkey(self, key):
    \item Fix head pointer
 \end{enumerate}
 
+\begin{figure}[ht]
 \begin{center}
     \begin{tikzpicture}[>=to, 
     every node/.style = {minimum width = 2em, draw, rectangle, node distance={23mm}},
@@ -837,6 +844,8 @@ def searchkey(self, key):
     \draw[->] (C) -- (B);
     \end{tikzpicture}
 \end{center}
+\caption{Reversing a linked list: recursive approach}
+\end{figure}
 
 \noindent Time complexity: $O(n)$\\
 \noindent Space complexity: $O(1)$
@@ -867,7 +876,7 @@ def reverse(self, head):
     \begin{enumerate}
         \item Create two pointers \lstinline{slow} and \lstinline{fast} which moves by one node and two nodes at a time respectively. Both start at the head.
         \item After traversing the list, the \lstinline{fast} pointer would point to the last node if the number of nodes is odd. If the number of nodes is even, the \lstinline{fast} pointer would point to the None.
-        \begin{figure}
+        \begin{figure}[ht]
         \begin{center}
         \begin{tikzpicture}[>=to, 
         every node/.style = {minimum width = 2em, draw, rectangle, node distance={18mm}},
@@ -930,12 +939,11 @@ def reverse(self, head):
         \draw[->] (E) -- (F);
         \end{tikzpicture}
         \end{center}
-        \captionsetup{labelformat=empty}
-        \caption{Movement of \lstinline{slow} and \lstinline{fast} pointers for odd number of nodes} 
+        \caption{Check palindrome: Movement of \lstinline{slow} and \lstinline{fast} pointers for odd number of nodes} 
         \label{fig:Odd}
         \end{figure}
         	
-	\begin{figure}
+	\begin{figure}[ht]
 	\begin{center}
         \begin{tikzpicture}[>=to, 
         every node/.style = {minimum width = 2em, draw, rectangle, node distance={18mm}},
@@ -992,8 +1000,7 @@ def reverse(self, head):
         \draw[->] (D) -- (E);
         \end{tikzpicture}
         \end{center}
-        \captionsetup{labelformat=empty}
-        \caption{Movement of \lstinline{slow} and \lstinline{fast} pointers for even number of nodes} 
+        \caption{Check palindrome: Movement of \lstinline{slow} and \lstinline{fast} pointers for even number of nodes} 
         \label{fig:Even}
         \end{figure}
         
@@ -1665,22 +1672,22 @@ every node/.style = {minimum width = 2em, draw, circle},
 
 \noindent DFS (Depth-first search) is technique used for traversing a tree or graph. Here backtracking is used for traversal. In this traversal first the deepest node is visited and then backtracks to it's parent node if no sibling of that node exist. 
 
-\begin{center}
-\begin{tikzpicture}[
-every node/.style = {minimum width = 2em, draw, circle},
-  level/.style = {sibling distance = 30mm/#1}
-]
-\node {51}
-    child {node {12} 
-        child {node {7}}
-        child {node {43}}
-    }
-    child {node {67}
-        child {node {52}}
-        child {node {75}}
-    };
-\end{tikzpicture}
-\end{center}
+%\begin{center}
+%\begin{tikzpicture}[
+%every node/.style = {minimum width = 2em, draw, circle},
+%  level/.style = {sibling distance = 30mm/#1}
+%]
+%\node {51}
+%    child {node {12} 
+%        child {node {7}}
+%        child {node {43}}
+%    }
+%    child {node {67}
+%        child {node {52}}
+%        child {node {75}}
+%    };
+%\end{tikzpicture}
+%\end{center}
 
 \noindent There are three ways we can implement the DFS for a Binary tree.
 
@@ -1690,6 +1697,7 @@ every node/.style = {minimum width = 2em, draw, circle},
             \item Traverse the left subtree, i.e., call Pre-order on left-subtree resursively.
             \item Traverse the right subtree, i.e., call Pre-order on right-subtree recursively.
         \end{enumerate}
+        \begin{figure}[ht]
         \begin{center}
         \begin{tikzpicture}[
         every node/.style = {minimum width = 2em, draw, circle},
@@ -1726,12 +1734,15 @@ every node/.style = {minimum width = 2em, draw, circle},
         \draw[->] (6) -- (7);
         \end{tikzpicture}
         \end{center}
+        \caption{Pre-order traversal}
+        \end{figure}
 \subsubsection{In-order traversal}
         \begin{enumerate}
             \item Traverse the left subtree, i.e., call In-order on left-subtree resursively.
             \item Visit the root.
             \item Traverse the right subtree, i.e., call In-order on right-subtree recursively.
         \end{enumerate}
+        \begin{figure}[ht]
         \begin{center}
         \begin{tikzpicture}[
         every node/.style = {minimum width = 2em, draw, circle},
@@ -1769,12 +1780,16 @@ every node/.style = {minimum width = 2em, draw, circle},
         \draw[->] (6) -- (7);
         \end{tikzpicture}
         \end{center}
+        \caption{in-order traversal}
+        \end{figure}
+        
 \subsubsection{Post-order traversal}
         \begin{enumerate}
             \item Traverse the left subtree, i.e., call Post-order on left-subtree resursively.
             \item Traverse the right subtree, i.e., call Post-order on right-subtree recursively.
             \item Visit the root.
         \end{enumerate}
+        \begin{figure}[ht]
         \begin{center}
         \begin{tikzpicture}[
         every node/.style = {minimum width = 2em, draw, circle},
@@ -1811,12 +1826,11 @@ every node/.style = {minimum width = 2em, draw, circle},
         \draw[->] (6) -- (7);
         \end{tikzpicture}
         \end{center}
-
+        \caption{Post-order traversal}
+        \end{figure}
 \noindent Time complexity: $O(n)$
 
-\noindent Space complexity: $O(h)$ where $h$ is the height (maximum depth from root) of the tree
-
-Even if we aren't using any additional data structures, we are using a recursive function, which means that we have to have a look on the maximum number of calls that can be on the call stack, and in this case, it represents the height $h$ of the tree. This is our space complexity.
+\noindent Space complexity: $O(h)$ where $h$ is the height (maximum depth from root) of the tree. Even if we aren't using any additional data structures, we are using a recursive function, which means that we have to have a look on the maximum number of calls that can be on the call stack, and in this case, it represents the height $h$ of the tree. This is our space complexity.
 
 
 \begin{lstlisting}
@@ -1901,6 +1915,7 @@ Output
     \end{enumerate}
 \end{enumerate}
 
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[
 every node/.style = {minimum width = 2em, draw, circle},
@@ -1938,6 +1953,8 @@ every node/.style = {minimum width = 2em, draw, circle, node distance={15mm}},
 \draw[->] (6) -- (7);
 \end{tikzpicture}
 \end{center}
+\caption{Breadth First Search (BFS)}
+\end{figure}
 
 \noindent Time complexity: $O(n)$
 
@@ -2055,6 +2072,7 @@ A Binary search Tree (BST) is one data structure that supports faster searching,
 \item Duplicate keys are not allowed.
 \end{enumerate}
 
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[
 every node/.style = {minimum width = 2em, draw, circle},
@@ -2072,7 +2090,8 @@ every node/.style = {minimum width = 2em, draw, circle},
     };
 \end{tikzpicture}
 \end{center}
-
+\caption{Binary swearch Tree}
+\end{figure}
 \textbf{Advantages of Binary search tree}
 \begin{enumerate}
     \item Searching an element in the Binary search tree is easy and fast ($\sim O(\log n)$) as we always have a hint that which subtree has the desired element.
@@ -2759,6 +2778,7 @@ After deleting node 8 (two children)
 
 \noindent A hash table (a.k.a Hash map) is an important data structure which stores data based on key-value pairs in such a way as to access the elements faster in $O(1)$ time. Each position of the hash table, often called a \textbf{slot}, can hold an item and is indexed by an integer value starting at 0. For example, we will have a slot at index 0, a slot at index 1, a slot at index 2, and so on. Initially, the hash table contains no items so every slot is empty. We can implement a hash table by using a list with each element initialized to the special Python value \lstinline{None}. The following figure shows a hash table of size $m=11$. In other words, there are $m$ slots in the table, at index 0 through 10.
 
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[font=\ttfamily,
 array/.style={matrix of nodes,nodes={draw, minimum size=8mm, fill=gray!10},column sep=-\pgflinewidth, row sep=0.5mm, nodes in empty cells,
@@ -2768,6 +2788,8 @@ row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}}]
 None & None & None & None & None & None & None & None & None & None & None\\};
 \end{tikzpicture}
 \end{center}
+\caption{Hash initialization}
+\end{figure}
 
 \noindent The mapping between an item (a key-value pair) and the slot is called the \textbf{hash function}. The hash function will take the key of any item in the collection and return an integer in the range of slot indices, between 0 and $m-1$. Assume that we have the set of integers 54, 26, 93, 17, 77, and 31 as keys and their respective values as V54, V26, V93, V17, V77, and V31. Our first hash function, sometimes referred to as the \textbf{remainder method}, simply takes a key and divides it by the table size, returning the remainder as its hash value $$h(\text{key})=\text{key} \% 11$$
 \begin{lstlisting}
@@ -2782,6 +2804,7 @@ Key      Hash Value
 
 \noindent Once the hash values have been computed, we can insert each item into the hash table at the index position given bu the computed hash value as shown in Figure 5. Note that 6 out of 11 slots are now occupied. This is referred to as the \textbf{load factor} $\lambda$, and is commonly defined as $$\lambda=\dfrac{\text{number of items}}{\text{table size}}$$
 
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[font=\ttfamily,
 array/.style={matrix of nodes,nodes={draw, minimum size=8mm, fill=gray!10},column sep=-\pgflinewidth, row sep=1mm, nodes in empty cells,
@@ -2791,6 +2814,8 @@ row 1/.style={nodes={draw=none, fill=none, minimum size=5mm}}}]
 V77 & None & None & None & V26 & V93 & V17 & None & None & V31 & V54 \\};
 \end{tikzpicture}
 \end{center}
+\caption{After placing values into the hash}
+\end{figure}
 
 \noindent Now when we want to search for an item, we simply use the hash function to compute the slot name for the item and then check the hash table to see if it is present. This searching operation is $O(1)$.
 
@@ -3089,7 +3114,7 @@ every node/.style = {minimum width = 4em, draw, rectangle},
 '''Max heap implementation'''
 
 def heapify(arr, i):
-    # To heapify a subtree rooted with node i which is an index in arr. N is size of heap
+    # To heapify a subtree rooted with node i which is an index in arr.
     largest = i  # Initialize largest as root
     leftChildIndex = 2*i + 1  # leftChildIndex = 2*i + 1
     rightChildIndex = 2*i + 2  # rightChildIndex = 2*i + 2
@@ -3364,7 +3389,7 @@ def deleteNode(arr, element):
 
 \subsection{Heapsort}
 
-\noindent Heapsort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is \textbf{ascending for max-heap} while the order is \textbf{descending for min-heap}. Let's consider an array \lstinline{arr} which is to be sorted using heap sort.
+\noindent Heapsort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is \textbf{ascending for max-heap} while the order is \textbf{descending for min-heap}. Let's consider an array \lstinline{arr} which is to be sorted in ascending order using heap sort.
 
 \begin{enumerate}
     \item Build a max-heap from the elements of the array \lstinline{arr}.
@@ -3439,7 +3464,7 @@ def deleteNode(arr, element):
 	\node[fill=gray!30] (F) [right of=E] {12};
 	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
 	\end{tikzpicture}
-	\caption{Heap sort: Step 2. Swapping 12 with 9}
+	\caption{Heap sort: Step 2. Swapping 12 with 9 and remove 12 from heap}
 \end{figure}
 
 \begin{figure}[H]
@@ -3503,7 +3528,7 @@ def deleteNode(arr, element):
 	\node[fill=gray!30] (F) [right of=E] {12};
 	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
 	\end{tikzpicture}
-	\caption{Heap sort: Step 4. Swapping 10 with 1}
+	\caption{Heap sort: Step 4. Swapping 10 with 1 and remove 10 from heap}
 \end{figure}
 
 \begin{figure}[H]
@@ -3564,7 +3589,7 @@ def deleteNode(arr, element):
 	\node[fill=gray!30] (F) [right of=E] {12};
 	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
 	\end{tikzpicture}
-	\caption{Heap sort: Step 6. Swap 5 with 9}
+	\caption{Heap sort: Step 6. Swap 9 with 5 and remove 9 from heap}
 \end{figure}
 	
 \begin{figure}[H]
@@ -3622,7 +3647,7 @@ def deleteNode(arr, element):
 	\node[fill=gray!30] (F) [right of=E] {12};
 	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
 	\end{tikzpicture}
-	\caption{Heap sort: Step 8. Swap 6 with 1}
+	\caption{Heap sort: Step 8. Swap 6 with 1 and remove 6 from heap}
 \end{figure}
 \begin{figure}[H]	
 	\centering
@@ -3677,8 +3702,66 @@ def deleteNode(arr, element):
 	\node[fill=gray!30] (F) [right of=E] {12};
 	\node[draw=none, fill=white!20] (F1) [above=.1cm of F] {5};
 	\end{tikzpicture}
-	\caption{Heap sort: Step 10. Swap 5 with 1}
+	\caption{Heap sort: Step 10. Swap 5 with 1 and remove 5 from heap}
 \end{figure}
+
+\noindent Time complexity: The initial building of heap takes $O(n\log n)$ time. The the bubbline-down operation of root would take $O(\log n)$ time, which is to be performed $n$ times at maximum. So the time complexity for heap sort is $O(n\log n)$.\\
+\noindent Space complexity: $O(1)$
+\begin{lstlisting}
+def heapify(arr, i, size):
+    # To heapify a subtree rooted with node i which is an index in arr. 
+    # `size' is size of heap
+    largest = i  # Initialize largest as root
+    leftChildIndex = 2*i + 1  # leftChildIndex = 2*i + 1
+    rightChildIndex = 2*i + 2  # rightChildIndex = 2*i + 2
+ 
+    # If leftChildIndex child is larger than root
+    if leftChildIndex < size and arr[leftChildIndex] > arr[largest]:
+        largest = leftChildIndex
+ 
+    # If rightChildIndex child is larger than largest so far
+    if rightChildIndex < size and arr[rightChildIndex] > arr[largest]:
+        largest = rightChildIndex
+ 
+    # If largest is not root
+    if largest != i:
+        arr[i], arr[largest] = arr[largest], arr[i]
+ 
+        # Recursively heapify the affected sub-tree
+        heapify(arr, largest, size)
+ 
+
+def buildHeap(arr):
+    # Function to build a Max-Heap from the given array index of last non-leaf node
+    N = len(arr)
+    startIdx = N // 2 - 1
+ 
+    # Perform reverse level order traversal from last non-leaf node and heapify each node
+    for i in range(startIdx, -1, -1):
+        heapify(arr, i, N)
+
+
+def heapSort(arr):
+    # First build a max-heap
+    buildHeap(arr)
+    
+    N = len(arr)
+    for i in range(N-1, 0, -1):
+        # Swap the root and last element of heap
+        arr[0], arr[i] = arr[i], arr[0]
+        # Bubble-down the root element
+        heapify(arr, 0, i)
+
+
+if __name__ == "__main__":
+    arr = [24, 56, 23, 9, 45, 18, 60, 107, 45, 27]
+    heapSort(arr)
+    print(arr)
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+[9, 18, 23, 24, 27, 45, 45, 56, 60, 107]
+\end{lstlisting}
 
 \subsection{Priority queues}
 \noindent A priority queue is a special type of queue in which each element is associated with a priority value. And, elements are served on the basis of their priority. That is, higher priority elements are served first (not first-in-first-out rule). However, if elements with the same priority occur, they are served according to their order in the queue. Generally, the value of the element itself is considered for assigning the priority. We can perform two operations on a priority queue:
@@ -4658,11 +4741,13 @@ To solve the job sequencing problem via greedy method follow this steps:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.35]{code/sort/pic/job1.png}
+	\caption{An example of the job sequencing problem with deadlines}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.35]{code/sort/pic/job2.png}
+	\caption{The solution of the job sequencing problem with deadlines}
 \end{figure}
 
 \noindent Time complexity $O(n^2)$.
@@ -4869,6 +4954,7 @@ Output: ["abc", "acb", "bac", "bca", "cba", "cab"]
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{code/sort/pic/recursiontreeabc.png}
+	\caption{Permutation of string ``ABC''}
 \end{figure}
 \vspace{5mm}
 
@@ -5027,6 +5113,7 @@ def swap_value_by_index(a_list, a, b):
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=1.2]{code/sort/pic/picinsertion.jpg}
+	\caption{Insertion sort}
 \end{figure}
 
 \newpage
@@ -5083,11 +5170,13 @@ After insertion sort:
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=1.2]{code/sort/pic/partitionA.png}
+	\caption{Quick sort: Partition process}
 \end{figure}
 
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=1.2]{code/sort/pic/partitionB.png}
+	\caption{Quick sort: Recursion after partition}
 \end{figure}
 
 \begin{lstlisting}
@@ -5169,6 +5258,7 @@ After sorting: [27, 28, 29, 41, 44, 66, 99]
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.5]{code/sort/pic/mergesort.png}
+	\caption{Merge sort}
 \end{figure}
 
 \begin{lstlisting}
@@ -5269,6 +5359,7 @@ def fib(n):
 
 \noindent Here, the program will call itself, again and again, to calculate further values as shown in the figure. The calculation of the time complexity of the recursion based approach is around $O(2^n)$. The space complexity of this approach is $O(n)$ as recursion can go max to $n$. In this method values like $F_2$ and $F_3$ are computed multiple times. Imagine the number of repetitions if you have to calculate for $F_{100}$. This method is ineffective for large values.
 
+\begin{figure}[ht]
 \begin{center}
     \begin{tikzpicture}[
 every node/.style = {minimum width = 1.5em, draw = none, circle},
@@ -5298,6 +5389,8 @@ every node/.style = {minimum width = 1.5em, draw = none, circle},
     };
 \end{tikzpicture}
 \end{center}
+\caption{Recursion tree for Fibonacci sequence}
+\end{figure}
 
 \noindent Second solution: Using \textbf{Top-down method}
 
@@ -5615,6 +5708,7 @@ B    & $w_1=$2      & $V_1=$6     \\
 C    & $w_2=$4      & $V_2=$4 \\
 \hline
 \end{tabular}
+\caption{An example of 0/1 Knapsack problem}
 \end{table}
 
 \noindent Initial table:
@@ -5633,7 +5727,7 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 2                  & 0 &   &   &   \\ \hline
 3                  & 0 &   &   &   \\ \hline
 \end{tabular}
-\caption*{Initial table}
+\caption{Initial table}
 \end{table}
 
 \noindent Recursion for first row:
@@ -5656,7 +5750,7 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 2                  & 0 &   &   &   \\ \hline
 3                  & 0 &   &   &   \\ \hline
 \end{tabular}
-\caption*{After adding the first row}
+\caption{After adding the first row}
 \end{table}
 
 \noindent Recursion for second row:
@@ -5676,7 +5770,7 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 2                  & 0 & 1 & 6 & 7 \\ \hline
 3                  & 0 &   &   &   \\ \hline
 \end{tabular}
-\caption*{After adding the second row}
+\caption{After adding the second row}
 \end{table}
 
 \noindent Recursion for third row:
@@ -5696,7 +5790,7 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 2                  & 0 & 1 & 6 & 7 \\ \hline
 3                  & 0 & 1 & 6 & 7 \\ \hline
 \end{tabular}
-\caption*{After adding the third row}
+\caption{After adding the third row}
 \end{table}
 
 \noindent It can be observed the maximum possible value is 7 which is the bottom right entry of the table.
@@ -5860,7 +5954,7 @@ The length of the LCS is 4
 \multicolumn{1}{c|}{A} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{l|}{}  \\ \cline{2-6} 
 \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   &                       
 \end{tabular}
-\caption*{Initial table}
+\caption{Initial table}
 \end{table}
 
 \noindent Recursion for first row:
@@ -5883,7 +5977,7 @@ The length of the LCS is 4
 \multicolumn{1}{c|}{A} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{l|}{}  \\ \cline{2-6} 
 \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   &                       
 \end{tabular}
-\caption*{Recursion for first row}
+\caption{Recursion for first row}
 \end{table}
 
 \noindent Similarly we can continue further with the following rule:
@@ -5902,7 +5996,7 @@ The length of the LCS is 4
 \multicolumn{1}{c|}{A} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{l|}{}  \\ \cline{2-6} 
 \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   &                       
 \end{tabular}
-\caption*{Recursion for second row}
+\caption{Recursion for second row}
 \end{table}
 
 \begin{table}[ht]
@@ -5915,7 +6009,7 @@ The length of the LCS is 4
 \multicolumn{1}{c|}{A} & \multicolumn{1}{c|}{0} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{1} & \multicolumn{1}{c|}{1} & \multicolumn{1}{l|}{2} \\ \cline{2-6} 
 \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   & \multicolumn{1}{l}{}   &                       
 \end{tabular}
-\caption*{Recursion for third row}
+\caption{Recursion for third row}
 \end{table}
 
 \noindent It can be observed the LCS is 2 which is the bottom right entry of the table.
@@ -6474,7 +6568,7 @@ def findDuplicate(arr):
             visited[element] = True
 \end{lstlisting}
 
-\noindent Fourth solution: By using Floyd's Cycle Detection Algorithm
+\noindent Fourth solution: By using Floyd's cycle detection algorithm
 
 \noindent Use the function $f(x) = $ \lstinline{arr[x]} to construct the sequence:
 \vspace{3mm}
@@ -6499,6 +6593,7 @@ arr   & 2 & 6 & 4 & 1 & 3 & 1 & 5
 \noindent \lstinline{arr[0] = 2 --> arr[2] = 4 --> arr[4] = 3 --> arr[3] = 1 --> arr[1] = 6 --> arr[6] = 5 --> arr[5] = 1}
 \vspace{5mm}
 
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[node distance={15mm}, thick, main/.style = {draw, circle}]
 \node[main] (1) {2};
@@ -6516,7 +6611,8 @@ arr   & 2 & 6 & 4 & 1 & 3 & 1 & 5
 \draw[->] (6) -- (4);
 \end{tikzpicture}
 \end{center}
-
+\caption{Floyd's cycle detection algorithm}
+\end{figure}
 \vspace{5mm}
 
 \begin{itemize}
@@ -6570,6 +6666,7 @@ def findDuplicate(arr):
 Let us assume that the linked list has a cycle that starts at $x_4$. As per the algorithm, we have two traversal pointers \lstinline{hare} and \lstinline{tortoise} meet each other at $x_7$ for the first time. From there the \lstinline{tortoise} starts from the starting point $x_1$ and both the \lstinline{hare} and \lstinline{tortoise} are then moving by one node. The next point they meet will be the start of the cycle i.e. $x_4$.
 \vspace{5mm}
 
+\begin{figure}
 \begin{center}
 \begin{tikzpicture}[node distance={17mm}, thick, main/.style = {draw, circle}]
 \node[main] (1) {$x_1$};
@@ -6593,28 +6690,30 @@ Let us assume that the linked list has a cycle that starts at $x_4$. As per the 
 \draw[->] (9) -- (4);
 \end{tikzpicture}
 \end{center}
+\caption{Floyd's cycle detection algorithm: How it works}
+\end{figure}
 
-Let,
+\noindent Let,
 
-\noindent $x$ = Path distance between the start of the linked list and the start of the cycle.
+ $x$ = Path distance between the start of the linked list and the start of the cycle.
 
-\noindent $y$ = Path distance between the start of the cycle to the point where \lstinline{hare} and \lstinline{tortoise} first meet each other.
+ $y$ = Path distance between the start of the cycle to the point where \lstinline{hare} and \lstinline{tortoise} first meet each other.
 
-\noindent $L$ = Total length of the cycle.
+ $L$ = Total length of the cycle.
 
 \noindent When they first meet each other, \lstinline{hare} has covered a distance of $$x + k_h\times L + y$$ where $k_h$ is a non-negative integer and \lstinline{tortoise} has covered a distance of $$x + k_t\times L + y$$ where $k_t$ is another non-negative integer.
 
-Since \lstinline{hare} travels twice the speed of \lstinline{tortoise}, it would travel twice the distance. So,
+\noindent Since \lstinline{hare} travels twice the speed of \lstinline{tortoise}, it would travel twice the distance. So,
 
-$x + k_h L + y = 2\times (x + k_t L + y)$
+\begin{align*}
+x + k_h L + y &= 2\times (x + k_t L + y)\\
+\Rightarrow x + y &= (k_h - 2k_t) L\\
+\Rightarrow x + y &= k L, \text{ where } k = k_h - 2k_t \text{ is an integer}\\
+\Rightarrow x &= k L - y\\
+\end{align*}
 
-$\Rightarrow x + y = (k_h - 2k_t) L$
 
-$\Rightarrow x + y = k L$, where $k = k_h - 2k_t$ is an integer
-
-$\Rightarrow x = k L - y$
-
-Now, if we move \lstinline{tortoise} the start of the linked list, then after covering distance $x$ it will come to the starting node of the cycle. The \lstinline{hare} will cover $x = k L-y$ distance at the same time. The \lstinline{hare} already covered $y$ distance from the start of the cycle. After travelling $x$ distance the \lstinline{hare} will complete the cycle (may be multiple times) since $y+x=k L$ and reach the starting node where it will meet the \lstinline{tortoise}.
+\noindent Now, if we move \lstinline{tortoise} the start of the linked list, then after covering distance $x$ it will come to the starting node of the cycle. The \lstinline{hare} will cover $x = k L-y$ distance at the same time. The \lstinline{hare} already covered $y$ distance from the start of the cycle. After travelling $x$ distance the \lstinline{hare} will complete the cycle (may be multiple times) since $y+x=k L$ and reach the starting node where it will meet the \lstinline{tortoise}.
 
 \newpage
 \section{Maximum sub-array sum}
@@ -6817,11 +6916,11 @@ much very program this like i
 \end{lstlisting}
 
 \newpage
-\section{Reversing a Binary tree}
+\section{Reversing a binary tree}
 
 \textbf{Given a binary tree of integers, create a function that reverses its left to right in place.}
 \vspace{5mm}
-
+\begin{figure}[ht]
 \begin{center}
 \begin{tikzpicture}[
 every node/.style = {minimum width = 2em, draw, circle},
@@ -6853,7 +6952,8 @@ every node/.style = {minimum width = 2em, draw, circle},
     };
 \end{tikzpicture}
 \end{center}
-
+\caption{Reversing a binary tree}
+\end{figure}
 \noindent Using recursion:
 
 \noindent Time complexity: $O(n)$

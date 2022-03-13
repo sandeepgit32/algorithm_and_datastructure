@@ -19,7 +19,7 @@
 \contentsline {subsection}{\numberline {2.2.2}Convert decimal to binary using stack}{21}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Check the balancing and ordering of parentheses in an expression}{22}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Queue}{24}{section.2.3}%
-\contentsline {subsubsection}{Time complexity}{25}{section*.9}%
+\contentsline {subsubsection}{Time complexity}{25}{section*.12}%
 \contentsline {subsection}{\numberline {2.3.1}Priority queue}{25}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Deque}{26}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Palindrome checker using deque}{27}{subsection.2.3.3}%
@@ -27,9 +27,9 @@
 \contentsline {section}{\numberline {2.4}Tree}{31}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Binary tree}{32}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Depth First Search of a Binary tree}{33}{subsection.2.4.2}%
-\contentsline {subsubsection}{Pre-order traversal}{33}{section*.12}%
-\contentsline {subsubsection}{In-order traversal}{34}{section*.13}%
-\contentsline {subsubsection}{Post-order traversal}{34}{section*.14}%
+\contentsline {subsubsection}{Pre-order traversal}{33}{section*.15}%
+\contentsline {subsubsection}{In-order traversal}{33}{section*.17}%
+\contentsline {subsubsection}{Post-order traversal}{34}{section*.19}%
 \contentsline {subsection}{\numberline {2.4.3}Breadth First Search of a Tree}{36}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Binary Search Tree (BST)}{39}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Insertion operation}{40}{subsection.2.5.1}%
@@ -42,74 +42,74 @@
 \contentsline {section}{\numberline {2.6}Hash table}{54}{section.2.6}%
 \contentsline {subsection}{\numberline {2.6.1}Hashing function}{56}{subsection.2.6.1}%
 \contentsline {subsection}{\numberline {2.6.2}Hash collision}{58}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Heap}{59}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Heapify}{60}{subsection.2.7.1}%
-\contentsline {subsection}{\numberline {2.7.2}Percolation: Bubbling up and down}{63}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Insert element into heap}{65}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Delete element from heap}{65}{subsection.2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5}Heapsort}{66}{subsection.2.7.5}%
-\contentsline {subsection}{\numberline {2.7.6}Priority queues}{69}{subsection.2.7.6}%
-\contentsline {section}{\numberline {2.8}Graph}{70}{section.2.8}%
-\contentsline {subsection}{\numberline {2.8.1}Directed and Undirected graph}{70}{subsection.2.8.1}%
-\contentsline {subsection}{\numberline {2.8.2}Graph terminologies}{70}{subsection.2.8.2}%
-\contentsline {subsection}{\numberline {2.8.3}Graph implementations}{72}{subsection.2.8.3}%
-\contentsline {subsection}{\numberline {2.8.4}Depth First Search (DFS)}{73}{subsection.2.8.4}%
-\contentsline {subsubsection}{Applications}{75}{section*.38}%
-\contentsline {subsection}{\numberline {2.8.5}Breadth First Search (BFS)}{75}{subsection.2.8.5}%
-\contentsline {subsubsection}{Applications}{77}{section*.40}%
-\contentsline {subsection}{\numberline {2.8.6}Shortest path}{77}{subsection.2.8.6}%
-\contentsline {subsubsection}{Dijkstra's Algorithm}{77}{section*.41}%
-\contentsline {subsubsection}{Time complexity}{81}{section*.49}%
-\contentsline {subsection}{\numberline {2.8.7}Minimum spanning tree (MST)}{81}{subsection.2.8.7}%
-\contentsline {subsubsection}{Prim's algorithm}{81}{section*.50}%
-\contentsline {chapter}{\numberline {3}Algorithm Techniques}{85}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Brute force approach}{85}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Divide and Conquer method}{85}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Binary search}{85}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}Greedy approach}{86}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Coin change problem}{87}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Job sequencing problem with deadlines}{88}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Fractional knapsack problem}{91}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Backtracking method}{91}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Suitcase password problem}{91}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Permutation of a string}{93}{subsection.3.5.2}%
-\contentsline {chapter}{\numberline {4}Sorting Algorithms}{97}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Bubble sort}{97}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Selection sort}{99}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Insertion sort}{100}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Quick sort}{102}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Merge sort}{105}{section.4.5}%
-\contentsline {chapter}{\numberline {5}Dynamic Programming}{109}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Fibonacci sequence}{110}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Integers from a given list to add up to a number}{112}{section.5.2}%
-\contentsline {section}{\numberline {5.3}House robber problem}{114}{section.5.3}%
-\contentsline {section}{\numberline {5.4}0/1 Knapsack problem}{116}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Longest common subsequence (LCS)}{121}{section.5.5}%
-\contentsline {chapter}{\numberline {6}More Algorithms}{125}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Find smallest and largest number}{125}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Swap values without using temporary variable}{126}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Array chunking}{127}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Get nth prime number}{128}{section.6.4}%
-\contentsline {section}{\numberline {6.5}FizzBuzz problem}{129}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Anagram checker}{130}{section.6.6}%
-\contentsline {section}{\numberline {6.7}Missing number}{132}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Find pair that sums up to k}{133}{section.6.8}%
-\contentsline {section}{\numberline {6.9}First repeating character}{135}{section.6.9}%
-\contentsline {section}{\numberline {6.10}Remove duplicates}{136}{section.6.10}%
-\contentsline {section}{\numberline {6.11}Find duplicate value}{137}{section.6.11}%
-\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{139}{section*.74}%
-\contentsline {section}{\numberline {6.12}Maximum sub-array sum}{141}{section.6.12}%
-\contentsline {section}{\numberline {6.13}Rotation checker}{143}{section.6.13}%
-\contentsline {section}{\numberline {6.14}Reverse words in a given sentence}{144}{section.6.14}%
-\contentsline {section}{\numberline {6.15}Reversing a Binary tree}{146}{section.6.15}%
-\contentsline {section}{\numberline {6.16}Longest sub-string without repeating characters}{148}{section.6.16}%
-\contentsline {section}{\numberline {6.17}Finding a peak element}{151}{section.6.17}%
-\contentsline {section}{\numberline {6.18}Ways to climb a stair}{153}{section.6.18}%
-\contentsline {section}{\numberline {6.19}Coin change}{155}{section.6.19}%
-\contentsline {section}{\numberline {6.20}Minimum number of coins for change}{157}{section.6.20}%
-\contentsline {section}{\numberline {6.21}Cutting a rod}{160}{section.6.21}%
-\contentsline {section}{\numberline {6.22}Numerical solution of an equation}{162}{section.6.22}%
-\contentsline {subsection}{\numberline {6.22.1}Bisection method}{162}{subsection.6.22.1}%
-\contentsline {subsection}{\numberline {6.22.2}Secant method}{164}{subsection.6.22.2}%
-\contentsline {subsection}{\numberline {6.22.3}Newton-Raphson method}{166}{subsection.6.22.3}%
-\contentsline {subsection}{\numberline {6.22.4}Regula-falsi method}{168}{subsection.6.22.4}%
+\contentsline {section}{\numberline {2.7}Heap}{60}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Heapify}{61}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Percolation: Bubbling up and down}{64}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Insert element into heap}{66}{subsection.2.7.3}%
+\contentsline {subsection}{\numberline {2.7.4}Delete element from heap}{66}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.5}Heapsort}{67}{subsection.2.7.5}%
+\contentsline {subsection}{\numberline {2.7.6}Priority queues}{71}{subsection.2.7.6}%
+\contentsline {section}{\numberline {2.8}Graph}{72}{section.2.8}%
+\contentsline {subsection}{\numberline {2.8.1}Directed and Undirected graph}{73}{subsection.2.8.1}%
+\contentsline {subsection}{\numberline {2.8.2}Graph terminologies}{73}{subsection.2.8.2}%
+\contentsline {subsection}{\numberline {2.8.3}Graph implementations}{74}{subsection.2.8.3}%
+\contentsline {subsection}{\numberline {2.8.4}Depth First Search (DFS)}{76}{subsection.2.8.4}%
+\contentsline {subsubsection}{Applications}{78}{section*.48}%
+\contentsline {subsection}{\numberline {2.8.5}Breadth First Search (BFS)}{78}{subsection.2.8.5}%
+\contentsline {subsubsection}{Applications}{80}{section*.50}%
+\contentsline {subsection}{\numberline {2.8.6}Shortest path}{80}{subsection.2.8.6}%
+\contentsline {subsubsection}{Dijkstra's Algorithm}{80}{section*.51}%
+\contentsline {subsubsection}{Time complexity}{84}{section*.59}%
+\contentsline {subsection}{\numberline {2.8.7}Minimum spanning tree (MST)}{84}{subsection.2.8.7}%
+\contentsline {subsubsection}{Prim's algorithm}{84}{section*.60}%
+\contentsline {chapter}{\numberline {3}Algorithm Techniques}{89}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Brute force approach}{89}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Divide and Conquer method}{89}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Binary search}{89}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Greedy approach}{90}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Coin change problem}{91}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Job sequencing problem with deadlines}{92}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Fractional knapsack problem}{95}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Backtracking method}{95}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Suitcase password problem}{95}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Permutation of a string}{97}{subsection.3.5.2}%
+\contentsline {chapter}{\numberline {4}Sorting Algorithms}{101}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Bubble sort}{101}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Selection sort}{103}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Insertion sort}{104}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Quick sort}{106}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Merge sort}{109}{section.4.5}%
+\contentsline {chapter}{\numberline {5}Dynamic Programming}{113}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Fibonacci sequence}{114}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Integers from a given list to add up to a number}{116}{section.5.2}%
+\contentsline {section}{\numberline {5.3}House robber problem}{118}{section.5.3}%
+\contentsline {section}{\numberline {5.4}0/1 Knapsack problem}{120}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Longest common subsequence (LCS)}{125}{section.5.5}%
+\contentsline {chapter}{\numberline {6}More Algorithms}{131}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Find smallest and largest number}{131}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Swap values without using temporary variable}{132}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Array chunking}{133}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Get nth prime number}{134}{section.6.4}%
+\contentsline {section}{\numberline {6.5}FizzBuzz problem}{135}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Anagram checker}{136}{section.6.6}%
+\contentsline {section}{\numberline {6.7}Missing number}{138}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Find pair that sums up to k}{139}{section.6.8}%
+\contentsline {section}{\numberline {6.9}First repeating character}{141}{section.6.9}%
+\contentsline {section}{\numberline {6.10}Remove duplicates}{142}{section.6.10}%
+\contentsline {section}{\numberline {6.11}Find duplicate value}{143}{section.6.11}%
+\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{145}{section*.86}%
+\contentsline {section}{\numberline {6.12}Maximum sub-array sum}{147}{section.6.12}%
+\contentsline {section}{\numberline {6.13}Rotation checker}{149}{section.6.13}%
+\contentsline {section}{\numberline {6.14}Reverse words in a given sentence}{150}{section.6.14}%
+\contentsline {section}{\numberline {6.15}Reversing a binary tree}{152}{section.6.15}%
+\contentsline {section}{\numberline {6.16}Longest sub-string without repeating characters}{154}{section.6.16}%
+\contentsline {section}{\numberline {6.17}Finding a peak element}{157}{section.6.17}%
+\contentsline {section}{\numberline {6.18}Ways to climb a stair}{159}{section.6.18}%
+\contentsline {section}{\numberline {6.19}Coin change}{161}{section.6.19}%
+\contentsline {section}{\numberline {6.20}Minimum number of coins for change}{163}{section.6.20}%
+\contentsline {section}{\numberline {6.21}Cutting a rod}{166}{section.6.21}%
+\contentsline {section}{\numberline {6.22}Numerical solution of an equation}{168}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Bisection method}{168}{subsection.6.22.1}%
+\contentsline {subsection}{\numberline {6.22.2}Secant method}{170}{subsection.6.22.2}%
+\contentsline {subsection}{\numberline {6.22.3}Newton-Raphson method}{172}{subsection.6.22.3}%
+\contentsline {subsection}{\numberline {6.22.4}Regula-falsi method}{174}{subsection.6.22.4}%
