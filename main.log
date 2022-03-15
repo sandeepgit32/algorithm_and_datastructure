@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  13 MAR 2022 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  15 MAR 2022 05:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -802,7 +802,7 @@ File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [1
 
 ]
-<pic/time.jpg, id=566, 637.38126pt x 216.81pt>
+<pic/time.jpg, id=571, 637.38126pt x 216.81pt>
 File: pic/time.jpg Graphic file (type jpg)
 <use pic/time.jpg>
 Package pdftex.def Info: pic/time.jpg  used on input line 143.
@@ -822,344 +822,346 @@ Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
-[9]
+[9] [10]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [10]
-[11] [12] [13] [14] [15] [16]
+ [11]
+[12] [13] [14] [15] [16] [17]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [17]
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 1110--1111
+ [18]
+[19]
+Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
 
  []
 
-[19] [20] [21] [22] [23]
-Underfull \hbox (badness 10000) in paragraph at lines 1307--1309
+[20] [21] [22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 1336--1338
 
  []
 
-[24] [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1384--1385
-
- []
-
-[26]
-Underfull \hbox (badness 10000) in paragraph at lines 1456--1457
+[25] [26]
+Underfull \hbox (badness 10000) in paragraph at lines 1413--1414
 
  []
 
 [27]
-Underfull \hbox (badness 10000) in paragraph at lines 1484--1485
+Underfull \hbox (badness 10000) in paragraph at lines 1485--1486
 
  []
 
 [28]
+Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
+
+ []
+
+[29]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
-[30]
-<code/sort/pic/binary_tree.jpg, id=1362, 602.25pt x 352.31625pt>
+ [30]
+[31]
+<code/sort/pic/binary_tree.jpg, id=1375, 602.25pt x 352.31625pt>
 File: code/sort/pic/binary_tree.jpg Graphic file (type jpg)
 <use code/sort/pic/binary_tree.jpg>
-Package pdftex.def Info: code/sort/pic/binary_tree.jpg  used on input line 1584
+Package pdftex.def Info: code/sort/pic/binary_tree.jpg  used on input line 1613
 .
 (pdftex.def)             Requested size: 301.12425pt x 176.15768pt.
- [31 <./code/sort/pic/binary_tree.jpg>] [32] [33] [34]
+ [32 <./code/sort/pic/binary_tree.jpg>] [33] [34] [35]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
-[36]
+ [36]
+[37]
 Underfull \vbox (badness 1742) has occurred while \output is active []
 
- [37]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [38]
-[39] [40]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 2164.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 2164.
- [41] [42] [43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
-[45] [46] [47] [48] [49] [50] [51]
+ [39]
+[40] [41]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 2193.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 2193.
+ [42] [43] [44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
-[53] [54] [55] [56] [57] [58] [59] [60] [61]
-Overfull \hbox (1.20667pt too wide) in paragraph at lines 3104--3105
+ [45]
+[46] [47] [48] [49] [50] [51] [52]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [53]
+[54] [55] [56] [57] [58] [59] [60] [61] [62]
+Overfull \hbox (1.20667pt too wide) in paragraph at lines 3133--3134
 \T1/lmr/m/n/10.95 ment at [][][]th in-dex), set [][][] as [][][] ([][][]). 
  []
 
-[62] [63] [64]
+[63] [64] [65]
 Underfull \vbox (badness 6893) has occurred while \output is active []
 
- [65]
-[66]
+ [66]
+[67]
 Underfull \vbox (badness 2689) has occurred while \output is active []
-
- [67]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [68]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [69]
-[70] [71] [72] [73] [74] [75] [76]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [77]
-[78]
+ [70]
+[71] [72] [73] [74] [75] [76] [77]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [79]
-[80]
+ [78]
+[79]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [80]
+[81]
 Underfull \vbox (badness 3623) has occurred while \output is active []
 
- [81]
-[82]
+ [82]
+[83]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [83]
-<code/sort/pic/prim1.png, id=2826, 415.5525pt x 231.86626pt>
+ [84]
+<code/sort/pic/prim1.png, id=2838, 415.5525pt x 231.86626pt>
 File: code/sort/pic/prim1.png Graphic file (type png)
 <use code/sort/pic/prim1.png>
-Package pdftex.def Info: code/sort/pic/prim1.png  used on input line 4517.
+Package pdftex.def Info: code/sort/pic/prim1.png  used on input line 4546.
 (pdftex.def)             Requested size: 186.99689pt x 104.33884pt.
-<code/sort/pic/prim2.png, id=2829, 728.7225pt x 512.91624pt>
+<code/sort/pic/prim2.png, id=2841, 728.7225pt x 512.91624pt>
 File: code/sort/pic/prim2.png Graphic file (type png)
 <use code/sort/pic/prim2.png>
-Package pdftex.def Info: code/sort/pic/prim2.png  used on input line 4526.
+Package pdftex.def Info: code/sort/pic/prim2.png  used on input line 4555.
 (pdftex.def)             Requested size: 327.92209pt x 230.81018pt.
 
-[84 <./code/sort/pic/prim1.png>] [85 <./code/sort/pic/prim2.png>]
+[85 <./code/sort/pic/prim1.png>] [86 <./code/sort/pic/prim2.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [86]
-[87] [88
-
-]
+ [87]
+[88]
  3.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4615.
-[89] [90] [91]
-<code/sort/pic/job1.png, id=2982, 735.74875pt x 174.6525pt>
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 4636.
+[89
+
+] [90] [91] [92] [93]
+<code/sort/pic/job1.png, id=3050, 735.74875pt x 174.6525pt>
 File: code/sort/pic/job1.png Graphic file (type png)
 <use code/sort/pic/job1.png>
-Package pdftex.def Info: code/sort/pic/job1.png  used on input line 4743.
+Package pdftex.def Info: code/sort/pic/job1.png  used on input line 4841.
 (pdftex.def)             Requested size: 257.51591pt x 61.12929pt.
-<code/sort/pic/job2.png, id=2983, 693.59125pt x 601.24625pt>
+<code/sort/pic/job2.png, id=3051, 693.59125pt x 601.24625pt>
 File: code/sort/pic/job2.png Graphic file (type png)
 <use code/sort/pic/job2.png>
-Package pdftex.def Info: code/sort/pic/job2.png  used on input line 4749.
+Package pdftex.def Info: code/sort/pic/job2.png  used on input line 4847.
 (pdftex.def)             Requested size: 242.76057pt x 210.43933pt.
- [92]
-Underfull \vbox (badness 1024) has occurred while \output is active []
+ [94 <./code/sort/pic/job1.png>]
+Underfull \vbox (badness 3849) has occurred while \output is active []
 
- [93 <./code/sort/pic/job1.png> <./code/sort/pic/job2.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [94]
-Overfull \hbox (7.06793pt too wide) in paragraph at lines 4867--4868
+ [95 <./code/sort/pic/job2.png>] [96] [97]
+Overfull \hbox (7.06793pt too wide) in paragraph at lines 5028--5029
  [][] 
  []
 
-[95]
+[98]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [96]
-[97]
-<code/sort/pic/recursiontreeabc.png, id=3161, 769.87625pt x 310.15875pt>
+ [99]
+[100]
+<code/sort/pic/recursiontreeabc.png, id=3256, 769.87625pt x 310.15875pt>
 File: code/sort/pic/recursiontreeabc.png Graphic file (type png)
 <use code/sort/pic/recursiontreeabc.png>
 Package pdftex.def Info: code/sort/pic/recursiontreeabc.png  used on input line
- 4956.
+ 5118.
 (pdftex.def)             Requested size: 346.44112pt x 139.57014pt.
- [98 <./code/sort/pic/recursiontreeabc.png>] [99] [100
-
-]
+ [101 <./code/sort/pic/recursiontreeabc.png>] [102]
  4.
-[101] [102] [103]
-<code/sort/pic/picinsertion.jpg, id=3252, 246.6816pt x 185.0112pt>
+[103
+
+] [104] [105]
+<code/sort/pic/picinsertion.jpg, id=3344, 246.6816pt x 185.0112pt>
 File: code/sort/pic/picinsertion.jpg Graphic file (type jpg)
 <use code/sort/pic/picinsertion.jpg>
-Package pdftex.def Info: code/sort/pic/picinsertion.jpg  used on input line 511
-5.
+Package pdftex.def Info: code/sort/pic/picinsertion.jpg  used on input line 527
+7.
 (pdftex.def)             Requested size: 296.01642pt x 222.01231pt.
- [104 <./code/sort/pic/picinsertion.jpg>] [105]
-<code/sort/pic/partitionA.png, id=3296, 240.4182pt x 327.624pt>
+ [106 <./code/sort/pic/picinsertion.jpg>] [107]
+<code/sort/pic/partitionA.png, id=3388, 240.4182pt x 327.624pt>
 File: code/sort/pic/partitionA.png Graphic file (type png)
 <use code/sort/pic/partitionA.png>
-Package pdftex.def Info: code/sort/pic/partitionA.png  used on input line 5172.
+Package pdftex.def Info: code/sort/pic/partitionA.png  used on input line 5334.
 
 (pdftex.def)             Requested size: 288.50038pt x 393.14682pt.
-<code/sort/pic/partitionB.png, id=3297, 227.4096pt x 98.2872pt>
+<code/sort/pic/partitionB.png, id=3389, 227.4096pt x 98.2872pt>
 File: code/sort/pic/partitionB.png Graphic file (type png)
 <use code/sort/pic/partitionB.png>
-Package pdftex.def Info: code/sort/pic/partitionB.png  used on input line 5178.
+Package pdftex.def Info: code/sort/pic/partitionB.png  used on input line 5340.
 
 (pdftex.def)             Requested size: 272.89015pt x 117.94402pt.
- [106] [107 <./code/sort/pic/partitionA.png>] [108 <./code/sort/pic/partitionB.
+ [108] [109 <./code/sort/pic/partitionA.png>] [110 <./code/sort/pic/partitionB.
 png>]
-<code/sort/pic/mergesort.png, id=3366, 620.3175pt x 597.23125pt>
+<code/sort/pic/mergesort.png, id=3459, 620.3175pt x 597.23125pt>
 File: code/sort/pic/mergesort.png Graphic file (type png)
 <use code/sort/pic/mergesort.png>
-Package pdftex.def Info: code/sort/pic/mergesort.png  used on input line 5260.
+Package pdftex.def Info: code/sort/pic/mergesort.png  used on input line 5422.
 (pdftex.def)             Requested size: 310.15799pt x 298.61488pt.
- [109]
-[110 <./code/sort/pic/mergesort.png>] [111] [112
+ [111]
+[112 <./code/sort/pic/mergesort.png>] [113] [114
 
 ]
  5.
 
-Underfull \hbox (badness 7576) in paragraph at lines 5327--5327
+Underfull \hbox (badness 7576) in paragraph at lines 5489--5489
 \T1/lmr/m/n/10.95 ing down a sub-
  []
 
 
-Underfull \hbox (badness 6428) in paragraph at lines 5327--5327
+Underfull \hbox (badness 6428) in paragraph at lines 5489--5489
 \T1/lmr/m/n/10.95 prob-lem into sim-
  []
 
 
-Underfull \hbox (badness 1248) in paragraph at lines 5327--5327
+Underfull \hbox (badness 1248) in paragraph at lines 5489--5489
 \T1/lmr/m/n/10.95 pler ver-sions of it-
  []
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 5328--5328
+Underfull \hbox (badness 3838) in paragraph at lines 5490--5490
 \T1/lmr/m/n/10.95 the op-ti-mal so-lu-
  []
 
 
-Underfull \hbox (badness 2285) in paragraph at lines 5328--5328
+Underfull \hbox (badness 2285) in paragraph at lines 5490--5490
 \T1/lmr/m/n/10.95 tion, but is very
  []
 
 
-Overfull \hbox (4.86418pt too wide) in paragraph at lines 5324--5331
+Overfull \hbox (4.86418pt too wide) in paragraph at lines 5486--5493
  [][] 
  []
 
-[113] [114]
+[115] [116]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [115]
-[116] [117] [118] [119] [120] [121] [122] [123]
+ [117]
+[118] [119] [120] [121]
 Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [122]
+[123]
+Underfull \vbox (badness 6725) has occurred while \output is active []
 
  [124]
-Overfull \hbox (4.18155pt too wide) in paragraph at lines 5867--5868
+[125] [126]
+Overfull \hbox (4.18155pt too wide) in paragraph at lines 6038--6039
 \T1/lmr/bx/n/10.95 Given two se-quences, find the length of longest sub-se-quen
 ce present
  []
 
-
-Overfull \hbox (15.0427pt too wide) in paragraph at lines 5887--5888
+[127]
+Overfull \hbox (15.0427pt too wide) in paragraph at lines 6058--6059
 \OML/lmm/m/it/10.95 X$ \T1/lmr/m/n/10.95 and $\OML/lmm/m/it/10.95 Y$ \T1/lmr/m/
 n/10.95 is the longer of the two se-quences $\OML/lmm/m/it/10.95 LCS\OT1/lmr/m/
 n/10.95 (\OML/lmm/m/it/10.95 x[]x[] [] x[]; y[]y[] [] y[]\OT1/lmr/m/n/10.95 )$
  []
 
-[125]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[128] [129]
+Underfull \vbox (badness 1163) has occurred while \output is active []
 
- [126]
-[127] [128] [129] [130
+ [130]
+[131] [132
 
 ]
  6.
-[131] [132] [133] [134] [135]
-Overfull \hbox (10.7708pt too wide) in paragraph at lines 6253--6254
+[133] [134] [135] [136] [137]
+Overfull \hbox (10.7708pt too wide) in paragraph at lines 6424--6425
 \T1/lmr/m/n/10.95 Time com-plex-ity: $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (
 \OML/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 since the mos
 t ef-fi-cient sort-ing will take $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (\OML
 /lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$
  []
 
-[136] [137] [138] [139] [140] [141] [142]
-Overfull \hbox (0.68234pt too wide) in paragraph at lines 6576--6578
+[138] [139] [140] [141] [142] [143] [144]
+Overfull \hbox (0.68234pt too wide) in paragraph at lines 6747--6749
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
-[143]
-Overfull \hbox (2.24895pt too wide) in paragraph at lines 6593--6595
+[145]
+Overfull \hbox (2.24895pt too wide) in paragraph at lines 6764--6766
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][]
  []
 
-[144] [145] [146] [147] [148]
-Underfull \hbox (badness 10000) in paragraph at lines 6811--6812
+[146] [147] [148] [149] [150]
+Underfull \hbox (badness 10000) in paragraph at lines 6982--6983
 
  []
 
-[149] [150] [151] [152] [153] [154]
+[151] [152] [153] [154] [155] [156]
 Overfull \hbox (17.74045pt too wide) has occurred while \output is active
 \T1/lmr/m/sl/10.95 6.16.  LONGEST SUB-STRING WITHOUT REPEATING CHARACTERS \T1/l
-mr/m/n/10.95 155
+mr/m/n/10.95 157
  []
 
-[155] [156] [157] [158] [159] [160] [161] [162] [163] [164] [165] [166]
-[167]
-<code/sort/pic/bisection.jpeg, id=4725, 740.7675pt x 590.205pt>
+[157] [158] [159] [160] [161] [162] [163] [164] [165] [166] [167] [168]
+[169]
+<code/sort/pic/bisection.jpeg, id=4815, 740.7675pt x 590.205pt>
 File: code/sort/pic/bisection.jpeg Graphic file (type jpg)
 <use code/sort/pic/bisection.jpeg>
-Package pdftex.def Info: code/sort/pic/bisection.jpeg  used on input line 7587.
+Package pdftex.def Info: code/sort/pic/bisection.jpeg  used on input line 7758.
 
 (pdftex.def)             Requested size: 222.23196pt x 177.06287pt.
- [168 <./code/sort/pic/bisection.jpeg>] [169]
-<code/sort/pic/secant.jpeg, id=4789, 938.50626pt x 670.505pt>
+ [170 <./code/sort/pic/bisection.jpeg>] [171]
+<code/sort/pic/secant.jpeg, id=4878, 938.50626pt x 670.505pt>
 File: code/sort/pic/secant.jpeg Graphic file (type jpg)
 <use code/sort/pic/secant.jpeg>
-Package pdftex.def Info: code/sort/pic/secant.jpeg  used on input line 7668.
+Package pdftex.def Info: code/sort/pic/secant.jpeg  used on input line 7839.
 (pdftex.def)             Requested size: 187.69792pt x 134.09862pt.
- [170] [171 <./code/sort/pic/secant.jpeg>]
-<code/sort/pic/newtonraphson.jpeg, id=4849, 647.41875pt x 609.27625pt>
+ [172] [173 <./code/sort/pic/secant.jpeg>]
+<code/sort/pic/newtonraphson.jpeg, id=4938, 647.41875pt x 609.27625pt>
 File: code/sort/pic/newtonraphson.jpeg Graphic file (type jpg)
 <use code/sort/pic/newtonraphson.jpeg>
 Package pdftex.def Info: code/sort/pic/newtonraphson.jpeg  used on input line 7
-735.
+906.
 (pdftex.def)             Requested size: 194.22711pt x 182.78427pt.
- [172 <./code/sort/pic/newtonraphson.jpeg>] [173]
-<code/sort/pic/regulafalsi.jpeg, id=4898, 879.285pt x 666.49pt>
+ [174 <./code/sort/pic/newtonraphson.jpeg>] [175]
+<code/sort/pic/regulafalsi.jpeg, id=4988, 879.285pt x 666.49pt>
 File: code/sort/pic/regulafalsi.jpeg Graphic file (type jpg)
 <use code/sort/pic/regulafalsi.jpeg>
-Package pdftex.def Info: code/sort/pic/regulafalsi.jpeg  used on input line 780
-7.
+Package pdftex.def Info: code/sort/pic/regulafalsi.jpeg  used on input line 797
+8.
 (pdftex.def)             Requested size: 228.6087pt x 173.28331pt.
 
-Overfull \hbox (1.9314pt too wide) in paragraph at lines 7811--7812
+Overfull \hbox (1.9314pt too wide) in paragraph at lines 7982--7983
 \T1/lmr/bx/n/10.95 Geometric in-ter-pre-ta-tion\T1/lmr/m/n/10.95 : The equa-tio
 n of a straight line pass-ing through
  []
 
-[174]
+[176]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [175 <./code/sort/pic/regulafalsi.jpeg>] [176] [177]
+ [177 <./code/sort/pic/regulafalsi.jpeg>] [178] [179]
 Underfull \vbox (badness 2285) has occurred while \output is active []
 
- [178]
-[179] [180] [181]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 8065.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 8065.
+ [180]
+[181] [182] [183]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 8236.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 8236.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8065.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 8065.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8236.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 8236.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 014A97BA725383D27CEB4EF4FEFF3B1F;7305.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 8065.
+(rerunfilecheck)             Checksum: BEEDA3DA2CF50971C7CEF93095DFEFEC;7381.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 8236.
  ) 
 Here is how much of TeX's memory you used:
- 26757 strings out of 481239
- 479052 string characters out of 5920377
- 764965 words of memory out of 5000000
- 37572 multiletter control sequences out of 15000+600000
+ 26851 strings out of 481239
+ 480525 string characters out of 5920377
+ 764964 words of memory out of 5000000
+ 37588 multiletter control sequences out of 15000+600000
  626140 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,69p,854b,1988s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1182,10 +1184,10 @@ blic/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (187 pages, 1400490 bytes).
+Output written on main.pdf (189 pages, 1409787 bytes).
 PDF statistics:
- 6040 PDF objects out of 6186 (max. 8388607)
- 5747 compressed objects within 58 object streams
- 4011 named destinations out of 4296 (max. 500000)
- 904 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6144 PDF objects out of 6186 (max. 8388607)
+ 5848 compressed objects within 59 object streams
+ 4089 named destinations out of 4296 (max. 500000)
+ 912 words of extra memory for PDF output out of 10000 (max. 10000000)
 

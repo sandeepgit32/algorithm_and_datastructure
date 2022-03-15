@@ -39,7 +39,7 @@
 \BOOKMARK [2][-]{subsection.2.7.2}{Percolation: Bubbling up and down}{section.2.7}% 39
 \BOOKMARK [2][-]{subsection.2.7.3}{Insert element into heap}{section.2.7}% 40
 \BOOKMARK [2][-]{subsection.2.7.4}{Delete element from heap}{section.2.7}% 41
-\BOOKMARK [2][-]{subsection.2.7.5}{Heapsort}{section.2.7}% 42
+\BOOKMARK [2][-]{subsection.2.7.5}{Heap sort}{section.2.7}% 42
 \BOOKMARK [2][-]{subsection.2.7.6}{Priority queues}{section.2.7}% 43
 \BOOKMARK [1][-]{section.2.8}{Graph}{chapter.2}% 44
 \BOOKMARK [2][-]{subsection.2.8.1}{Directed and Undirected graph}{section.2.8}% 45
@@ -51,52 +51,53 @@
 \BOOKMARK [2][-]{subsection.2.8.7}{Minimum spanning tree \(MST\)}{section.2.8}% 51
 \BOOKMARK [0][-]{chapter.3}{Algorithm Techniques}{}% 52
 \BOOKMARK [1][-]{section.3.1}{Brute force approach}{chapter.3}% 53
-\BOOKMARK [1][-]{section.3.2}{Divide and Conquer method}{chapter.3}% 54
-\BOOKMARK [2][-]{subsection.3.2.1}{Binary search}{section.3.2}% 55
-\BOOKMARK [1][-]{section.3.3}{Greedy approach}{chapter.3}% 56
-\BOOKMARK [2][-]{subsection.3.3.1}{Coin change problem}{section.3.3}% 57
-\BOOKMARK [2][-]{subsection.3.3.2}{Job sequencing problem with deadlines}{section.3.3}% 58
-\BOOKMARK [1][-]{section.3.4}{Fractional knapsack problem}{chapter.3}% 59
-\BOOKMARK [1][-]{section.3.5}{Backtracking method}{chapter.3}% 60
-\BOOKMARK [2][-]{subsection.3.5.1}{Suitcase password problem}{section.3.5}% 61
-\BOOKMARK [2][-]{subsection.3.5.2}{Permutation of a string}{section.3.5}% 62
-\BOOKMARK [0][-]{chapter.4}{Sorting Algorithms}{}% 63
-\BOOKMARK [1][-]{section.4.1}{Bubble sort}{chapter.4}% 64
-\BOOKMARK [1][-]{section.4.2}{Selection sort}{chapter.4}% 65
-\BOOKMARK [1][-]{section.4.3}{Insertion sort}{chapter.4}% 66
-\BOOKMARK [1][-]{section.4.4}{Quick sort}{chapter.4}% 67
-\BOOKMARK [1][-]{section.4.5}{Merge sort}{chapter.4}% 68
-\BOOKMARK [0][-]{chapter.5}{Dynamic Programming}{}% 69
-\BOOKMARK [1][-]{section.5.1}{Fibonacci sequence}{chapter.5}% 70
-\BOOKMARK [1][-]{section.5.2}{Integers from a given list to add up to a number}{chapter.5}% 71
-\BOOKMARK [1][-]{section.5.3}{House robber problem}{chapter.5}% 72
-\BOOKMARK [1][-]{section.5.4}{0/1 Knapsack problem}{chapter.5}% 73
-\BOOKMARK [1][-]{section.5.5}{Longest common subsequence \(LCS\)}{chapter.5}% 74
-\BOOKMARK [0][-]{chapter.6}{More Algorithms}{}% 75
-\BOOKMARK [1][-]{section.6.1}{Find smallest and largest number}{chapter.6}% 76
-\BOOKMARK [1][-]{section.6.2}{Swap values without using temporary variable}{chapter.6}% 77
-\BOOKMARK [1][-]{section.6.3}{Array chunking}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.4}{Get nth prime number}{chapter.6}% 79
-\BOOKMARK [1][-]{section.6.5}{FizzBuzz problem}{chapter.6}% 80
-\BOOKMARK [1][-]{section.6.6}{Anagram checker}{chapter.6}% 81
-\BOOKMARK [1][-]{section.6.7}{Missing number}{chapter.6}% 82
-\BOOKMARK [1][-]{section.6.8}{Find pair that sums up to k}{chapter.6}% 83
-\BOOKMARK [1][-]{section.6.9}{First repeating character}{chapter.6}% 84
-\BOOKMARK [1][-]{section.6.10}{Remove duplicates}{chapter.6}% 85
-\BOOKMARK [1][-]{section.6.11}{Find duplicate value}{chapter.6}% 86
-\BOOKMARK [1][-]{section.6.12}{Maximum sub-array sum}{chapter.6}% 87
-\BOOKMARK [1][-]{section.6.13}{Rotation checker}{chapter.6}% 88
-\BOOKMARK [1][-]{section.6.14}{Reverse words in a given sentence}{chapter.6}% 89
-\BOOKMARK [1][-]{section.6.15}{Reversing a binary tree}{chapter.6}% 90
-\BOOKMARK [1][-]{section.6.16}{Longest sub-string without repeating characters}{chapter.6}% 91
-\BOOKMARK [1][-]{section.6.17}{Finding a peak element}{chapter.6}% 92
-\BOOKMARK [1][-]{section.6.18}{Ways to climb a stair}{chapter.6}% 93
-\BOOKMARK [1][-]{section.6.19}{Coin change}{chapter.6}% 94
-\BOOKMARK [1][-]{section.6.20}{Minimum number of coins for change}{chapter.6}% 95
-\BOOKMARK [1][-]{section.6.21}{Cutting a rod}{chapter.6}% 96
-\BOOKMARK [1][-]{section.6.22}{Numerical solution of an equation}{chapter.6}% 97
-\BOOKMARK [2][-]{subsection.6.22.1}{Bisection method}{section.6.22}% 98
-\BOOKMARK [2][-]{subsection.6.22.2}{Secant method}{section.6.22}% 99
-\BOOKMARK [2][-]{subsection.6.22.3}{Newton-Raphson method}{section.6.22}% 100
-\BOOKMARK [2][-]{subsection.6.22.4}{Regula-falsi method}{section.6.22}% 101
-\BOOKMARK [1][-]{section.6.23}{Edit distance \(Levenshtein distance\)}{chapter.6}% 102
+\BOOKMARK [2][-]{subsection.3.1.1}{Linear search}{section.3.1}% 54
+\BOOKMARK [1][-]{section.3.2}{Divide and Conquer method}{chapter.3}% 55
+\BOOKMARK [2][-]{subsection.3.2.1}{Binary search}{section.3.2}% 56
+\BOOKMARK [1][-]{section.3.3}{Greedy approach}{chapter.3}% 57
+\BOOKMARK [2][-]{subsection.3.3.1}{Coin change problem}{section.3.3}% 58
+\BOOKMARK [2][-]{subsection.3.3.2}{Job sequencing problem with deadlines}{section.3.3}% 59
+\BOOKMARK [2][-]{subsection.3.3.3}{Fractional knapsack problem}{section.3.3}% 60
+\BOOKMARK [1][-]{section.3.4}{Backtracking method}{chapter.3}% 61
+\BOOKMARK [2][-]{subsection.3.4.1}{Suitcase password problem}{section.3.4}% 62
+\BOOKMARK [2][-]{subsection.3.4.2}{Permutation of a string}{section.3.4}% 63
+\BOOKMARK [0][-]{chapter.4}{Sorting Algorithms}{}% 64
+\BOOKMARK [1][-]{section.4.1}{Bubble sort}{chapter.4}% 65
+\BOOKMARK [1][-]{section.4.2}{Selection sort}{chapter.4}% 66
+\BOOKMARK [1][-]{section.4.3}{Insertion sort}{chapter.4}% 67
+\BOOKMARK [1][-]{section.4.4}{Quick sort}{chapter.4}% 68
+\BOOKMARK [1][-]{section.4.5}{Merge sort}{chapter.4}% 69
+\BOOKMARK [0][-]{chapter.5}{Dynamic Programming}{}% 70
+\BOOKMARK [1][-]{section.5.1}{Fibonacci sequence}{chapter.5}% 71
+\BOOKMARK [1][-]{section.5.2}{Integers from a given list to add up to a number}{chapter.5}% 72
+\BOOKMARK [1][-]{section.5.3}{House robber problem}{chapter.5}% 73
+\BOOKMARK [1][-]{section.5.4}{0/1 Knapsack problem}{chapter.5}% 74
+\BOOKMARK [1][-]{section.5.5}{Longest common subsequence \(LCS\)}{chapter.5}% 75
+\BOOKMARK [0][-]{chapter.6}{More Algorithms}{}% 76
+\BOOKMARK [1][-]{section.6.1}{Find smallest and largest number}{chapter.6}% 77
+\BOOKMARK [1][-]{section.6.2}{Swap values without using temporary variable}{chapter.6}% 78
+\BOOKMARK [1][-]{section.6.3}{Array chunking}{chapter.6}% 79
+\BOOKMARK [1][-]{section.6.4}{Get nth prime number}{chapter.6}% 80
+\BOOKMARK [1][-]{section.6.5}{FizzBuzz problem}{chapter.6}% 81
+\BOOKMARK [1][-]{section.6.6}{Anagram checker}{chapter.6}% 82
+\BOOKMARK [1][-]{section.6.7}{Missing number}{chapter.6}% 83
+\BOOKMARK [1][-]{section.6.8}{Find pair that sums up to k}{chapter.6}% 84
+\BOOKMARK [1][-]{section.6.9}{First repeating character}{chapter.6}% 85
+\BOOKMARK [1][-]{section.6.10}{Remove duplicates}{chapter.6}% 86
+\BOOKMARK [1][-]{section.6.11}{Find duplicate value}{chapter.6}% 87
+\BOOKMARK [1][-]{section.6.12}{Maximum sub-array sum}{chapter.6}% 88
+\BOOKMARK [1][-]{section.6.13}{Rotation checker}{chapter.6}% 89
+\BOOKMARK [1][-]{section.6.14}{Reverse words in a given sentence}{chapter.6}% 90
+\BOOKMARK [1][-]{section.6.15}{Reversing a binary tree}{chapter.6}% 91
+\BOOKMARK [1][-]{section.6.16}{Longest sub-string without repeating characters}{chapter.6}% 92
+\BOOKMARK [1][-]{section.6.17}{Finding a peak element}{chapter.6}% 93
+\BOOKMARK [1][-]{section.6.18}{Ways to climb a stair}{chapter.6}% 94
+\BOOKMARK [1][-]{section.6.19}{Coin change}{chapter.6}% 95
+\BOOKMARK [1][-]{section.6.20}{Minimum number of coins for change}{chapter.6}% 96
+\BOOKMARK [1][-]{section.6.21}{Cutting a rod}{chapter.6}% 97
+\BOOKMARK [1][-]{section.6.22}{Numerical solution of an equation}{chapter.6}% 98
+\BOOKMARK [2][-]{subsection.6.22.1}{Bisection method}{section.6.22}% 99
+\BOOKMARK [2][-]{subsection.6.22.2}{Secant method}{section.6.22}% 100
+\BOOKMARK [2][-]{subsection.6.22.3}{Newton-Raphson method}{section.6.22}% 101
+\BOOKMARK [2][-]{subsection.6.22.4}{Regula-falsi method}{section.6.22}% 102
+\BOOKMARK [1][-]{section.6.23}{Edit distance \(Levenshtein distance\)}{chapter.6}% 103

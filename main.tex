@@ -401,6 +401,35 @@ A linked list is a linear collection of data elements in which the linear orderi
 \end{enumerate}
 
 \subsection{Inserting item into linked list}
+
+\noindent We can add elements to either at the end or at the beginning or in the middle of the linked list.
+
+\subsubsection{Insert at the end}
+
+\begin{itemize}
+	\item Traverse to last node.
+	\item Change next of last node to recently created node.
+\end{itemize}
+\noindent Time complexity: $O(n)$
+
+\subsubsection{Insert at the begining}
+
+\begin{itemize}
+	\item Change next of new node to point to head.
+	\item Set the recently created node as head of linked list .
+\end{itemize}
+\noindent Time complexity: $O(1)$
+
+\subsubsection{Insert in the middle}
+
+\begin{itemize}
+	\item Traverse to node $x$ just before the required position.
+	\item Set the next pointer of the new node to the next pointer of node $x$.
+	\item Change next pointer of node $x$ to the new node.
+\end{itemize}
+\noindent Time complexity: $O(n)$
+
+
 \begin{lstlisting}
 class Node:
     # Constructor
@@ -3387,9 +3416,9 @@ def deleteNode(arr, element):
     bubble_down(arr, i)
 \end{lstlisting}
 
-\subsection{Heapsort}
+\subsection{Heap sort}
 
-\noindent Heapsort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is \textbf{ascending for max-heap} while the order is \textbf{descending for min-heap}. Let's consider an array \lstinline{arr} which is to be sorted in ascending order using heap sort.
+\noindent Heap sort is one kind of sorting algorithm using a heap data structure. Note that the order of sort is \textbf{ascending for max-heap} while the order is \textbf{descending for min-heap}. Let's consider an array \lstinline{arr} which is to be sorted in ascending order using heap sort.
 
 \begin{enumerate}
     \item Build a max-heap from the elements of the array \lstinline{arr}.
@@ -4601,6 +4630,75 @@ Space complexity: $O(|V|)$
 
 \section{Brute force approach}
 
+\noindent Brute force approach is a direct, and straightforward technique of problem-solving in which all the possibilities are tried out till a satisfactory solution is not found. The advantage is that it guarantees that it will find the correct solution to a problem. But this approach is inefficient and slow.
+
+\subsection{Linear search}
+\textbf{Given aa array \lstinline{arr} of $n$ elements, write a function to search a given element $x$ in \lstinline{arr}.}
+\vspace{5mm}
+
+\noindent Linear search is a brute force searching algorithm where we start from one end and check every element of the list until the desired element is found. 
+
+\vspace{5mm}
+
+\noindent Time complexity: $O(n)$\\
+\noindent Space complexity: $O(1)$
+
+\begin{lstlisting}
+def linearSearch(arr, x):
+    n = len(arr)
+    # Going through arr sequencially
+    for i in range(n):
+        if (arr[i] == x):
+            return i
+    return -1
+
+
+if __name__ == "__main__":
+    arr = [2, 4, 0, 1, 9]
+    x = 1
+    result = linearSearch(arr, x)
+    if(result == -1):
+        print("Element not found")
+    else:
+        print("Element found at index:", result)
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+Element found at index: 3
+\end{lstlisting}
+
+\noindent The same linear search algorithm can also be implemented in recursive fashion as well.
+
+\vspace{5mm}
+
+\noindent Time complexity: $O(n)$ because of $n$ number of recursive calls.\\
+\noindent Space complexity: $O(1)$
+
+\begin{lstlisting}
+def linearSearchRecursive(arr, idx, x):
+    if idx == len(arr):
+        return -1
+    if (arr[idx] == x):
+        return idx
+    else:
+        return linearSearchRecursive(arr, idx+1, x)
+
+
+if __name__ == "__main__":
+    arr = [2, 4, 0, 1, 9]
+    x = 9
+    result = linearSearchRecursive(arr, 0, x)
+    if(result == -1):
+        print("Element not found")
+    else:
+        print("Element found at index: ", result)
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+Element found at index: 4
+\end{lstlisting}
+
+
 \section{Divide and Conquer method}
 
 \noindent Divide and conquer is an algorithm design paradigm. A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. Here are the steps involved:
@@ -4819,7 +4917,70 @@ The scheduled jobs are ['T7', 'T6', 'T9', 'T5', 'T3', 'T4', 'T8', 'T1']
 The total profit earned is 109
 \end{lstlisting}
 
-\section{Fractional knapsack problem}
+\subsection{Fractional knapsack problem}
+
+\noindent \textbf{Given weights $w_i$ and values (or profits) $V_i$ of $n$ items ($i = 1,2,\cdots n$), put these items in a knapsack of capacity $W$ to get the maximum total profit in the knapsack.}
+
+\vspace{3mm}
+
+\noindent The problem is called fractional knapsack because we can either include any fraction of the items into the knapsack. Let’s take an example. Take the following input values.
+\begin{align*}
+V &= [50,100,150,200]\\
+w &= [8,15,32,40]\\
+W &= 60
+\end{align*}
+
+\noindent Here we get the maximum profit when we include 8 units of item 1, 15 units of item 2 and 37 units of item 4 giving us a total profit of 
+$$50 + 100 + \dfrac{200}{40}\times 37= 335 \text{ units}$$
+
+\noindent We can apply greedy method to solve this fractional knapsack problem. The basic idea of the greedy approach is to calculate the ratio value/weight for each item and sort the item on basis of this ratio.
+
+$$\dfrac{V_1}{w_1} \geq \dfrac{V_2}{w_2} \geq \cdots \dfrac{V_n}{w_n}$$
+
+\noindent Then take the item with the highest ratio and add them until we can’t add the next item as a whole and at the end add the next item as much as we can. Which will always be the optimal solution to this problem.
+
+\vspace{5mm}
+\noindent Time complexity: First we need to sort the items in decreasing order of value/weight ratio, which takes $O(n\log n)$ time. Then iteration over each element takes $O(n)$ time. So the time complexity is $O(n\log n)$.\\
+\noindent Space complexity: $O(n)$ to store the value/weight ratios in an array.
+
+\begin{lstlisting}
+def fractional_knapsack(value, weight, capacity):
+    # index = [0, 1, 2, ..., (n-1)] for n items
+    index = list(range(len(value)))
+    # Contains ratios of values to weight
+    ratio = [v/w for v, w in zip(value, weight)]
+    # index is sorted according to value-to-weight ratio in decreasing order
+    index.sort(key=lambda i: ratio[i], reverse=True)
+ 
+    max_value = 0
+    fractions = [0]*len(value)
+    for i in index:
+        if weight[i] <= capacity:
+            fractions[i] = 1 # Full fraction is included
+            max_value += value[i]
+            capacity -= weight[i]
+        else:
+            fractions[i] = capacity/weight[i]
+            max_value += value[i]*capacity/weight[i]
+            break
+ 
+    return max_value, fractions
+ 
+ 
+if __name__ == "__main__":
+    value = [50, 100, 150, 200]
+    weight = [8, 15, 32, 40]
+    capacity = 60
+    
+    max_value, fractions = fractional_knapsack(value, weight, capacity)
+    print('The maximum value of items that can be carried:', max_value)
+    print('The fractions in which the items should be taken:', fractions)
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+The maximum value of items that can be carried: 335.0
+The fractions in which the items should be taken: [1, 1, 0, 0.925]
+\end{lstlisting}
 
 \section{Backtracking method}
 
@@ -4829,9 +4990,9 @@ The total profit earned is 109
 
 \noindent Before start solving the problem we must be able to recognize if it can be solved using a backtracking algorithm. There are the following types of problems that can be solved using backtracking:
 \begin{enumerate}
-    \item \textbf{Decision Problem}: In this type of problem we always search for a feasible solution.
-    \item \textbf{Optimization Problem}: In this type of problem we always search for the best possible solution.
-    \item \textbf{Enumeration Problem}: In this type of problem we try to find all feasible solutions.
+    \item \textit{Decision Problem}: In this type of problem we always search for a feasible solution.
+    \item \textit{Optimization Problem}: In this type of problem we always search for the best possible solution.
+    \item \textit{Enumeration Problem}: In this type of problem we try to find all feasible solutions.
 \end{enumerate}
 \subsection{Suitcase password problem}
 
@@ -4868,6 +5029,7 @@ every node/.style = {minimum width = 2em, draw, circle},
     \caption{Suitcase password problem}
     \label{fig:suitcase}
 \end{figure}
+\vspace{5mm}
 
 \noindent The potential password is of three digits which can be visualized as three digits $(x_1, x_2, x_3)$ where $x_i \in \{0,1\}, i = 1,2,3$. To construct a state-space tree, start with a Root. There are two choices 1 or 0, at every stage. This leads to the generation of the binary tree as shown in the figure \ref{fig:suitcase}. It can be observed all potential passwords are marked with green while all non-relevant passwords are marked with red. Check all the green leaves of the tree to find the valid solution.
 
@@ -5410,7 +5572,7 @@ def fib(n, cache = {}):
 
 $$T(n) = T(n-1) + T(n-2) + c$$
 
-\noindent Now when we calculate \lstinline{fib(n-1)}, we already have \lstinline{fib(n-2)} in cache. So the operation \lstinline{fib(n-2)} is 1 (i.e. reading from the cache). Therefore
+\noindent Now when we calculate \lstinline{fib(n-1)}, we already have \lstinline{fib(n-2)} in cache. So the number of operations for \lstinline{fib(n-2)} is 1 (i.e. reading from the cache). Therefore
 
 \begin{align*}
     T(n) &= T(n-1) + 1 + c\\
@@ -5447,7 +5609,7 @@ def fib(n):
 
 \section{Integers from a given list to add up to a number}
 
-\noindent \textbf{Given a number $n$. Find the number of ways of expressing $n$ as a sum from a list of integers 1, 3, and 4.}
+\noindent \textbf{Given a number $n$, find the number of ways of expressing $n$ as a sum from a list of integers 1, 3, and 4.}
 \vspace{5mm}
 
 \noindent If $n = 5$, then there are 6 ways to express $n$ namely, $$\{4,1\}, \{1,4\}, \{1,3,1\}, \{3,1,1\}, \{1,1,3\}, \{1,1,1,1,1\}$$
@@ -5482,7 +5644,6 @@ def number_sum_subset(n, memo = {}):
         sub_part2 = number_sum_subset(n-3, memo)
         sub_part3 = number_sum_subset(n-4, memo)
         memo[n] = sub_part1 + sub_part2 + sub_part3
-        print('call')
         return memo[n]
 \end{lstlisting}
 
@@ -5495,11 +5656,9 @@ def number_sum_subset(n, memo = {}):
 def number_sum_subset(n):
     dp = []
     for i in range(n+1):
-        if i == 0:
-            dp.append(1)
         # If the number is 0, 1, or 2, append 1.
         # The only ways we can represent: 0 = 0, 1 = 1, 2 = 1 + 1
-        elif i in (1, 2):
+        if i in (0, 1, 2):
             dp.append(1)
         # if the number is 3, append 2 because 3 = 1 + 1 + 1, 3 = 3
         elif i == 3:
@@ -5550,11 +5709,17 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 \noindent So, let's say we're indexing the houses from 0, and we're in 0th house at the start. Here, we've got two choices. Either we can rob house 0 and go to house 2 (leaving adjacent house 1) OR we can leave house 0 and rob house 1. We'll take the maximum of these two choices. We solve the problem recursively with the above two choices at each index $i$, and whenever we reach the end, we simply return 0 as there are no additional houses left. So, for the ith index, we have
 
 \begin{itemize}
-\item \textbf{Option1 (rob the house)}: Rob the current house at index $i$ and move to index $i+2$. The profit will be \lstinline{money[i]+max_loot(money, i+2)}. 
-\item \textbf{Option2 (skip the house)}: Skip the house at index $i$ and move to the next house at $i+1$ and see the profit. The profit will be \lstinline{max_loot(money, i+1)}.
+\item \textbf{Option1 (rob the house)}: Rob the current house at index $i$ and move to index $i+2$. The profit will be \begin{center}
+\lstinline{money[i] + max_loot(money, i+2)}
+\end{center}
+\item \textbf{Option2 (skip the house)}: Skip the house at index $i$ and move to the next house at $i+1$ and see the profit. The profit will be \begin{center}
+\lstinline{max_loot(money, i+1)}
+\end{center}
 \end{itemize}
 
-\noindent Decision: \lstinline{max(money[i]+max_loot(money, i+2), max_loot(money, i+1))}
+\noindent Decision: \begin{center}
+\lstinline{max(money[i] + max_loot(money, i+2), max_loot(money, i+1))}
+\end{center}
 
 \noindent Time Complexity: $O(n)$\\
 \noindent Space Complexity: $O(n)$
@@ -5590,11 +5755,17 @@ Max loot: 41
 \noindent Here we have to look at the other direction. If we are at current index $i$, then what is the maximum money we can steal up to now. We have two options:
 
 \begin{itemize}
-\item \textbf{Option1 (rob the house)}: Rob the current house at index $i$ and move back to index $i-2$. The profit will be \lstinline{money[i]+max_loot(money, i-2)}. 
-\item \textbf{Option2 (skip the house)}: Skip the next house at index $i$ and move back to the previous house at $i$ and see the profit. The profit will be \lstinline{max_loot(money, i-1)}.
+\item \textbf{Option1 (rob the house)}: Rob the current house at index $i$ and move back to index $i-2$. The profit will be \begin{center}
+\lstinline{money[i] + max_loot(money, i-2)}
+\end{center} 
+\item \textbf{Option2 (skip the house)}: Skip the next house at index $i$ and move back to the previous house at $i$ and see the profit. The profit will be \begin{center}
+\lstinline{max_loot(money, i-1)}
+\end{center}
 \end{itemize}
 
-\noindent Decision: \lstinline{max(money[i]+max_loot(money, i-2), max_loot(money, i-1))}
+\noindent Decision: \begin{center}
+\lstinline{max(money[i] + max_loot(money, i-2), max_loot(money, i-1))}
+\end{center}
 
 \begin{lstlisting}
 def max_loot(money, currentIndex, memo = {}):
@@ -5660,7 +5831,7 @@ w &= [8,16,32,40]\\
 W &= 64
 \end{align*}
 
-\noindent Here we get the maximum profit when we include items 1,2 and 4 giving us a total of 200 + 50 + 100 = 350.
+\noindent Here we get the maximum profit when we include items 1, 2 and 4 giving us a total of 200 + 50 + 100 = 350.
 
 \noindent To solve 0/1 knapsack using dynamic programming we construct a table with dimensions $(n+1) \times (W+1)$. The rows of the table correspond to items from 0 to $n$. The columns of the table correspond to weight limit from 0 to $W$. The cell with index $ij$ contains a value $A[i][j]$ which represents the maximum profit possible when considering items from 0 to $i$ and the total weight limit as $j$.
 
@@ -5812,8 +5983,8 @@ def knapSack(W, wt, val):
     return table[n][W] 
 
 if __name__ == "__main__":
-    val = [50,100,150,200]
-    wt = [8,16,32,40]
+    val = [50, 100, 150, 200]
+    wt = [8, 16, 32, 40]
     W = 64
     
     print(knapSack(W, wt, val))
@@ -5847,8 +6018,8 @@ def knapSack(W, wt, val, n):
     return memo[n][W]
 
 if __name__ == "__main__":
-    val = [50,100,150,200]
-    wt = [8,16,32,40]
+    val = [50, 100, 150, 200]
+    wt = [8, 16, 32, 40]
     W = 64
     n = len(val)
 
