@@ -4422,10 +4422,82 @@ if __name__ == "__main__":
 \begin{lstlisting}
 {'0': 1, '1': 0, '2': 2, '3': 3, '4': 4}
 \end{lstlisting}
-\subsubsection{Time complexity}
-\noindent We have a loop with $n=|V|$ iterations. On each iteration, we need to find the minimum distance node. Then we need to update the distance of all the adjacent node. In the worst case this operation will take $O(|V|)$ time. Thus overall we have the time complexity $O(|V|^2)$. The space complexity is $O(|V|)$, since we have to maintain two lists $d$ and $u$ each of length $|V|$.
+\noindent \textit{Time complexity}: We have a loop with $n=|V|$ iterations. On each iteration, we need to find the minimum distance node. Then we need to update the distance of all the adjacent node. In the worst case this operation will take $O(|V|)$ time. Thus overall we have the time complexity $O(|V|^2)$. The space complexity is $O(|V|)$, since we have to maintain two lists $d$ and $u$ each of length $|V|$.
 
-% \subsubsection{Bellman-Ford algorithm}
+\subsubsection{Bellman-Ford algorithm}
+\vspace{4mm}
+
+\noindent Bellman-Ford algorithm helps us find the shortest path from a vertex to all other vertices of a weighted graph. It is similar to Dijkstra's algorithm but it can work with graphs in which edges can have negative weights.
+\vspace{4mm}
+
+\noindent The Bellman-Ford algorithm can also be used to check if the graph
+contains a \textit{cycle with negative length}. In this case, any path that contains the cycle can be shortened infinitely many times, so the concept of a shortest path is not meaningful.
+\begin{enumerate}
+    \item Create a list of ``distances'' $d$ equal to the number of nodes $n$ and initialize each value to infinity.
+    $$d[v] = \infty, \hspace{5mm}\forall v = 0,1,2,\cdots (n-1)$$
+    \item Set the ``distances'' to the starting node equal to 0 since the distance from the source node to itself is 0. If $v_0$ is the index of the starting node, then
+    $$d[v_0] = 0$$
+    \item Loop through $(n-1)$ iterations:
+    \begin{enumerate}
+        \item Loop through each edge ($v_{\text{source}}$, $v_{\text{destination}}$) with weight $w$
+        \begin{itemize}
+        	\item \textbf{Relax} the edge:
+        	$$d[v_{\text{destination}}] = \min\left(d[v_{\text{destination}}], w + d[v_{\text{source}}]\right)$$
+        \end{itemize}
+    \end{enumerate}
+    \item Detect negative cycle. We loop through each edge again. If we found for some edge, $$d[v_{\text{destination}} < w + d[v_{\text{source}}]$$ then there is a negative edge and we halt the algorithm.
+    \item The original ``distances'' list should now contain the shortest distance to each node or infinity if a node is unreachable from the desired starting node.
+\end{enumerate}
+
+\begin{lstlisting}
+def bellman_ford(graph, n, starting_node):
+    # Step 1: fill the distance array and predecessor array
+    distances = [float("Inf")] * n
+
+    # Mark the distance of the source vertex as zero
+    distances[starting_node] = 0
+
+    # Step 2: Relax edges |V|-1 times
+    for _ in range(n-1):
+        for s, d, w in graph:
+            if distances[s] != float("Inf") and distances[s] + w < distances[d]:
+                distances[d] = distances[s] + w
+
+    # Step 3: Detect negative cycle
+    # If value changes then we have a negative cycle in the graph and we cannot find the shortest distances
+    for s, d, w in graph:
+        if distances[s] != float("Inf") and distances[s] + w < distances[d]:
+            print("Graph contains negative weight cycle")
+            return
+
+    # No negative weight cycle found!
+    # Return the distances array
+    return distances
+
+
+if __name__ == "__main__":
+    graph = [
+        (0, 1, 5),
+        (0, 2, 4),
+        (1, 3, 3),
+        (2, 1, 6),
+        (3, 2, 2)
+    ]
+    n = 4 # Number of vertices
+
+    distances = bellman_ford(graph, 4, 0)
+    for i in range(n):
+        print(f"{i}\t\t{distances[i]}")
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+0               0
+1               5
+2               4
+3               8
+\end{lstlisting}
+\noindent \textit{Time complexity}: The time complexity of the algorithm is $O(|V||E|)$, because the algorithm consists of
+$|V|-1$ rounds and iterates through all $|E|$ edges during a round.
 % \subsubsection{Floyd-Warshall algorithm}
 
 \subsection{Minimum spanning tree (MST)}
@@ -5844,7 +5916,7 @@ W &= 64
 \noindent Now how do we decide whether we include object $i$ in our selection? There are two conditions that should be satisfied to include object $i$:
 \begin{enumerate}
 \item The total weight after including $i$th item should not exceed the weight limit. In this case the profit is $A[i-1,j]$.
-\item The profit after including $i$th item should be greater as compared to when the item is not included. In this case the profit is $V_i + A[i-1,j-w_{i-1}]$. (Since the indexing is started from 0, the weight of the $i$th item is $w_{i-1}$).
+\item The profit after including $i$th item should be greater as compared to when the item is not included. In this case the profit is $V_{i-1} + A[i-1,j-w_{i-1}]$ (since the indexing is started from 0, the weight of the $i$th item is $w_{i-1}$ and value for the $i$th item is $V_{i-1}$).
 \end{enumerate}
 
 \noindent With all the above conditions, the recursive formulation of knapsack problem is given as follows:
@@ -5854,8 +5926,8 @@ W &= 64
 \begin{cases}
     0, & \text{if } i=0\\
     0, & \text{if } j=0\\
-    A[i-1,j], & \text{if } w_i > j\\
-    \max(A[i-1,j], V_i + A[i-1,j-w_{i-1}]), & \text{if } w_{i-1} <= j\\
+    A[i-1,j], & \text{if } w_{i-1} > j\\
+    \max(A[i-1,j], V_{i-1} + A[i-1,j-w_{i-1}]), & \text{if } w_{i-1} \leq j\\
 \end{cases}
 \]
 
@@ -5903,12 +5975,12 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 
 \noindent Recursion for first row:
 \begin{align*}
-    A[1,1] &= \max(A[1-1,1], V_1 + A[1-1,1-w_0])\\
-           &= \max(A[0,1], V_1 + A[0,0]) = 1 \\
-    A[1,2] &= \max(A[1-1,2], V_1 + A[1-1,2-w_0])\\
-           &= \max(A[0,2], V_1 + A[0,2]) = 1 \\
-    A[1,3] &= \max(A[1-1,3], V_1 + A[1-1,3-w_0])\\
-           &= \max(A[0,3], V_1 + A[0,3]) = 1
+    A[1,1] &= \max(A[1-1,1], V_0 + A[1-1,1-w_0])\\
+           &= \max(A[0,1], 1 + A[0,0]) = 1 \\
+    A[1,2] &= \max(A[1-1,2], V_0 + A[1-1,2-w_0])\\
+           &= \max(A[0,2], 1 + A[0,2]) = 1 \\
+    A[1,3] &= \max(A[1-1,3], V_0 + A[1-1,3-w_0])\\
+           &= \max(A[0,3], 1 + A[0,3]) = 1
 \end{align*}
 
 \begin{table}[ht]
@@ -5926,9 +5998,9 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 
 \noindent Recursion for second row:
 \begin{align*}
-    A[2,1] &= \max(A[1,1], V_2 + A[1,1-w_1]) = 1\\
-    A[2,2] &= \max(A[1,2], V_2 + A[1,2-w_1]) = 6\\
-    A[2,3] &= \max(A[1,3], V_2 + A[1,3-w_1]) = 7
+    A[2,1] &= A[1,1] = 1\\
+    A[2,2] &= \max(A[1,2], V_1 + A[1,2-w_1]) = 6\\
+    A[2,3] &= \max(A[1,3], V_1 + A[1,3-w_1]) = 7
 \end{align*}
 
 \begin{table}[ht]
@@ -5946,9 +6018,9 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 
 \noindent Recursion for third row:
 \begin{align*}
-    A[3,1] &= \max(A[2,1], V_3 + A[2,1-w_2]) = 1\\
-    A[3,2] &= \max(A[2,2], V_3 + A[2,2-w_2]) = 6\\
-    A[3,3] &= \max(A[2,3], V_3 + A[2,3-w_2]) = 7
+    A[3,1] &= A[2,1] = 1\\
+    A[3,2] &= A[2,2] = 6\\
+    A[3,3] &= A[2,3] = 7
 \end{align*}
 
 \begin{table}[ht]
@@ -5970,7 +6042,7 @@ i\textbackslash{}j & 0 & 1 & 2 & 3 \\ \hline
 def knapSack(W, wt, val): 
     n = len(val)
     # Initialize the table with all zeros.
-    table = [[0 for i in range(W + 1)] for j in range(n + 1)] 
+    table = [[0 for j in range(W+1)] for i in range(n+1)] 
  
     for i in range(n + 1): 
         for j in range(W + 1): 
@@ -5998,7 +6070,7 @@ if __name__ == "__main__":
 
 \begin{lstlisting}
 def knapSack(W, wt, val, n):
-    # Base case 0 items left or knapsack is full 
+    # Base case
     if n == 0 or W == 0:
         memo[n][W] = 0
         return 0
@@ -6007,12 +6079,10 @@ def knapSack(W, wt, val, n):
     if memo[n][W] != -1:
         return memo[n][W]
 
-    # If weight of current element is less than or equal to capacity we can 
-    # either include or exclude the item.
+    # If weight of current element is less than or equal to capacity we can either include or exclude the item.
     if wt[n-1] <= W:
         memo[n][W] = max(val[n-1] + knapSack(W-wt[n-1], wt, val, n-1), knapSack(W, wt, val, n-1))
-    # If weight of current element is greater than the capacity we will
-    # not include it thus returning just the ignoring part. 
+    # If weight of current element is greater than the capacity we will not include it thus returning just the ignoring part. 
     else:
         memo[n][W] = knapSack(W, wt, val, n-1)
     return memo[n][W]
@@ -6024,7 +6094,7 @@ if __name__ == "__main__":
     n = len(val)
 
     # The memory defined to store the result of the subproblem outside the function
-    memo = [[-1 for i in range(W+1)] for j in range(n+1)]
+    memo = [[-1 for j in range(W+1)] for i in range(n+1)]
 
     print(knapSack(W, wt, val, n))
 \end{lstlisting}
@@ -6035,7 +6105,7 @@ if __name__ == "__main__":
 
 \section{Longest common subsequence (LCS)}
 
-\noindent \textbf{Given two sequences, find the length of longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. For example, "abc", "abg", "bdf", "aeg", "acefg", .. etc are subsequences of "abcdefg".}
+\noindent \textbf{Given two sequences, find the length of longest subsequence present in both of them. A subsequence is a sequence that appears in the same relative order, but not necessarily contiguous. For example, "abc", "abg", "bdf", "aeg", "acefg", $\dots$ etc are subsequences of "abcdefg".}
 
 \vspace{5mm}
 
@@ -8231,6 +8301,5 @@ if __name__ == "__main__":
 \begin{lstlisting}
 3
 \end{lstlisting}
-
 
 \end{document}

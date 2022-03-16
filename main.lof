@@ -1,0 +1,63 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Asymptotic notation\relax }}{2}{figure.caption.6}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Deleting item from linked list\relax }}{12}{figure.caption.11}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Reversing a linked list: iterative approach\relax }}{15}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Reversing a linked list: recursive approach\relax }}{16}{figure.caption.13}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Check palindrome: Movement of \lstinline {slow} and \lstinline {fast} pointers for odd number of nodes\relax }}{16}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Check palindrome: Movement of \lstinline {slow} and \lstinline {fast} pointers for even number of nodes\relax }}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Tree data structure\relax }}{32}{figure.caption.17}%
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A tree used for representing as an array\relax }}{33}{figure.caption.18}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Pre-order traversal\relax }}{34}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.9}{\ignorespaces in-order traversal\relax }}{35}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Post-order traversal\relax }}{35}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Breadth First Search (BFS)\relax }}{38}{figure.caption.25}%
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Binary swearch Tree\relax }}{40}{figure.caption.26}%
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Hash initialization\relax }}{55}{figure.caption.27}%
+\contentsline {figure}{\numberline {2.14}{\ignorespaces After placing values into the hash\relax }}{56}{figure.caption.28}%
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Max heap\relax }}{61}{figure.caption.29}%
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Min heap\relax }}{61}{figure.caption.30}%
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Array representation of heap\relax }}{62}{figure.caption.31}%
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Heap relationship\relax }}{62}{figure.caption.32}%
+\contentsline {figure}{\numberline {2.19}{\ignorespaces Percolation: Bubble up for max-heap\relax }}{65}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Percolation: Bubble down for max-heap\relax }}{66}{figure.caption.34}%
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Heap sort: Step 1. Initialisation\relax }}{69}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Heap sort: Step 2. Swapping 12 with 9 and remove 12 from heap\relax }}{69}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Heap sort: Step 3. Bubble-down 9\relax }}{69}{figure.caption.37}%
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Heap sort: Step 4. Swapping 10 with 1 and remove 10 from heap\relax }}{70}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.25}{\ignorespaces Heap sort: Step 5. Bubble-down 1\relax }}{70}{figure.caption.39}%
+\contentsline {figure}{\numberline {2.26}{\ignorespaces Heap sort: Step 6. Swap 9 with 5 and remove 9 from heap\relax }}{70}{figure.caption.40}%
+\contentsline {figure}{\numberline {2.27}{\ignorespaces Heap sort: Step 7. Bubble-down 5\relax }}{70}{figure.caption.41}%
+\contentsline {figure}{\numberline {2.28}{\ignorespaces Heap sort: Step 8. Swap 6 with 1 and remove 6 from heap\relax }}{71}{figure.caption.42}%
+\contentsline {figure}{\numberline {2.29}{\ignorespaces Heap sort: Step 9. Bubble down 1\relax }}{71}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.30}{\ignorespaces Heap sort: Step 10. Swap 5 with 1 and remove 5 from heap\relax }}{71}{figure.caption.44}%
+\contentsline {figure}{\numberline {2.31}{\ignorespaces Descending order priority queue\relax }}{73}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.32}{\ignorespaces Ascending order priority queue\relax }}{73}{figure.caption.46}%
+\contentsline {figure}{\numberline {2.33}{\ignorespaces Graph data structure\relax }}{74}{figure.caption.47}%
+\contentsline {figure}{\numberline {2.34}{\ignorespaces Directed graph\relax }}{74}{figure.caption.48}%
+\contentsline {figure}{\numberline {2.35}{\ignorespaces Graph for the given DFS python program\relax }}{77}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.36}{\ignorespaces Graph for the given BFS python program\relax }}{79}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.37}{\ignorespaces Example graph for Dijkstra's algorithm\relax }}{82}{figure.caption.56}%
+\contentsline {figure}{\numberline {2.38}{\ignorespaces Prim's algorithm: starting graph\relax }}{85}{figure.caption.65}%
+\contentsline {figure}{\numberline {2.39}{\ignorespaces Prim's algorithm steps\relax }}{86}{figure.caption.66}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of the job sequencing problem with deadlines\relax }}{94}{figure.caption.67}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces The solution of the job sequencing problem with deadlines\relax }}{95}{figure.caption.68}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Suitcase password problem\relax }}{99}{figure.caption.69}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Permutation of string ``ABC''\relax }}{101}{figure.caption.70}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Insertion sort\relax }}{106}{figure.caption.73}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Quick sort: Partition process\relax }}{109}{figure.caption.74}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Quick sort: Recursion after partition\relax }}{110}{figure.caption.75}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Merge sort\relax }}{112}{figure.caption.76}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Recursion tree for Fibonacci sequence\relax }}{117}{figure.caption.78}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Floyd's cycle detection algorithm\relax }}{146}{figure.caption.89}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Floyd's cycle detection algorithm: How it works\relax }}{148}{figure.caption.91}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Reversing a binary tree\relax }}{154}{figure.caption.92}%
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Bisection method\relax }}{170}{figure.caption.93}%
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Secant method: geometric interpretation\relax }}{173}{figure.caption.94}%
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Newton-Raphson method: geometric interpretation\relax }}{174}{figure.caption.95}%
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Regula-falsi method: geometric interpretation\relax }}{177}{figure.caption.96}%
