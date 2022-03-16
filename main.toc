@@ -22,7 +22,6 @@
 \contentsline {subsection}{\numberline {2.2.2}Convert decimal to binary using stack}{22}{subsection.2.2.2}%
 \contentsline {subsection}{\numberline {2.2.3}Check the balancing and ordering of parentheses in an expression}{23}{subsection.2.2.3}%
 \contentsline {section}{\numberline {2.3}Queue}{25}{section.2.3}%
-\contentsline {subsubsection}{Time complexity}{26}{section*.15}%
 \contentsline {subsection}{\numberline {2.3.1}Priority queue}{26}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}Deque}{27}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Palindrome checker using deque}{28}{subsection.2.3.3}%
@@ -30,9 +29,9 @@
 \contentsline {section}{\numberline {2.4}Tree}{32}{section.2.4}%
 \contentsline {subsection}{\numberline {2.4.1}Binary tree}{33}{subsection.2.4.1}%
 \contentsline {subsection}{\numberline {2.4.2}Depth First Search of a Binary tree}{34}{subsection.2.4.2}%
-\contentsline {subsubsection}{Pre-order traversal}{34}{section*.18}%
-\contentsline {subsubsection}{In-order traversal}{34}{section*.20}%
-\contentsline {subsubsection}{Post-order traversal}{35}{section*.22}%
+\contentsline {subsubsection}{Pre-order traversal}{34}{section*.17}%
+\contentsline {subsubsection}{In-order traversal}{34}{section*.19}%
+\contentsline {subsubsection}{Post-order traversal}{35}{section*.21}%
 \contentsline {subsection}{\numberline {2.4.3}Breadth First Search of a Tree}{37}{subsection.2.4.3}%
 \contentsline {section}{\numberline {2.5}Binary Search Tree (BST)}{40}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Insertion operation}{41}{subsection.2.5.1}%
@@ -57,14 +56,14 @@
 \contentsline {subsection}{\numberline {2.8.2}Graph terminologies}{74}{subsection.2.8.2}%
 \contentsline {subsection}{\numberline {2.8.3}Graph implementations}{75}{subsection.2.8.3}%
 \contentsline {subsection}{\numberline {2.8.4}Depth First Search (DFS)}{77}{subsection.2.8.4}%
-\contentsline {subsubsection}{Applications}{79}{section*.51}%
+\contentsline {subsubsection}{Applications}{79}{section*.50}%
 \contentsline {subsection}{\numberline {2.8.5}Breadth First Search (BFS)}{79}{subsection.2.8.5}%
-\contentsline {subsubsection}{Applications}{81}{section*.53}%
+\contentsline {subsubsection}{Applications}{81}{section*.52}%
 \contentsline {subsection}{\numberline {2.8.6}Shortest path}{81}{subsection.2.8.6}%
-\contentsline {subsubsection}{Dijkstra's Algorithm}{81}{section*.54}%
-\contentsline {subsubsection}{Bellman-Ford algorithm}{85}{section*.62}%
+\contentsline {subsubsection}{Dijkstra's Algorithm}{81}{section*.53}%
+\contentsline {subsubsection}{Bellman-Ford algorithm}{85}{section*.61}%
 \contentsline {subsection}{\numberline {2.8.7}Minimum spanning tree (MST)}{87}{subsection.2.8.7}%
-\contentsline {subsubsection}{Prim's algorithm}{87}{section*.63}%
+\contentsline {subsubsection}{Prim's algorithm}{87}{section*.62}%
 \contentsline {chapter}{\numberline {3}Algorithm Techniques}{91}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Brute force approach}{91}{section.3.1}%
 \contentsline {subsection}{\numberline {3.1.1}Linear search}{91}{subsection.3.1.1}%
@@ -101,7 +100,7 @@
 \contentsline {section}{\numberline {6.9}First repeating character}{145}{section.6.9}%
 \contentsline {section}{\numberline {6.10}Remove duplicates}{146}{section.6.10}%
 \contentsline {section}{\numberline {6.11}Find duplicate value}{147}{section.6.11}%
-\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{149}{section*.89}%
+\contentsline {subsubsection}{Why does Floyd's Cycle Detection Algorithm works?}{149}{section*.88}%
 \contentsline {section}{\numberline {6.12}Maximum sub-array sum}{151}{section.6.12}%
 \contentsline {section}{\numberline {6.13}Rotation checker}{153}{section.6.13}%
 \contentsline {section}{\numberline {6.14}Reverse words in a given sentence}{154}{section.6.14}%
