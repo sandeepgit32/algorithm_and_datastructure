@@ -410,7 +410,7 @@ A linked list is a linear collection of data elements in which the linear orderi
 	\item Traverse to last node.
 	\item Change next of last node to recently created node.
 \end{itemize}
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
 \subsubsection{Insert at the begining}
 
@@ -418,7 +418,7 @@ A linked list is a linear collection of data elements in which the linear orderi
 	\item Change next of new node to point to head.
 	\item Set the recently created node as head of linked list .
 \end{itemize}
-\noindent \textit{Time complexity}: $O(1)$
+\noindent Time complexity: $O(1)$
 
 \subsubsection{Insert in the middle}
 
@@ -427,7 +427,7 @@ A linked list is a linear collection of data elements in which the linear orderi
 	\item Set the next pointer of the new node to the next pointer of node $x$.
 	\item Change next pointer of node $x$ to the new node.
 \end{itemize}
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
 
 \begin{lstlisting}
@@ -583,7 +583,7 @@ To delete a node from the linked list, we need to do the following steps.
 \caption{Deleting item from linked list}
 \end{figure}
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
 \begin{lstlisting}
 # Delete item by value (key)
@@ -633,7 +633,7 @@ def delete_at_pos(self, pos):
 \subsection{Search element in a linked list using key}
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
 \begin{lstlisting}
 # Search element in a linked list using key
@@ -876,8 +876,8 @@ def searchkey(self, key):
 \caption{Reversing a linked list: recursive approach}
 \end{figure}
 
-\noindent \textit{Time complexity}: $O(n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: $O(n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def reverse(self, head):
@@ -1039,8 +1039,8 @@ def reverse(self, head):
     \item Check if the first and second half is similar.
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: $O(n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 class Node:
@@ -1212,9 +1212,9 @@ Popped item = 4
 
 \subsection{Reverse a string using stack}
 
-\noindent \textit{Time complexity}: $O(N)$
+\noindent Time complexity: $O(N)$
 
-\noindent \textit{Space complexity}: $O(N)$
+\noindent Space complexity: $O(N)$
 
 \begin{lstlisting}
 def reverse_string(input_str):
@@ -1238,9 +1238,9 @@ def reverse_string(input_str):
     \item Print the array in reverse order.
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(N)$
+\noindent Time complexity: $O(N)$
 
-\noindent \textit{Space complexity}: $O(N)$
+\noindent Space complexity: $O(N)$
 
 \begin{lstlisting}
 def convert_binary(dec_num):
@@ -1394,7 +1394,7 @@ Removed item = hello
 Queue size = 3
 \end{lstlisting}
 
-\noindent \textit{Time complexity}:
+\subsubsection{Time complexity}
 
 \noindent Access: $O(n)$\\
 \noindent Search: $O(n)$\\
@@ -1857,9 +1857,9 @@ every node/.style = {minimum width = 2em, draw, circle},
         \end{center}
         \caption{Post-order traversal}
         \end{figure}
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(h)$ where $h$ is the height (maximum depth from root) of the tree. Even if we aren't using any additional data structures, we are using a recursive function, which means that we have to have a look on the maximum number of calls that can be on the call stack, and in this case, it represents the height $h$ of the tree. This is our space complexity.
+\noindent Space complexity: $O(h)$ where $h$ is the height (maximum depth from root) of the tree. Even if we aren't using any additional data structures, we are using a recursive function, which means that we have to have a look on the maximum number of calls that can be on the call stack, and in this case, it represents the height $h$ of the tree. This is our space complexity.
 
 
 \begin{lstlisting}
@@ -2004,9 +2004,9 @@ every node/.style = {minimum width = 2em, draw, circle, node distance={15mm}},
     \item Recursively call the function with the new state of queue.
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 class Tree_node:
@@ -3203,7 +3203,7 @@ if __name__ == '__main__':
 [17, 15, 13, 9, 6, 5, 10, 4, 8, 3, 1]
 \end{lstlisting}
 
-\noindent \textit{Time complexity}: The function \lstinline{heapify} exchanges two items in an array, which runs in constant time and recursively calls itself. So the time complexity of \lstinline{heapify} will be in proportional to the number of repeats. In the worst case, \lstinline{heapify} should repeat the operation the height of the tree times. This is because in the worst case, \lstinline{heapify} will exchange the root nodes with the most depth leaf node. Therefore the time complexity of \lstinline{heapify} is $O(\log_2 n)$ time. The function \lstinline{buildHeap} basically calls \lstinline{heapify} and makes $O(n)$ such calls. So the overall time complexity is $O(n\log_2 n)$.
+\noindent \textbf{Time complexity}: The function \lstinline{heapify} exchanges two items in an array, which runs in constant time and recursively calls itself. So the time complexity of \lstinline{heapify} will be in proportional to the number of repeats. In the worst case, \lstinline{heapify} should repeat the operation the height of the tree times. This is because in the worst case, \lstinline{heapify} will exchange the root nodes with the most depth leaf node. Therefore the time complexity of \lstinline{heapify} is $O(\log_2 n)$ time. The function \lstinline{buildHeap} basically calls \lstinline{heapify} and makes $O(n)$ such calls. So the overall time complexity is $O(n\log_2 n)$.
 
 \subsection{Percolation: Bubbling up and down}
 
@@ -3387,7 +3387,7 @@ After bubbling down: [17, 15, 6, 13, 9, 2, 5, 10, 4, 8, 3, 1]
     \item Insert the new element at the end of the array.
     \item Bubble-up the element through the array.
 \end{enumerate}
-\noindent \textit{Time complexity}: $O(\log_2 n)$
+\noindent Time complexity: $O(\log_2 n)$
 \begin{lstlisting}
 def insertNode(arr, element):
     arr.append(element)
@@ -3734,8 +3734,8 @@ def deleteNode(arr, element):
 	\caption{Heap sort: Step 10. Swap 5 with 1 and remove 5 from heap}
 \end{figure}
 
-\noindent \textit{Time complexity}: The initial building of heap takes $O(n\log n)$ time. The the bubbline-down operation of root would take $O(\log n)$ time, which is to be performed $n$ times at maximum. So the time complexity for heap sort is $O(n\log n)$.\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: The initial building of heap takes $O(n\log n)$ time. The the bubbline-down operation of root would take $O(\log n)$ time, which is to be performed $n$ times at maximum. So the time complexity for heap sort is $O(n\log n)$.\\
+\noindent Space complexity: $O(1)$
 \begin{lstlisting}
 def heapify(arr, i, size):
     # To heapify a subtree rooted with node i which is an index in arr. 
@@ -4132,8 +4132,8 @@ Recursive approach
 0 2 4 5 7 1 3 8 9 6
 \end{lstlisting}
 
-\noindent \textit{Time complexity}: $O(|V| + |E|)$\\
-\noindent \textit{Space Complexity}: $O(|V|)$ for the \lstinline{visited} array
+\noindent Time complexity: $O(|V| + |E|)$\\
+\noindent Space Complexity: $O(|V|)$ for the \lstinline{visited} array
 
 \subsubsection{Applications}
 
@@ -4231,8 +4231,8 @@ if __name__ == "__main__":
 Iterative approach
 0 1 2 3 4 6 8 5 9 7
 \end{lstlisting}
-\noindent \textit{Time complexity}: $O(|V| + |E|)$\\
-\noindent \textit{Space Complexity}: $O(|V|)$ for the \lstinline{visited} array
+\noindent Time complexity: $O(|V| + |E|)$\\
+\noindent Space Complexity: $O(|V|)$ for the \lstinline{visited} array
 
 \subsubsection{Applications}
 
@@ -4693,8 +4693,8 @@ Edge : Weight
 3-2 : 51
 \end{lstlisting}
 
-\noindent \textit{Time complexity}: At every iteration of the loop, we add one node to the tree. Since there are $|V|$ nodes, it follows that there are $O(|V|)$ iterations of this loop. Within each iteration of the loop, we need to find and test edges in the tree. If there are $|E|$ edges, the naive searching implementation uses $O(|E|)$ to find the edge with minimum weight. So in combination, we should expect the complexity to be $O(|V||E|)$, which may be $O(|V|^3)$ in the worst case.\\
-\textit{Space complexity}: $O(|V|)$
+\noindent Time complexity: At every iteration of the loop, we add one node to the tree. Since there are $|V|$ nodes, it follows that there are $O(|V|)$ iterations of this loop. Within each iteration of the loop, we need to find and test edges in the tree. If there are $|E|$ edges, the naive searching implementation uses $O(|E|)$ to find the edge with minimum weight. So in combination, we should expect the complexity to be $O(|V||E|)$, which may be $O(|V|^3)$ in the worst case.\\
+Space complexity: $O(|V|)$
 
 
 \newpage
@@ -4712,8 +4712,8 @@ Edge : Weight
 
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: $O(n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def linearSearch(arr, x):
@@ -4743,8 +4743,8 @@ Element found at index: 3
 
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(n)$ because of $n$ number of recursive calls.\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: $O(n)$ because of $n$ number of recursive calls.\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def linearSearchRecursive(arr, idx, x):
@@ -4794,8 +4794,8 @@ Element found at index: 4
 \end{enumerate}
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(\log n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity: $O(\log n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def binarySearch(arr, left, right, element):
@@ -4920,7 +4920,7 @@ To solve the job sequencing problem via greedy method follow this steps:
 	\caption{The solution of the job sequencing problem with deadlines}
 \end{figure}
 
-\noindent \textit{Time complexity} $O(n^2)$.
+\noindent Time complexity $O(n^2)$.
 \begin{lstlisting}
 # A class to store job details. Each job has an identifier,
 # a deadline, and profit associated with it.
@@ -4961,7 +4961,9 @@ def scheduleJobs(jobs, T):
  
  
 if __name__ == '__main__':
-    # List of given jobs. Each job has an identifier, a deadline, and profit associated with it
+ 
+    # List of given jobs. Each job has an identifier, a deadline, and
+    # profit associated with it
     jobs = [
         Job('T1', 9, 15), 
         Job('T2', 2, 2), 
@@ -5010,8 +5012,8 @@ $$\dfrac{V_1}{w_1} \geq \dfrac{V_2}{w_2} \geq \cdots \dfrac{V_n}{w_n}$$
 \noindent Then take the item with the highest ratio and add them until we can’t add the next item as a whole and at the end add the next item as much as we can. Which will always be the optimal solution to this problem.
 
 \vspace{5mm}
-\noindent \textit{Time complexity}: First we need to sort the items in decreasing order of value/weight ratio, which takes $O(n\log n)$ time. Then iteration over each element takes $O(n)$ time. So the time complexity is $O(n\log n)$.\\
-\noindent \textit{Space complexity}: $O(n)$ to store the value/weight ratios in an array.
+\noindent Time complexity: First we need to sort the items in decreasing order of value/weight ratio, which takes $O(n\log n)$ time. Then iteration over each element takes $O(n)$ time. So the time complexity is $O(n\log n)$.\\
+\noindent Space complexity: $O(n)$ to store the value/weight ratios in an array.
 
 \begin{lstlisting}
 def fractional_knapsack(value, weight, capacity):
@@ -5190,8 +5192,8 @@ Output: ["abc", "acb", "bac", "bca", "cba", "cab"]
 \end{figure}
 \vspace{5mm}
 
-\noindent \textit{Time Complexity}: $O(n * n!)$, where $n$ is the length of the string since there are $n!$ permutations and it requires $O(n)$ time to print a permutation.\\
-\textit{Space Complexity}: $O(n!)$, since one has to keep $n!$ solutions.
+\noindent Time Complexity: $O(n * n!)$, where $n$ is the length of the string since there are $n!$ permutations and it requires $O(n)$ time to print a permutation.\\
+Space Complexity: $O(n!)$, since one has to keep $n!$ solutions.
 
 \begin{lstlisting}
 def permutations(char_list, idx=0):
@@ -5232,9 +5234,9 @@ ACB
 	\item Execute steps (1), (2) and (3) for $n$ number of times where $n$ is the length of the list. (In second round you don't need to consider the last element. In third round no need to consider the last two elements and so on.)
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(n^2)$ for number of rounds ($n$) $\times$ number of comparisons ($n$) in the worst case
+\noindent Time complexity: $O(n^2)$ for number of rounds ($n$) $\times$ number of comparisons ($n$) in the worst case
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{table}[ht]
 	\label{Bubble sort}
@@ -5285,9 +5287,9 @@ def swap_value_by_index(a_list, a, b):
 	\item After the first iteration, the smallest number is placed at the first position. The same procedure is repeated for the second element and so on.
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{table}[h]
 	\label{Selection sort}
@@ -5338,9 +5340,9 @@ def swap_value_by_index(a_list, a, b):
 	\item The procedure is repeated for all elements in the array.
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{figure}[ht]
 	\centering
@@ -5458,7 +5460,7 @@ Before sorting: [29, 99, 27, 41, 66, 28, 44]
 After sorting: [27, 28, 29, 41, 44, 66, 99]
 \end{lstlisting}
 
-\noindent \textit{Time complexity}: To analyze the \lstinline{quick_sort} function, note that for a list of length $n$, if the partition always occurs in the middle of the list, there will again be $\log n$ divisions. In order to find the split point, each of the $n$ items needs to be checked against the pivot value. The result is $n\log n$. This results in an average case complexity $\Theta(n\log n)$.
+\noindent To analyze the \lstinline{quick_sort} function, note that for a list of length $n$, if the partition always occurs in the middle of the list, there will again be $\log n$ divisions. In order to find the split point, each of the $n$ items needs to be checked against the pivot value. The result is $n\log n$. This results in an average case complexity $\Theta(n\log n)$.
 
 \noindent Unfortunately, in the worst case, the split points may not be in the middle and can be very skewed to the left or the right, leaving a very uneven division. In this case, sorting a list of $n$ items divides into sorting a list of 0 items and a list of $n-1$ items. Then sorting a list of $n-1$ divides into a list of size 0 and a list of size $n-2$, and so on. The result is the worst case complexity $O(n^2)$ sort with all of the overhead that recursion requires.
 
@@ -5638,7 +5640,7 @@ def fib(n, cache = {}):
         return res
 \end{lstlisting}
 
-\noindent Here, the computation time is reduced significantly as the outputs produced after each recursion are stored in a cache which can be reused later. This method is much more efficient than the previous one. Let's now calculate its \textit{time complexity}.
+\noindent Here, the computation time is reduced significantly as the outputs produced after each recursion are stored in a cache which can be reused later. This method is much more efficient than the previous one. Let's now calculate its time complexity.
 
 $$T(n) = T(n-1) + T(n-2) + c$$
 
@@ -5658,7 +5660,7 @@ $$T(n) = T(n-1) + T(n-2) + c$$
 	     &= 1 + n(1+c) \in O(n)
 \end{align*}
 
-\noindent The \textit{space complexity} is $O(n)$ to store the cache.
+\noindent The space complexity is $O(n)$ to store the cache.
 \vspace{3mm}
 
 \noindent Third solution: Using \textbf{Bottom-up method}
@@ -5675,7 +5677,7 @@ def fib(n):
     return dp[n]
 \end{lstlisting}
 
-\noindent This code doesn't use recursion at all. Here, we create an empty list of length $(n+1)$ and set the base case of \lstinline{fib(0)} and \lstinline{fib(1)} at index positions 0 and 1. Then using a for loop for index values 2 up to $n$, the rest of the values are populated in the list. Unlike in the recursive method, the \textit{time complexity} of this code is linear i.e., it runs in $O(n)$. The \textit{space complexity} is $O(n)$ because of the requirement of storing the list.
+\noindent This code doesn't use recursion at all. Here, we create an empty list of length $(n+1)$ and set the base case of \lstinline{fib(0)} and \lstinline{fib(1)} at index positions 0 and 1. Then using a for loop for index values 2 up to $n$, the rest of the values are populated in the list. Unlike in the recursive method, the time complexity of this code is linear i.e., it runs in $O(n)$. The space complexity is $O(n)$ because of the requirement of storing the list.
 
 \section{Integers from a given list to add up to a number}
 
@@ -5694,9 +5696,9 @@ $$dp[0] = dp[1] = dp[2] = 1 \text{ and } dp[3] = 2$$
 
 \noindent First solution: Using Top-down approach
 
-\noindent \textit{Time complexity}:  $O(n)$
+\noindent Time complexity:  $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 \begin{lstlisting}
 def number_sum_subset(n, memo = {}):
     # If the number is 0, 1, or 2, return 1.
@@ -5719,8 +5721,8 @@ def number_sum_subset(n, memo = {}):
 
 \noindent Second solution: Using Bottom-up approach
 
-\noindent \textit{Time Complexity}: $O(n)$\\
-\noindent \textit{Space Complexity}: $O(n)$
+\noindent Time Complexity: $O(n)$\\
+\noindent Space Complexity: $O(n)$
 
 \begin{lstlisting}
 def number_sum_subset(n):
@@ -5791,8 +5793,8 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 \lstinline{max(money[i] + max_loot(money, i+2), max_loot(money, i+1))}
 \end{center}
 
-\noindent \textit{Time Complexity}: $O(n)$\\
-\noindent \textit{Space Complexity}: $O(n)$
+\noindent Time Complexity: $O(n)$\\
+\noindent Space Complexity: $O(n)$
 
 \begin{lstlisting}
 # Maximum loot at the current index
@@ -5861,8 +5863,8 @@ Max loot: 41
 
 \noindent Third solution: Using Bottom-up approach
 
-\noindent \textit{Time Complexity}: $O(n)$\\
-\noindent \textit{Space Complexity}: $O(n)$
+\noindent Time Complexity: $O(n)$\\
+\noindent Space Complexity: $O(n)$
 
 \begin{lstlisting}
 def max_loot(money):
@@ -5933,8 +5935,8 @@ W &= 64
 
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(nW)$\\
-\noindent \textit{Time complexity}: $O(nW)$
+\noindent Time complexity: $O(nW)$\\
+\noindent \noindent Time complexity: $O(nW)$
 
 \vspace{3mm}
 
@@ -6116,7 +6118,8 @@ $$Y =  \text{"BDCABA"}$$
 
 \vspace{3mm}
 
-\noindent A naive solution is to check if every subsequence of $X$ to see if it is also a subsequence of $Y$. As there are $2^m$ subsequences possible of $X$, the time complexity of this solution would be $O(n.2^m)$, where $m$ is the length of the first string and $n$ is the length of the second string.
+\noindent A naive solution is to check if every subsequence of $X$ to see if it is also a subsequence of $Y$. As there are $2^m$ subsequences possible of $X$, the time complexity of this solution would be $O(n.2^m)$, where $m$ is the length of the first string and $n$ is the length of the second string. To check that a string is a subsequence of another string on length $n$ takes $O(n)$ time (see \ref{sec:check_subsequence}).
+\vspace{4mm}
 
 \noindent The LCS problem has optimal substructure. So we can apply the dynamic programming approach. Let's consider two sequences, $X = x_1x_2x_3\cdots x_m$ and $Y=y_1y_2y_3\cdots y_n$, of length $m$ and $n$ that both end in the same element.
 
@@ -6135,8 +6138,8 @@ $$Y =  \text{"BDCABA"}$$
 
 \noindent First solution: Top-down approach
 
-\noindent \textit{Time complexity}: $O(nm)$: Since there are $(m+1)(n+1)$ entries, so the total number of recursive calls are at most $2(m+1)(n+1)+1$. So the time complexity is $O(mn)$.\\
-\noindent  \textit{Space complexity}: $O(nm)$
+\noindent Time complexity: $O(nm)$ since there are $(m+1)(n+1)$ entries, so the total number of recursive calls are at most $2(m+1)(n+1)+1$. So the time complexity is $O(mn)$.\\
+\noindent  Space complexity: $O(nm)$
 
 \begin{lstlisting}
 def lcs(X, Y, m, n, memo = {}):
@@ -6151,11 +6154,11 @@ def lcs(X, Y, m, n, memo = {}):
  
     # If the last character of 'X' and 'Y' match
     if X[m - 1] == Y[n - 1]:
-        memo[key] = lcs(X, Y, m - 1, n - 1) + 1
+        memo[key] = lcs(X, Y, m-1, n-1) + 1
         return memo[key]
     # If the last character of 'X' and 'Y' don't match
     else:
-        memo[key] = max(lcs(X, Y, m, n - 1, memo), lcs(X, Y, m - 1, n, memo))
+        memo[key] = max(lcs(X, Y, m, n-1, memo), lcs(X, Y, m-1, n, memo))
     
     return memo[key]
  
@@ -6221,7 +6224,7 @@ The length of the LCS is 4
 
 \noindent Similarly we can continue further with the following rule:
 \begin{enumerate}
-    \item If the character correspond to the row and the character corresponding to the column are same, fill the cell with the \textbf{value in the cell diagonally top-left plus one}. 
+    \item If the character correspond to the row and the character corresponding to the column are same, fill the cell with the \textbf{value in the cell diagonally top-left and add 1}. 
     \item Otherwise, fill the cell with the \textbf{maximum value among the left cell and the just cell above this}.
 \end{enumerate}
 
@@ -6301,8 +6304,8 @@ The length of the LCS is 4
 
 \vspace{5mm}
 
-\noindent \textit{Time complexity}:  $O(n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity:  $O(n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def findMinMax(arr):
@@ -6371,9 +6374,9 @@ a, b = b, a
 \textbf{Given an array \lstinline{arr} and size \lstinline{L}, divide the array into many sub-arrays where each sub-array is of given chunk size. }
 \vspace{5mm}
 
-\noindent \textit{Time complexity}:  $O(n)$
+\noindent Time complexity:  $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def chunk(arr, L):
@@ -6403,10 +6406,10 @@ if __name__ == "__main__":
 \textbf{Write a program to get the $n$th prime number.}
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: The \textit{prime number theorem}\footnote{The number of primes less than or equal to $n$ (a.k.a. \textbf{prime counting function}) is given by $$\Pi(n) \sim \dfrac{n}{\log n}$$} is equivalent to the statement that the $n$th prime number $p_n$ satisfies $p_n \sim n\log n$.  We therefore need to have $n\log n$ iteration. In each iteration, we need to check if the number is a prime or not in $O(n)$ time. So the time complexity will be of the order
+\noindent Time complexity: The \textit{prime number theorem}\footnote{The number of primes less than or equal to $n$ (a.k.a. \textbf{prime counting function}) is given by $$\Pi(n) \sim \dfrac{n}{\log n}$$} is equivalent to the statement that the $n$th prime number $p_n$ satisfies $p_n \sim n\log n$.  We therefore need to have $n\log n$ iteration. In each iteration, we need to check if the number is a prime or not in $O(n)$ time. So the time complexity will be of the order
 $$\sum_{k=1}^{n\log n} k = \dfrac{(n\log n)(n\log n + 1)}{2} \sim O(n^2(\log n)^2)$$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def isPrime(number):
@@ -6489,9 +6492,9 @@ FizzBuzz
 
 \noindent First solution: By sorting the strings and comparing:
 
-\noindent \textit{Time complexity}: $O(n\log n)$ since the most efficient sorting will take $O(n\log n)$ time while the comparison will take $O(n)$ time.
+\noindent Time complexity: $O(n\log n)$ since the most efficient sorting will take $O(n\log n)$ time while the comparison will take $O(n)$ time.
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 \begin{lstlisting}
 def anagram_check(str1, str2):
     # Check if length is same
@@ -6522,9 +6525,9 @@ race and care are anagram.
 
 \noindent Second solution: By building character map for each string and then comparing the maps.
 
-\noindent \textit{Time complexity}:  $O(n)$ since building character map will take  $O(n)$ time plus the comparison will take $O(n)$ time.
+\noindent Time complexity:  $O(n)$ since building character map will take  $O(n)$ time plus the comparison will take $O(n)$ time.
 
-\noindent \textit{Space complexity}: $O(n)$ for the requirements of the character maps.
+\noindent Space complexity: $O(n)$ for the requirements of the character maps.
 \begin{lstlisting}
 def anagram_check(str1, str2):
     # Build the charMap of the two strings
@@ -6583,8 +6586,8 @@ $$1 + 2 + \cdots + n = \dfrac{n(n+1)}{2}$$
 
 \noindent The idea is to find the sum of integers between 1 and $n$ using the above formula where $n$ is the array's size + 1. Also calculate the actual sum of integers in the array. Now the missing number would be the difference between the two.
 
-\noindent \textit{Time complexity}:  $O(n)$\\
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Time complexity:  $O(n)$\\
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def getMissingNumber(arr):
@@ -6609,9 +6612,9 @@ def getMissingNumber(arr):
 
 \noindent Brute force solution: By checking all pairs
 
-\noindent \textit{Time complexity}:  $O(n^2)$
+\noindent Time complexity:  $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def findPair(arr, k):
@@ -6624,9 +6627,9 @@ def findPair(arr, k):
 
 \noindent Second solution: By sorting the array
 
-\noindent \textit{Time complexity}: $O(n\log n)$
+\noindent Time complexity: $O(n\log n)$
 
-\noindent \textit{Space complexity}: $O(1)$ if you are allowed to modify the input, otherwise $O(n)$
+\noindent Space complexity: $O(1)$ if you are allowed to modify the input, otherwise $O(n)$
 
 \begin{lstlisting}
 def findPair(arr, k):
@@ -6645,9 +6648,9 @@ def findPair(arr, k):
 
 \noindent Third solution: By using a dictionary
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def findPair(arr, k):
@@ -6672,9 +6675,9 @@ def findPair(arr, k):
 
 \noindent Brute force solution:
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def firstRepeatingCharacter(a_str):
@@ -6687,9 +6690,9 @@ def firstRepeatingCharacter(a_str):
 
 \noindent By using a dictionary:
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def firstRepeatingCharacter(a_str):
@@ -6710,9 +6713,9 @@ def firstRepeatingCharacter(a_str):
 
 \noindent Brute force solution:
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def removeDuplicates(arr):
@@ -6727,9 +6730,9 @@ def removeDuplicates(arr):
 
 After sorting the array all the duplicate elements are grouped together e.g. \lstinline{[1, 1, 1, 3, 3, 4]}. So we only need to add the character to the output list if the current character does not match the previous character in the array.
 
-\noindent \textit{Time complexity}: $O(n\log n)$
+\noindent Time complexity: $O(n\log n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def removeDuplicates(arr):
@@ -6745,9 +6748,9 @@ def removeDuplicates(arr):
 
 \noindent Third solution: By using a dictionary
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def removeDuplicates(arr):
@@ -6765,9 +6768,9 @@ def removeDuplicates(arr):
 
 \noindent Brute force solution:
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def findDuplicate(arr):
@@ -6779,9 +6782,9 @@ def findDuplicate(arr):
 
 \noindent Second solution: By sorting the array
 
-\noindent \textit{Time complexity}: $O(n\log n)$
+\noindent Time complexity: $O(n\log n)$
 
-\noindent \textit{Space complexity}: $O(1)$ if you are allowed to modify the input, otherwise $O(n)$
+\noindent Space complexity: $O(1)$ if you are allowed to modify the input, otherwise $O(n)$
 
 \begin{lstlisting}
 def findDuplicate(arr):
@@ -6793,9 +6796,9 @@ def findDuplicate(arr):
 
 \noindent Third solution: By using a dictionary
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def findDuplicate(arr):
@@ -6865,9 +6868,9 @@ arr   & 2 & 6 & 4 & 1 & 3 & 1 & 5
 
 \end{itemize}
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \newpage
 \begin{lstlisting}
@@ -6965,9 +6968,9 @@ x + k_h L + y &= 2\times (x + k_t L + y)\\
 
 \noindent Brute force solution:
 
-\noindent \textit{Time complexity}: $O(n^3)$
+\noindent Time complexity: $O(n^3)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def maximumSubarray(arr):
@@ -6984,9 +6987,9 @@ def maximumSubarray(arr):
 
 \noindent Second solution: Brute force with cumulative sum
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def maximumSubarray(arr):
@@ -7023,9 +7026,9 @@ or,
 
 $$S_i = \max(A_i, S_{i-1} + A_i)$$
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def maximumSubarray(arr):
@@ -7047,9 +7050,9 @@ def maximumSubarray(arr):
 \noindent In order to solve this problem, we will firstly check if the strings are of same length. After that we will concatenate the first string with itself, then check whether the second one is present in the concatenated string or not. If the second string exists in the concatenated string, the strings are rotations of each other. In our example, for \lstinline{str1 = "HELLO"},  the concatenated String will be \lstinline{"HELLOHELLO"}. As we can see, this concatenated string contains the string \lstinline{"LOHEL"} and thus, these strings are rotations of each other.
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(n^2)$, since it depends on the process of finding the string \lstinline{str2} in the concatenated string. For this we need to run two loops: one along the concatenated string and the other through \lstinline{str2}.\\
+\noindent Time complexity: $O(n^2)$, since it depends on the process of finding the string \lstinline{str2} in the concatenated string. For this we need to run two loops: one along the concatenated string and the other through \lstinline{str2}.\\
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def checkRotation(str1, str2): 
@@ -7092,8 +7095,8 @@ Output: "practice of lot a needs coding at good getting"
 \noindent First solution: using a stack
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(n)$ where $n$ is the number of characters in the sentence. The complexity is due to the splitting of words into an array.\\
-\noindent \textit{Space complexity}: $O(m)$ due to the requirement of the stack where $m$ is the number of words in the sentence.
+\noindent Time complexity: $O(n)$ where $n$ is the number of characters in the sentence. The complexity is due to the splitting of words into an array.\\
+\noindent Space complexity: $O(m)$ due to the requirement of the stack where $m$ is the number of words in the sentence.
 \begin{lstlisting}
 def reverseWords(sentence):
     word_array = sentence.split(" ")
@@ -7129,8 +7132,8 @@ much very program this like i
 
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: Swapping of words takes $O(m)$ time where $m$ is the number of words in the sentence and splitting of words into an array takes $O(n)$ time where $n$ is the number of characters in the sentence. Since $m<n$, the complexity is due to the splitting of words into an array and is given by $O(n)$.\\
-\noindent \textit{Space complexity}: $O(1)$.
+\noindent Time complexity: Swapping of words takes $O(m)$ time where $m$ is the number of words in the sentence and splitting of words into an array takes $O(n)$ time where $n$ is the number of characters in the sentence. Since $m<n$, the complexity is due to the splitting of words into an array and is given by $O(n)$.\\
+\noindent Space complexity: $O(1)$.
 \begin{lstlisting}
 def reverseWords(sentence):
     word_array = sentence.split(" ")
@@ -7152,6 +7155,102 @@ if __name__ == "__main__":
 \textbf{Output}
 \begin{lstlisting}
 much very program this like i
+\end{lstlisting}
+
+\newpage
+\section{Check subsequence}
+\label{sec:check_subsequence}
+\noindent \textbf{Given two strings \lstinline{str1} and \lstinline{str2}, find if \lstinline{str1} is a subsequence of \lstinline{str2}.}
+\vspace{5mm}
+
+\noindent A subsequence is a sequence that can be derived from another sequence by deleting some elements without changing the order of the remaining elements.
+
+\begin{lstlisting}
+Input: str1 = "AXY", str2 = "ADXCPY"
+Output: True (str1 is a subsequence of str2)
+
+Input: str1 = "AXY", str2 = "YADXCP"
+Output: False (str1 is not a subsequence of str2)
+\end{lstlisting}
+
+\noindent The idea is simple, we traverse both strings from one side to the other (say, from rightmost character to leftmost or vice versa). If we find a matching character, we move ahead in both strings. Otherwise we move ahead only in \lstinline{str2}.
+\vspace{4mm}
+
+\noindent First solution: Iterative approach
+\vspace{4mm}
+
+\noindent \textit{Time complexity}: $O(n)$\\
+\noindent \textit{Space complexity}: $O(1)$\\
+\begin{lstlisting}
+def isSubSequence(str1, str2): 
+    m = len(str1) 
+    n = len(str2) 
+
+    i = 0    # Index of str1 
+    j = 0    # Index of str2 
+      
+    # Traverse both str1 and str2 
+    # Compare current character of str2 with first unmatched character of str1 
+    # If matched, then move ahead in str1 
+    while i < m and j < n: 
+        if str1[i] == str2[j]:     
+            i += 1    
+        j += 1
+          
+    # If all characters of str1 matched, then j is equal to m 
+    return i == m 
+      
+
+if __name__ == "__main__":
+    str1 = "amnraon"
+    str2 = "administration"
+    
+    if isSubSequence(str1, str2):
+        print(f"'{str1}' is a subsequence of '{str2}'") 
+    else: 
+        print(f"'{str1}' is a not subsequence of '{str2}'") 
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+'amnraon' is a subsequence of 'administration'
+\end{lstlisting}
+
+\noindent Second solution: Recursive approach
+\vspace{4mm}
+
+\noindent \textit{Time complexity}: $O(n)$ since there will be a maximum of $n$ number of recursive calls in the worst case.\\
+\noindent \textit{Space complexity}: $O(1)$\\
+
+\begin{lstlisting}
+def isSubSequence(str1, str2, m, n):
+    # m and n are the length of the str1 and str2 respectively
+
+    # Base Cases
+    if m == 0:
+        return True
+    if n == 0:
+        return False
+ 
+    # If last characters of two strings are matching, move both the pointers
+    if str1[m-1] == str2[n-1]:
+        return isSubSequence(str1, str2, m-1, n-1)
+ 
+    # If last characters are not matching, move only the pointer for str2
+    return isSubSequence(str1, str2, m, n-1)
+      
+
+if __name__ == "__main__":
+    str1 = "amnraon"
+    str2 = "administration"
+    
+    if isSubSequence(str1, str2, len(str1), len(str2)):
+        print(f"'{str1}' is a subsequence of '{str2}'") 
+    else: 
+        print(f"'{str1}' is a not subsequence of '{str2}'") 
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+'amnraon' is a subsequence of 'administration'
 \end{lstlisting}
 
 \newpage
@@ -7195,9 +7294,9 @@ every node/.style = {minimum width = 2em, draw, circle},
 \end{figure}
 \noindent Using recursion:
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(h)$ where $h$ is the height (maximum depth from root) of the tree
+\noindent Space complexity: $O(h)$ where $h$ is the height (maximum depth from root) of the tree
 
 \begin{lstlisting}
 class Tree_node:
@@ -7243,9 +7342,9 @@ if __name__ == "__main__":
 
 \noindent Brute force solution:
 
-\noindent \textit{Time complexity}: $O(n^2)$
+\noindent Time complexity: $O(n^2)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def longestSubstringWithoutRepeating(a_string):    
@@ -7276,9 +7375,9 @@ The idea is to scan the string from left to right, keeping track of the maximum 
 
 First we set the starting index to 0 and scan the string with the current pointer. During each character scan we store the index of that character in \lstinline{last_idx}. In case we get a repeated character (which is already present in \lstinline{last_idx}), we move the start pointer to \lstinline{last_idx[a_string[i]] + 1} only if it is greater than previous start pointer. At each scan we also keep track of the maximum length \lstinline{max_len}.
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def longestSubstringWithoutRepeating(a_string):
@@ -7346,9 +7445,9 @@ It is clear that there is always a peak element in any given array.
 
 \noindent Naive solution: By traversing the whole array.
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 # Find the peak element in the array
@@ -7377,9 +7476,9 @@ def findPeak(arr) :
 \noindent Second solution: The idea is based on the technique of Binary Search by finding the middle element. If the element on the right side is greater than the middle element then there is always a peak element on the right side of the array \lstinline{arr[mid+1:]}. On the other hand, if the element on the left side is greater than the middle element then there is always a peak element on the left side of the array \lstinline{arr[:mid+1]}.
 \vspace{3mm}
 
-\noindent \textit{Time complexity}: $O(\log n)$
+\noindent Time complexity: $O(\log n)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def findPeak(arr):
@@ -7397,9 +7496,9 @@ def findPeak(arr):
 \noindent Third solution: Using \textit{Divide and Conquer} method. The idea is to find the middle element similar to the previous case. The middle element will divide the array into two sub-arrays: left sub-array \lstinline{arr[:mid+1]} and right sub-array \lstinline{arr[mid+1:]}. If the element on the right side is greater than the middle element then there is always a peak element on the right sub-array. On the other hand, if the element on the left side is greater than the middle element then there is always a peak element on the left sub-array. Apply the same function on the sub-array (which contains the peak element) recursively.
 \vspace{3mm}
 
-\noindent \textit{Time complexity}: $O(\log n)$
+\noindent Time complexity: $O(\log n)$
 
-\noindent \textit{Space complexity}: $O(1)$
+\noindent Space complexity: $O(1)$
 
 \begin{lstlisting}
 def findPeakRec(arr, left, right):
@@ -7432,9 +7531,9 @@ $$f(n) = f(n-1)+f(n-2)+f(n-3)$$
 
 \noindent First solution: Using normal recursion
 
-\noindent \textit{Time complexity}: $O(3^n)$
+\noindent Time complexity: $O(3^n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def countWays(n):
@@ -7449,9 +7548,9 @@ def countWays(n):
 
 \noindent Second solution: Dynamic programming with memoized approach
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def countWays(n, memo = {}):
@@ -7470,9 +7569,9 @@ def countWays(n, memo = {}):
 
 \noindent Third solution: Dynamic programming with tabulation approach
 
-\noindent \textit{Time complexity}: $O(n)$
+\noindent Time complexity: $O(n)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def countWays(n):
@@ -7513,9 +7612,9 @@ if __name__ == "__main__":
 24
 \end{lstlisting}
 
-\noindent \textit{Time complexity}: $O(mn)$
+\noindent Time complexity: $O(mn)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \newpage
 \section{Coin change}
@@ -7533,9 +7632,9 @@ $$f(n) = f(n-d_1) + f(n-d_2) + f(n-d_3)$$
 \noindent First solution: Dynamic programming with memoized approach
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(mn)$
+\noindent Time complexity: $O(mn)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def countWays(n, denominations):
@@ -7561,9 +7660,9 @@ Number of ways: 24
 \noindent Second solution: Dynamic programming with tabulation approach
 \vspace{5mm}
 
-\noindent \textit{Time complexity}: $O(mn)$
+\noindent Time complexity: $O(mn)$
 
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Space complexity: $O(n)$
 
 \begin{lstlisting}
 def countWays(n, denominations, memo = {}):
@@ -7619,8 +7718,8 @@ $$\phi(n) = 1 + \min_{i=1,2,3} \left(\phi(n-d_i)\right)$$
 
 \noindent First solution: Using normal recursion
 
-\noindent \textit{Time complexity}: $O(m^n)$\\
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Time complexity: $O(m^n)$\\
+\noindent  Space complexity: $O(n)$
 
 \begin{lstlisting}
 def coinChangeRec(n, denominations):
@@ -7653,8 +7752,8 @@ Minimum number of denominations: 3
 
 \noindent Second solution: Using dynamic programming with memoized approach
 
-\noindent \textit{Time complexity}: $O(mn)$\\
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Time complexity: $O(mn)$\\
+\noindent  Space complexity: $O(n)$
 
 \begin{lstlisting}
 def coinChangeRec(n, denominations, memo = {}):
@@ -7684,8 +7783,8 @@ if __name__ == "__main__":
 
 \noindent Third solution: Using dynamic programming with tabulation approach
 
-\noindent \textit{Time complexity}: $O(mn)$\\
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Time complexity: $O(mn)$\\
+\noindent  Space complexity: $O(n)$
 
 \begin{lstlisting}
 def coinChange(n, denominations):
@@ -7740,8 +7839,8 @@ $$r(n) = \max_{1 \leq i \leq n}\left(p(i) + r(n-i)\right)$$
 
 \noindent First solution: Dynamic programming using memoized approach
 
-\noindent \textit{Time complexity}: $O(n^2)$\\
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Time complexity: $O(n^2)$\\
+\noindent  Space complexity: $O(n)$
 \begin{lstlisting}
 def rodCut(price, n, memo={}):
     # Base case
@@ -7775,8 +7874,8 @@ Maximum profit is 18
 
 \noindent Second solution: Dynamic programming using tabulation approach
 
-\noindent \textit{Time complexity}: $O(n^2)$ because of two for loops\\
-\noindent \textit{Space complexity}: $O(n)$
+\noindent Time complexity: $O(n^2)$ because of two for loops\\
+\noindent  Space complexity: $O(n)$
 \begin{lstlisting}
 def rodCut(price, n):
     # `dp[i]' stores the maximum profit achieved from a rod of length `i'
@@ -8118,7 +8217,7 @@ Iteration  9 : Value =  3.5541475357252508 : Error =  2.7886966961432336e-05
 \textbf{Given two strings \lstinline{str1} and \lstinline{str2}, find the minimum number of edits (operations which include \textit{insert}, \textit{remove} and \textit{replace}) required to convert \lstinline{str1} into \lstinline{str2}.  }
 
 \vspace{5mm}
-\noindent The \textbf{Levenshtein distance} between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other. 
+\noindent The \textbf{Levenshtein distance} between two words is the minimum number of single-character edits (insertions, deletions or substitutions) required to change one word into the other.
 \vspace{5mm}
 
 \noindent Example 1
@@ -8156,8 +8255,8 @@ Replace 'n' with 'r', insert 't', insert 'a'
 \end{enumerate}
 \end{enumerate}
 
-\noindent \textit{Time complexity}: $O(3^{\min(m,n)})$\\
-\noindent \textit{Space complexity}: $O(\min(m,n))$ for the requirement of call stack
+\noindent Time complexity: $O(3^{\min(m,n)})$\\
+\noindent Space complexity: $O(\min(m,n))$ for the requirement of call stack
 
 
 \begin{lstlisting}
@@ -8196,8 +8295,8 @@ if __name__ == "__main__":
 
 \noindent Second solution: Memoization (Top-down) approach 
 
-\noindent \textit{Time complexity}: $O(mn)$\\
-\noindent \textit{Space complexity}: $O(mn)$ 
+\noindent Time complexity: $O(mn)$\\
+\noindent Space complexity: $O(mn)$ 
 
 \begin{lstlisting}
 def editDistance(str1, str2, m, n, memo = {}):
@@ -8253,8 +8352,8 @@ $$dp[i][j] = dp[i-1][j-1]$$
 $$dp[i][j] = 1 + \min \left(dp[i-1][j], dp[i][j-1], dp[i-1][j-1]\right)$$
 \end{itemize}
 
-\noindent \textit{Time complexity}: $O(mn)$\\
-\noindent \textit{Space complexity}: $O(mn)$
+\noindent Time complexity: $O(mn)$\\
+\noindent Space complexity: $O(mn)$
 
 \begin{lstlisting}
 def editDistance(str1, str2, m, n):
