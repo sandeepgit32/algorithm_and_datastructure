@@ -90,15 +90,16 @@
 \BOOKMARK [1][-]{section.6.14}{Reverse words in a given sentence}{chapter.6}% 90
 \BOOKMARK [1][-]{section.6.15}{Check subsequence}{chapter.6}% 91
 \BOOKMARK [1][-]{section.6.16}{Reversing a binary tree}{chapter.6}% 92
-\BOOKMARK [1][-]{section.6.17}{Longest sub-string without repeating characters}{chapter.6}% 93
-\BOOKMARK [1][-]{section.6.18}{Finding a peak element}{chapter.6}% 94
-\BOOKMARK [1][-]{section.6.19}{Ways to climb a stair}{chapter.6}% 95
-\BOOKMARK [1][-]{section.6.20}{Coin change}{chapter.6}% 96
-\BOOKMARK [1][-]{section.6.21}{Minimum number of coins for change}{chapter.6}% 97
-\BOOKMARK [1][-]{section.6.22}{Cutting a rod}{chapter.6}% 98
-\BOOKMARK [1][-]{section.6.23}{Numerical solution of an equation}{chapter.6}% 99
-\BOOKMARK [2][-]{subsection.6.23.1}{Bisection method}{section.6.23}% 100
-\BOOKMARK [2][-]{subsection.6.23.2}{Secant method}{section.6.23}% 101
-\BOOKMARK [2][-]{subsection.6.23.3}{Newton-Raphson method}{section.6.23}% 102
-\BOOKMARK [2][-]{subsection.6.23.4}{Regula-falsi method}{section.6.23}% 103
-\BOOKMARK [1][-]{section.6.24}{Edit distance \(Levenshtein distance\)}{chapter.6}% 104
+\BOOKMARK [1][-]{section.6.17}{Check for BST}{chapter.6}% 93
+\BOOKMARK [1][-]{section.6.18}{Longest sub-string without repeating characters}{chapter.6}% 94
+\BOOKMARK [1][-]{section.6.19}{Finding a peak element}{chapter.6}% 95
+\BOOKMARK [1][-]{section.6.20}{Ways to climb a stair}{chapter.6}% 96
+\BOOKMARK [1][-]{section.6.21}{Coin change}{chapter.6}% 97
+\BOOKMARK [1][-]{section.6.22}{Minimum number of coins for change}{chapter.6}% 98
+\BOOKMARK [1][-]{section.6.23}{Cutting a rod}{chapter.6}% 99
+\BOOKMARK [1][-]{section.6.24}{Numerical solution of an equation}{chapter.6}% 100
+\BOOKMARK [2][-]{subsection.6.24.1}{Bisection method}{section.6.24}% 101
+\BOOKMARK [2][-]{subsection.6.24.2}{Secant method}{section.6.24}% 102
+\BOOKMARK [2][-]{subsection.6.24.3}{Newton-Raphson method}{section.6.24}% 103
+\BOOKMARK [2][-]{subsection.6.24.4}{Regula-falsi method}{section.6.24}% 104
+\BOOKMARK [1][-]{section.6.25}{Edit distance \(Levenshtein distance\)}{chapter.6}% 105

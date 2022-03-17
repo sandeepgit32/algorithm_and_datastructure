@@ -6118,8 +6118,7 @@ $$Y =  \text{"BDCABA"}$$
 
 \vspace{3mm}
 
-\noindent A naive solution is to check if every subsequence of $X$ to see if it is also a subsequence of $Y$. As there are $2^m$ subsequences possible of $X$, the time complexity of this solution would be $O(n.2^m)$, where $m$ is the length of the first string and $n$ is the length of the second string. To check that a string is a subsequence of another string on length $n$ takes $O(n)$ time (see \ref{sec:check_subsequence}).
-\vspace{4mm}
+\noindent A naive solution is to check if every subsequence of $X$ to see if it is also a subsequence of $Y$. As there are $2^m$ subsequences possible of $X$, the time complexity of this solution would be $O(n.2^m)$, where $m$ is the length of the first string and $n$ is the length of the second string.
 
 \noindent The LCS problem has optimal substructure. So we can apply the dynamic programming approach. Let's consider two sequences, $X = x_1x_2x_3\cdots x_m$ and $Y=y_1y_2y_3\cdots y_n$, of length $m$ and $n$ that both end in the same element.
 
@@ -6138,7 +6137,7 @@ $$Y =  \text{"BDCABA"}$$
 
 \noindent First solution: Top-down approach
 
-\noindent Time complexity: $O(nm)$ since there are $(m+1)(n+1)$ entries, so the total number of recursive calls are at most $2(m+1)(n+1)+1$. So the time complexity is $O(mn)$.\\
+\noindent Time complexity: $O(nm)$: Since there are $(m+1)(n+1)$ entries, so the total number of recursive calls are at most $2(m+1)(n+1)+1$. So the time complexity is $O(mn)$.\\
 \noindent  Space complexity: $O(nm)$
 
 \begin{lstlisting}
@@ -6154,11 +6153,11 @@ def lcs(X, Y, m, n, memo = {}):
  
     # If the last character of 'X' and 'Y' match
     if X[m - 1] == Y[n - 1]:
-        memo[key] = lcs(X, Y, m-1, n-1) + 1
+        memo[key] = lcs(X, Y, m - 1, n - 1) + 1
         return memo[key]
     # If the last character of 'X' and 'Y' don't match
     else:
-        memo[key] = max(lcs(X, Y, m, n-1, memo), lcs(X, Y, m-1, n, memo))
+        memo[key] = max(lcs(X, Y, m, n - 1, memo), lcs(X, Y, m - 1, n, memo))
     
     return memo[key]
  
@@ -6224,7 +6223,7 @@ The length of the LCS is 4
 
 \noindent Similarly we can continue further with the following rule:
 \begin{enumerate}
-    \item If the character correspond to the row and the character corresponding to the column are same, fill the cell with the \textbf{value in the cell diagonally top-left and add 1}. 
+    \item If the character correspond to the row and the character corresponding to the column are same, fill the cell with the \textbf{value in the cell diagonally top-left plus one}. 
     \item Otherwise, fill the cell with the \textbf{maximum value among the left cell and the just cell above this}.
 \end{enumerate}
 
@@ -7159,7 +7158,7 @@ much very program this like i
 
 \newpage
 \section{Check subsequence}
-\label{sec:check_subsequence}
+\label{section:check_subsequence}
 \noindent \textbf{Given two strings \lstinline{str1} and \lstinline{str2}, find if \lstinline{str1} is a subsequence of \lstinline{str2}.}
 \vspace{5mm}
 
@@ -7333,6 +7332,156 @@ def main():
 if __name__ == "__main__":
 	main()
 \end{lstlisting}
+
+\newpage
+\section{Check for BST}
+\noindent \textbf{Determine whether a given binary tree is a BST or not}
+\vspace{5mm}
+
+\noindent  The BST property ``\textit{Every node on the right subtree has to be larger than the current node and every node on the left subtree has to be smaller than the current node}'' is the key to figuring out whether a tree is a BST or not.
+
+\vspace{3mm}
+
+\noindent The \textit{greedy} algorithm – traverse the tree, at every node check whether the node contains a value larger than the value at the left child and smaller than the value on the right child – does not work for all cases. Consider the following tree:
+
+\begin{lstlisting}
+      20
+     /  \
+   10    30
+        /  \
+       5    40
+\end{lstlisting}
+
+\noindent In the tree above, each node meets the condition that the node contains a value larger than its left child and smaller than its right child hold, and yet it’s not a BST: the value 5 is on the right subtree of the node containing 20, a violation of the BST property.
+\vspace{3mm}
+
+\noindent Instead of deciding based solely on a node’s values and its children, we also need information flowing down from the parent. In the tree above, if we could remember about the node containing the value 20, we would see that the node with value 5 is violating the BST property contract. So, the condition we need to check at each node is:
+\begin{enumerate}
+    \item If the node is the left child of its parent, it must be smaller than the parent, and it must pass down the value from its parent to its right subtree to make sure none of the nodes in that subtree is greater than the parent.
+    \item If the node is the right child of its parent, it must be larger than the parent, and it must pass down the value from its parent to its left subtree to make sure none of the nodes in that subtree is lesser than the parent.
+\end{enumerate}
+
+\noindent \textit{Time complexity}: $O(n)$ where $n$ is the size of the tree.\\
+\noindent \textit{Space complexity}: $O(n)$ since there will be $n$ number of recursive calls.
+
+\begin{lstlisting}
+class Tree_node:
+    def __init__(self, data, left = None, right = None):
+        self.data = data
+        self.left = left
+        self.right = right
+ 
+ 
+# Function to determine whether a given binary tree is a BST by keeping a valid range (starting from [-INFINITY, INFINITY]) and keep shrinking it down for each node as we go down recursively
+def isBST(node, minKey, maxKey):
+ 
+    # base case
+    if node is None:
+        return True
+ 
+    # if the node's value falls outside the valid range
+    if node.data < minKey or node.data > maxKey:
+        return False
+ 
+    # recursively check left and right subtrees with an updated range
+    return isBST(node.left, minKey, node.data) and \
+        isBST(node.right, node.data, maxKey)
+ 
+# Function to determine whether a given binary tree is a BST
+def checkForBST(root):
+    if isBST(root, float("-Inf"), float("Inf")):
+        print('The tree is a BST.')
+    else:
+        print('The tree is not a BST')
+ 
+if __name__ == '__main__':
+    '''
+      _4__     
+     /    \    
+     2     6   
+    / \   / \  
+    1 3  5   7
+    '''
+    root = Tree_node(4)
+    root.left = Tree_node(2)
+    root.right = Tree_node(6)
+    root.left.left = Tree_node(1)
+    root.left.right = Tree_node(3)
+    root.right.left = Tree_node(5)
+    root.right.right = Tree_node(7)
+    checkForBST(root)
+\end{lstlisting}
+\textbf{Output}
+\begin{lstlisting}
+The tree is a BST.
+\end{lstlisting}
+
+%\noindent Second approach: We know that an \textit{inorder traversal} of a binary search tree returns the nodes in sorted order. To determine whether a given binary tree is a BST, keep track of the last visited node while traversing the tree. Then for each encountered node in the inorder traversal, check whether the last visited node is smaller compared to the current node.
+%
+%\vspace{4mm}
+%
+%\noindent \textit{Time complexity}: $O(n)$ where $n$ is the size of the tree.\\
+%\noindent \textit{Space complexity}: $O(n)$ since there will be $n$ number of recursive calls.\textbf{}
+%
+%\begin{lstlisting}
+%class Tree_node:
+%    def __init__(self, data, left = None, right = None):
+%        self.data = data
+%        self.left = left
+%        self.right = right
+% 
+%
+%def isBST(node, prev):
+%    # Base case: Empty tree is a BST
+%    if node is None:
+%        return True
+% 
+%    # Check if the left subtree is BST or not
+%    isBST(node.left, prev)
+% 
+%    # Value of the current node should be more than that of the previous node
+%    print(prev.data, node.data)
+%    if node.data <= prev.data:
+%        return False
+% 
+%    # update previous node data and check if the right subtree is BST or not
+%    prev.data = node.data
+%
+%    # Check if the right subtree is BST or not
+%    isBST(node.right, prev)
+% 
+% 
+%# Function to determine whether a given binary tree is a BST
+%def checkForBST(root):
+%    # Pointer to store previously processed node in the inorder traversal
+%    prev = Tree_node(float("-Inf"))
+%    if isBST(root, prev):
+%        print('The tree is a BST.')
+%    else:
+%        print('The tree is not a BST')
+% 
+% 
+%if __name__ == '__main__':
+%    '''
+%      _4__     
+%     /    \    
+%     2     6   
+%    / \   / \  
+%    1 3  5   7
+%    '''
+%    root = Tree_node(4)
+%    root.left = Tree_node(2)
+%    root.right = Tree_node(6)
+%    root.left.left = Tree_node(1)
+%    root.left.right = Tree_node(3)
+%    root.right.left = Tree_node(5)
+%    root.right.right = Tree_node(7)
+%    checkForBST(root)
+%\end{lstlisting}
+%\textbf{Output}
+%\begin{lstlisting}
+%The tree is a BST.
+%\end{lstlisting}
 
 \newpage
 \section{Longest sub-string without repeating characters}
