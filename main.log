@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  17 MAR 2022 10:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  17 MAR 2022 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1072,7 +1072,7 @@ n/10.95 (\OML/lmm/m/it/10.95 x[]x[] [] x[]; y[]y[] [] y[]\OT1/lmr/m/n/10.95 )$
 ]
  6.
 [135] [136] [137] [138] [139]
-Overfull \hbox (10.7708pt too wide) in paragraph at lines 6494--6495
+Overfull \hbox (10.7708pt too wide) in paragraph at lines 6478--6479
 \T1/lmr/m/n/10.95 Time com-plex-ity: $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (
 \OML/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 since the mos
 t ef-fi-cient sort-ing will take $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (\OML
@@ -1080,28 +1080,28 @@ t ef-fi-cient sort-ing will take $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (\OML
  []
 
 [140] [141] [142] [143] [144] [145] [146]
-Overfull \hbox (0.68234pt too wide) in paragraph at lines 6817--6819
+Overfull \hbox (0.68234pt too wide) in paragraph at lines 6801--6803
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]  
  []
 
 [147]
-Overfull \hbox (2.24895pt too wide) in paragraph at lines 6834--6836
+Overfull \hbox (2.24895pt too wide) in paragraph at lines 6818--6820
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][][][][][][][][]
  []
 
 [148] [149] [150] [151] [152]
-Underfull \hbox (badness 10000) in paragraph at lines 7052--7053
+Underfull \hbox (badness 10000) in paragraph at lines 7036--7037
 
  []
 
 [153] [154] [155]
-Underfull \hbox (badness 10000) in paragraph at lines 7181--7183
+Underfull \hbox (badness 10000) in paragraph at lines 7165--7167
 
  []
 
 [156]
-Underfull \hbox (badness 10000) in paragraph at lines 7220--7222
+Underfull \hbox (badness 10000) in paragraph at lines 7204--7206
 
  []
 
@@ -1113,34 +1113,34 @@ mr/m/n/10.95 163
 
 [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174]
 [175]
-<code/sort/pic/bisection.jpeg, id=5019, 740.7675pt x 590.205pt>
+<code/sort/pic/bisection.jpeg, id=5007, 740.7675pt x 590.205pt>
 File: code/sort/pic/bisection.jpeg Graphic file (type jpg)
 <use code/sort/pic/bisection.jpeg>
-Package pdftex.def Info: code/sort/pic/bisection.jpeg  used on input line 8074.
+Package pdftex.def Info: code/sort/pic/bisection.jpeg  used on input line 8058.
 
 (pdftex.def)             Requested size: 222.23196pt x 177.06287pt.
  [176 <./code/sort/pic/bisection.jpeg>] [177]
-<code/sort/pic/secant.jpeg, id=5083, 938.50626pt x 670.505pt>
+<code/sort/pic/secant.jpeg, id=5071, 938.50626pt x 670.505pt>
 File: code/sort/pic/secant.jpeg Graphic file (type jpg)
 <use code/sort/pic/secant.jpeg>
-Package pdftex.def Info: code/sort/pic/secant.jpeg  used on input line 8155.
+Package pdftex.def Info: code/sort/pic/secant.jpeg  used on input line 8139.
 (pdftex.def)             Requested size: 187.69792pt x 134.09862pt.
  [178] [179 <./code/sort/pic/secant.jpeg>]
-<code/sort/pic/newtonraphson.jpeg, id=5143, 647.41875pt x 609.27625pt>
+<code/sort/pic/newtonraphson.jpeg, id=5131, 647.41875pt x 609.27625pt>
 File: code/sort/pic/newtonraphson.jpeg Graphic file (type jpg)
 <use code/sort/pic/newtonraphson.jpeg>
 Package pdftex.def Info: code/sort/pic/newtonraphson.jpeg  used on input line 8
-222.
+206.
 (pdftex.def)             Requested size: 194.22711pt x 182.78427pt.
  [180 <./code/sort/pic/newtonraphson.jpeg>] [181]
-<code/sort/pic/regulafalsi.jpeg, id=5193, 879.285pt x 666.49pt>
+<code/sort/pic/regulafalsi.jpeg, id=5181, 879.285pt x 666.49pt>
 File: code/sort/pic/regulafalsi.jpeg Graphic file (type jpg)
 <use code/sort/pic/regulafalsi.jpeg>
-Package pdftex.def Info: code/sort/pic/regulafalsi.jpeg  used on input line 829
-4.
+Package pdftex.def Info: code/sort/pic/regulafalsi.jpeg  used on input line 827
+8.
 (pdftex.def)             Requested size: 228.6087pt x 173.28331pt.
 
-Overfull \hbox (1.9314pt too wide) in paragraph at lines 8298--8299
+Overfull \hbox (1.9314pt too wide) in paragraph at lines 8282--8283
 \T1/lmr/bx/n/10.95 Geometric in-ter-pre-ta-tion\T1/lmr/m/n/10.95 : The equa-tio
 n of a straight line pass-ing through
  []
@@ -1153,19 +1153,19 @@ Underfull \vbox (badness 2285) has occurred while \output is active []
 
  [186]
 [187] [188] [189]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 8551.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 8551.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 8535.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 8535.
  (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8551.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 8551.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8535.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 8535.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 34A28C32EFF0935AF6CDB7BB6FA1E3F3;7509.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 8551.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 8535.
  ) 
 Here is how much of TeX's memory you used:
- 27038 strings out of 481239
- 483466 string characters out of 5920377
+ 27026 strings out of 481239
+ 483272 string characters out of 5920377
  764965 words of memory out of 5000000
  37599 multiletter control sequences out of 15000+600000
  626140 words of font info for 71 fonts, out of 8000000 for 9000
@@ -1190,10 +1190,10 @@ blic/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (195 pages, 1426607 bytes).
+Output written on main.pdf (195 pages, 1426285 bytes).
 PDF statistics:
- 6384 PDF objects out of 7423 (max. 8388607)
- 6080 compressed objects within 61 object streams
- 4265 named destinations out of 4296 (max. 500000)
+ 6370 PDF objects out of 7423 (max. 8388607)
+ 6066 compressed objects within 61 object streams
+ 4253 named destinations out of 4296 (max. 500000)
  928 words of extra memory for PDF output out of 10000 (max. 10000000)
 

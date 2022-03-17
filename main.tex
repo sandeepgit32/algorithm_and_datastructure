@@ -6345,24 +6345,8 @@ a = 10
 b = 5
 \end{lstlisting}
 
-\noindent Second solution: Using multiplication and division:
-\begin{lstlisting}
-a = 5
-y = 10
 
-a = a * b
-b = a / b # This will act like ab / b, and now b equals a.
-a = a / b # This will act like ab / a, and now a equals b.
-print("a =", a)
-print("b =", b)
-\end{lstlisting}
-\textbf{Output}
-\begin{lstlisting}
-a = 10
-b = 5
-\end{lstlisting}
-
-\noindent Third solution: In Python, there is a simple construct to swap variables. 
+\noindent Second solution: In Python, there is a simple construct to swap variables. 
 \begin{lstlisting}
 a, b = b, a
 \end{lstlisting}
@@ -6370,7 +6354,7 @@ a, b = b, a
 \newpage
 \section{Array chunking}
 
-\textbf{Given an array \lstinline{arr} and size \lstinline{L}, divide the array into many sub-arrays where each sub-array is of given chunk size. }
+\textbf{Given an array \lstinline{arr} and chunk size \lstinline{L}, divide the array into many sub-arrays where each sub-array is of given chunk size. }
 \vspace{5mm}
 
 \noindent Time complexity:  $O(n)$
@@ -6416,11 +6400,11 @@ def isPrime(number):
     if number == 1:
         return False
     for i in range(2, number//2 + 1):
-        if number%i == 0:
+        if number % i == 0:
             return False
     return True
 
-def main(N):
+def main(n):
     primeCounter = 0
     iteration = 0
     while primeCounter < n:
@@ -6496,8 +6480,8 @@ FizzBuzz
 \noindent Space complexity: $O(1)$
 \begin{lstlisting}
 def anagram_check(str1, str2):
-    # Check if length is same
-    if(len(str1) == len(str2)):
+    # Check if length is same or not
+    if len(str1) != len(str2):
         print(str1 + " and " + str2 + " are not anagram.")
         return
 
@@ -6506,7 +6490,7 @@ def anagram_check(str1, str2):
     sorted_str2 = sorted(str2)
 
     # If sorted char arrays are same
-    if(sorted_str1 == sorted_str2):
+    if sorted_str1 == sorted_str2:
         print(str1 + " and " + str2 + " are anagram.")
     else:
         print(str1 + " and " + str2 + " are not anagram.")
