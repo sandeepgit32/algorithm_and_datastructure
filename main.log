@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  17 MAR 2022 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.3.12)  18 MAR 2022 06:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -860,7 +860,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [30]
 [31]
-<code/sort/pic/binary_tree.jpg, id=1385, 602.25pt x 352.31625pt>
+<code/sort/pic/binary_tree.jpg, id=1386, 602.25pt x 352.31625pt>
 File: code/sort/pic/binary_tree.jpg Graphic file (type jpg)
 <use code/sort/pic/binary_tree.jpg>
 Package pdftex.def Info: code/sort/pic/binary_tree.jpg  used on input line 1613
@@ -929,12 +929,12 @@ Underfull \vbox (badness 1371) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [86]
-<code/sort/pic/prim1.png, id=2908, 415.5525pt x 231.86626pt>
+<code/sort/pic/prim1.png, id=2909, 415.5525pt x 231.86626pt>
 File: code/sort/pic/prim1.png Graphic file (type png)
 <use code/sort/pic/prim1.png>
 Package pdftex.def Info: code/sort/pic/prim1.png  used on input line 4618.
 (pdftex.def)             Requested size: 186.99689pt x 104.33884pt.
-<code/sort/pic/prim2.png, id=2911, 728.7225pt x 512.91624pt>
+<code/sort/pic/prim2.png, id=2912, 728.7225pt x 512.91624pt>
 File: code/sort/pic/prim2.png Graphic file (type png)
 <use code/sort/pic/prim2.png>
 Package pdftex.def Info: code/sort/pic/prim2.png  used on input line 4627.
@@ -947,12 +947,12 @@ LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10> not available
 [91
 
 ] [92] [93] [94] [95]
-<code/sort/pic/job1.png, id=3118, 735.74875pt x 174.6525pt>
+<code/sort/pic/job1.png, id=3119, 735.74875pt x 174.6525pt>
 File: code/sort/pic/job1.png Graphic file (type png)
 <use code/sort/pic/job1.png>
 Package pdftex.def Info: code/sort/pic/job1.png  used on input line 4913.
 (pdftex.def)             Requested size: 257.51591pt x 61.12929pt.
-<code/sort/pic/job2.png, id=3119, 693.59125pt x 601.24625pt>
+<code/sort/pic/job2.png, id=3120, 693.59125pt x 601.24625pt>
 File: code/sort/pic/job2.png Graphic file (type png)
 <use code/sort/pic/job2.png>
 Package pdftex.def Info: code/sort/pic/job2.png  used on input line 4919.
@@ -970,7 +970,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [101]
 [102]
-<code/sort/pic/recursiontreeabc.png, id=3324, 769.87625pt x 310.15875pt>
+<code/sort/pic/recursiontreeabc.png, id=3325, 769.87625pt x 310.15875pt>
 File: code/sort/pic/recursiontreeabc.png Graphic file (type png)
 <use code/sort/pic/recursiontreeabc.png>
 Package pdftex.def Info: code/sort/pic/recursiontreeabc.png  used on input line
@@ -981,20 +981,20 @@ Package pdftex.def Info: code/sort/pic/recursiontreeabc.png  used on input line
 [105
 
 ] [106] [107]
-<code/sort/pic/picinsertion.jpg, id=3412, 246.6816pt x 185.0112pt>
+<code/sort/pic/picinsertion.jpg, id=3413, 246.6816pt x 185.0112pt>
 File: code/sort/pic/picinsertion.jpg Graphic file (type jpg)
 <use code/sort/pic/picinsertion.jpg>
 Package pdftex.def Info: code/sort/pic/picinsertion.jpg  used on input line 534
 9.
 (pdftex.def)             Requested size: 296.01642pt x 222.01231pt.
  [108 <./code/sort/pic/picinsertion.jpg>] [109]
-<code/sort/pic/partitionA.png, id=3458, 240.4182pt x 327.624pt>
+<code/sort/pic/partitionA.png, id=3459, 240.4182pt x 327.624pt>
 File: code/sort/pic/partitionA.png Graphic file (type png)
 <use code/sort/pic/partitionA.png>
 Package pdftex.def Info: code/sort/pic/partitionA.png  used on input line 5406.
 
 (pdftex.def)             Requested size: 288.50038pt x 393.14682pt.
-<code/sort/pic/partitionB.png, id=3459, 227.4096pt x 98.2872pt>
+<code/sort/pic/partitionB.png, id=3460, 227.4096pt x 98.2872pt>
 File: code/sort/pic/partitionB.png Graphic file (type png)
 <use code/sort/pic/partitionB.png>
 Package pdftex.def Info: code/sort/pic/partitionB.png  used on input line 5412.
@@ -1002,7 +1002,7 @@ Package pdftex.def Info: code/sort/pic/partitionB.png  used on input line 5412.
 (pdftex.def)             Requested size: 272.89015pt x 117.94402pt.
  [110] [111 <./code/sort/pic/partitionA.png>] [112 <./code/sort/pic/partitionB.
 png>]
-<code/sort/pic/mergesort.png, id=3527, 620.3175pt x 597.23125pt>
+<code/sort/pic/mergesort.png, id=3528, 620.3175pt x 597.23125pt>
 File: code/sort/pic/mergesort.png Graphic file (type png)
 <use code/sort/pic/mergesort.png>
 Package pdftex.def Info: code/sort/pic/mergesort.png  used on input line 5494.
@@ -1072,11 +1072,11 @@ n/10.95 (\OML/lmm/m/it/10.95 x[]x[] [] x[]; y[]y[] [] y[]\OT1/lmr/m/n/10.95 )$
 ]
  6.
 [135] [136] [137] [138] [139]
-Overfull \hbox (10.7708pt too wide) in paragraph at lines 6478--6479
-\T1/lmr/m/n/10.95 Time com-plex-ity: $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (
-\OML/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/10.95 since the mos
-t ef-fi-cient sort-ing will take $\OML/lmm/m/it/10.95 O\OT1/lmr/m/n/10.95 (\OML
-/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$
+Overfull \hbox (9.85269pt too wide) in paragraph at lines 6478--6479
+\T1/lmr/m/it/10.95 Time com-plex-ity\T1/lmr/m/n/10.95 : $\OML/lmm/m/it/10.95 O\
+OT1/lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$ \T1/lmr/m/n/
+10.95 since the most ef-fi-cient sort-ing will take $\OML/lmm/m/it/10.95 O\OT1/
+lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n [] n\OT1/lmr/m/n/10.95 )$
  []
 
 [140] [141] [142] [143] [144] [145] [146]
@@ -1113,27 +1113,27 @@ mr/m/n/10.95 163
 
 [163] [164] [165] [166] [167] [168] [169] [170] [171] [172] [173] [174]
 [175]
-<code/sort/pic/bisection.jpeg, id=5007, 740.7675pt x 590.205pt>
+<code/sort/pic/bisection.jpeg, id=5008, 740.7675pt x 590.205pt>
 File: code/sort/pic/bisection.jpeg Graphic file (type jpg)
 <use code/sort/pic/bisection.jpeg>
 Package pdftex.def Info: code/sort/pic/bisection.jpeg  used on input line 8058.
 
 (pdftex.def)             Requested size: 222.23196pt x 177.06287pt.
  [176 <./code/sort/pic/bisection.jpeg>] [177]
-<code/sort/pic/secant.jpeg, id=5071, 938.50626pt x 670.505pt>
+<code/sort/pic/secant.jpeg, id=5072, 938.50626pt x 670.505pt>
 File: code/sort/pic/secant.jpeg Graphic file (type jpg)
 <use code/sort/pic/secant.jpeg>
 Package pdftex.def Info: code/sort/pic/secant.jpeg  used on input line 8139.
 (pdftex.def)             Requested size: 187.69792pt x 134.09862pt.
  [178] [179 <./code/sort/pic/secant.jpeg>]
-<code/sort/pic/newtonraphson.jpeg, id=5131, 647.41875pt x 609.27625pt>
+<code/sort/pic/newtonraphson.jpeg, id=5132, 647.41875pt x 609.27625pt>
 File: code/sort/pic/newtonraphson.jpeg Graphic file (type jpg)
 <use code/sort/pic/newtonraphson.jpeg>
 Package pdftex.def Info: code/sort/pic/newtonraphson.jpeg  used on input line 8
 206.
 (pdftex.def)             Requested size: 194.22711pt x 182.78427pt.
  [180 <./code/sort/pic/newtonraphson.jpeg>] [181]
-<code/sort/pic/regulafalsi.jpeg, id=5181, 879.285pt x 666.49pt>
+<code/sort/pic/regulafalsi.jpeg, id=5182, 879.285pt x 666.49pt>
 File: code/sort/pic/regulafalsi.jpeg Graphic file (type jpg)
 <use code/sort/pic/regulafalsi.jpeg>
 Package pdftex.def Info: code/sort/pic/regulafalsi.jpeg  used on input line 827
@@ -1164,15 +1164,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 8535.
  ) 
 Here is how much of TeX's memory you used:
- 27026 strings out of 481239
- 483272 string characters out of 5920377
- 764965 words of memory out of 5000000
- 37599 multiletter control sequences out of 15000+600000
- 626140 words of font info for 71 fonts, out of 8000000 for 9000
+ 27027 strings out of 481239
+ 483287 string characters out of 5920377
+ 764964 words of memory out of 5000000
+ 37600 multiletter control sequences out of 15000+600000
+ 630411 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,16n,69p,854b,1988s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
-ips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share
 /texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
 -mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/f
 onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
@@ -1190,7 +1190,7 @@ blic/lm/lmro10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf/fonts/type1/public/l
 m/lmsy9.pfb></usr/share/texmf/fonts/type1/public/lm/lmtk10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (195 pages, 1426285 bytes).
+Output written on main.pdf (195 pages, 1430452 bytes).
 PDF statistics:
  6370 PDF objects out of 7423 (max. 8388607)
  6066 compressed objects within 61 object streams
